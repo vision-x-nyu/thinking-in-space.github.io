@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces</title>
+        <!-- <link rel="icon" type="image/x-icon" href="/static/img/icons/jellyfish.ico"> -->
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Open Graph -->
+        <meta property="og:url" content="https://VSI-Bench.github.io/" />
+        <meta property="og:image" content="static/img/preview.png" />
+        <meta property="og:title" content="Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces" />
+        
+        <!-- Twitter -->
+        <meta name="twitter:url" content="https://VSI-Bench.github.io/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="static/img/preview.png" />
+        <meta name="twitter:title" content="Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces" />
+        <meta name="twitter:description" content="We introduce VSI-Bench, a novel benchmark of over 5,000 video-based visual-spatial intelligence questions, to evaluate and probe MLLMs, which revealed that their emerging spatial reasoning and local world modeling capabilities remain subhuman but promising.        " />
+
+        <script src="./static/js/distill_template.v2.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+        <script src="https://rawgit.com/nstrayer/slid3r/master/dist/slid3r.js"></script>
+
+        <script defer="" src="./static/js/hider.js"></script>
+        <script src="./static/js/image_interact.js"></script>
+        <script src="./static/js/switch_videos.js"></script>
+
+        <link rel="stylesheet" href="./static/css/style.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+
+        <!-- medium zoom https://github.com/francoischalifour/medium-zoom -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>  <!-- jquery -->
+        <script defer src="./static/js/medium-zoom.min.js"></script>
+        <script defer src="./static/js/zoom.js"></script>
+    </head>
+    <body>
+        <div class="header-wrapper">
+            <div class="header-container" id="header-container">
+                <div class="header-content">
+                    <h1 style="margin-top: 0px"><i>Thinking in Space</i></h1>
+                    <h2>How Multimodal Large Language Models 
+                        See, Remember and Recall Spaces</h2>
+                    
+
+                    <div class="button-container">
+                        <!-- replace arxiv -->
+                        <a href="" class="button paper-link" target="_blank">
+                            <span class="icon is-small">
+                                <i class="ai ai-arxiv"></i>
+                            </span>
+                            arXiv
+                        </a>
+                        <!-- replace pdf -->
+                        <a href="" class="button paper-link" target="_blank">
+                            <span class="icon is-small">
+                                <i class="fas fa-file-pdf"></i>
+                            </span>
+                            <span>PDF</span>
+                        </a>
+                        <!-- replace image -->
+                        <a href="" class="button" target="_blank">
+                            <span class="icon is-small">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>Code</span>
+                        </a>                      
+                        <a href="" class="button" target="_blank">
+                            <span class="icon is-small">
+                                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="height: 1em;">
+                            </span>
+                            <span>VSI-Bench</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-image">
+                    <img draggable="false" src="static/img/preview.png" alt="Teaser Image" class="teaser-image">
+                </div>
+            </div>
+        </div>
+    <d-article>
+
+        
+        <div class="byline">
+            <div class="byline-container">
+                <div class="byline-column">
+                    <h3>Authors</h3>
+                    <p>
+                        <a href="https://jihanyang.github.io/" class="author-link" target="_blank">Jihan Yang</a> 
+                        <sup>△†</sup>
+                    </p>
+                    <p>
+                        <a href="https://github.com/vealocia" class="author-link" target="_blank">Shusheng Yang</a> 
+                        <sup>△*</sup>
+                    </p>
+                    <p>
+                        <a href="https://www.linkedin.com/in/anjaliwgupta/" class="author-link" target="_blank">Anjali Gupta</a> 
+                        <sup>△*</sup>
+                    </p>
+                    <p>
+                        <a href="https://rilynhan.github.io" class="author-link" target="_blank">Rilyn Han</a> 
+                        <sup>▲*</sup>
+                    </p>
+                    <p>
+                        <a href="https://profiles.stanford.edu/fei-fei-li" class="author-link" target="_blank">Fei-Fei Li</a> 
+                        <sup>★</sup>
+                    </p>
+                    <p>
+                        <a href="https://www.sainingxie.com/" class="author-link" target="_blank">Saining Xie</a> 
+                        <sup>△</sup>
+                    </p>
+                </div>
+                <div class="byline-column">
+                    <h3>Affiliations</h3>
+                    <p>
+                        <sup>△</sup>
+                        <a href="https://cs.nyu.edu/home/index.html" class="affiliation-link" target="_blank">New York University</a>
+                    </p>
+                    <p>
+                        <sup>▲</sup>
+                        <a href="https://www.yale.edu" class="affiliation-link" target="_blank">Yale University</a>
+
+                    </p>
+                    <p>
+                        <sup>★</sup>
+                        <a href="https://www.stanford.edu/" class="affiliation-link" target="_blank">Stanford University</a>
+                    </p>
+                </div>
+                <div class="byline-column">
+                    <h3>Date</h3>
+                    <p>
+                        Dec. 1<sup>st</sup>, 2024
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align: center;">
+            <span class="author-note"><sup>*</sup>Equal contribution</span>&emsp;
+            <span class="author-note"><sup>†</sup>Project lead</span>&emsp;
+            <!-- <span class="author-note"><sup>†</sup>Corresponding author</span> -->
+        </p>
+
+        
+        <d-figure id="fig-teaser">
+            <figure>
+                <img data-zoomable="" draggable="false" src="static/img/teaser.png" alt="Visual-Spatial Intelligence Teaser">
+                <figcaption>
+                    <strong>Figure 1:</strong> Recent Multimodal LLMs can understand general videos, but can they “think spatially” when presented with a video recording of an environment? Can they build an accurate, implicit “cognitive map” that allows them to answer questions about a space? What are the strengths and limitations of using MLLMs to enhance spatial intelligence? We dig into these questions by setting up video data for MLLMs to watch, building a VQA benchmark to check their recall, and examining what the MLLMs actually remember and understand.
+                </figcaption>
+            </figure>
+        </d-figure>
+        
+        <p class="text abstract">
+            We present a novel video-based visual-spatial intelligence benchmark (VSI-Bench) of over 5,000 question-answer pairs, and find that MLLMs exhibit competitive - though subhuman - visual-spatial intelligence. 
+            Our evaluation reveals that MLLMs exhibit competitive visual-spatial intelligence, if still well short of human-level. 
+            To understand the MLLMs' behavior, we probe models to express how they think in space both linguistically and visually and find that while spatial reasoning capabilities remain the primary bottleneck for MLLMs to reach higher benchmark performance, local world models and spatial awareness do emerge within these models.
+            <br>
+        </p>
+        
+
+        
+
+        <hr>
+
+        <div id='visual_representations' class="vision-block">
+            
+            <div id="sec:benchmarking" class="sub-section">
+                <h1 class="text">Visual-Spatial Intelligence</h1>
+
+    </body>
+</html>

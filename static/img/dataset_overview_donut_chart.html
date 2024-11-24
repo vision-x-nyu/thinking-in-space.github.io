@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donut Chart with Gradient Colors and Legends</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    @font-face {
+      font-family: 'Garamond';
+      src: url('') format('truetype'); 
+      /* /./EB_Garamond/static/EBGaramond-SemiBold.ttf */
+    }
+  
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .innerRingText {
+      font-family: 'Garamond', serif;
+      font-weight: bold; /* Optional: Make the label bold if desired */
+
+    }
+    .largeFont {
+      font-size: 24px;
+      fill: white;
+    }
+    .regularFont {
+      font-size: 15px;
+      fill: white;
+    }
+
+  /* Adjust font size specifically for category labels like "Configuration" */
+    .categoryLabel {
+      display: inline-block;
+      padding: 5px;
+      color: white;
+      font-family: 'Garamond', serif;
+      font-size: 20px; /* Increase this value to make the category label larger */
+      font-weight: bold; /* Optional: Make the label bold if desired */
+    }
+
+    /* Adjust font size for subcategory labels */
+    .subcategoryLabel {
+      font-size: 18px; /* Adjust font size here for subcategory labels */
+      font-family: 'Garamond', serif;
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+
+
+    .subcategoryBox {
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+      display: inline-block;
+    }
+    .categoryLabel {
+      display: inline-block;
+      padding: 5px;
+      color: white;
+      font-family: 'Garamond', serif;
+      /* font-weight: bold; */
+    }
+  </style>
+</head>
+<body>
+
+<div id="legend"></div>
+<svg width="500" height="500"></svg>
+
+<script>
+const width = 500, height = 500, radius = Math.min(width, height) / 2;
+
+const svg = d3.select("svg")
+  .attr("width", width)
+  .attr("height", height)
+  .append("g")
+  .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+const data = [
+  { category: "Configuration", subcategory: "Relative Direction", value: 7.3 + 7.4 + 4.2 },  // Combined value
+  { category: "Configuration", subcategory: "Relative Distance", value: 13.8 },
+  { category: "Configuration", subcategory: "Object Count", value: 11.1 },
+  { category: "Configuration", subcategory: "Route Plan", value: 3.8 },
+  { category: "Measurement", subcategory: "Object Size", value: 18.5 },
+  { category: "Measurement", subcategory: "Room Size", value: 5.6 },
+  { category: "Measurement", subcategory: "Absolute Distance", value: 16.2 },
+  { category: "Spatiotemporal", subcategory: "Appearance Order", value: 12.1 } 
+];
+
+
+
+const dataByCategory = d3.group(data, d => d.category);
+
+// const categoryColorScales = {
+//   "Configuration": d3.scaleLinear()
+//     .domain([0, dataByCategory.get("Configuration").length - 1])
+//     .range(["#7989FF", "#F4FBFF"]),
+//   "Measurement": d3.scaleLinear()
+//     .domain([0, dataByCategory.get("Measurement").length - 1])
+//     .range(["#455D99", "#BCC6DD"]),
+//   "Spatialtemporal": d3.scaleLinear()
+//     .domain([0, dataByCategory.get("Spatialtemporal").length - 1])
+//     .range(["#E3E9D7", "#E3E9D7"])
+// };
+
+const categoryColorScales = {
+  "Configuration": d3.scaleLinear()
+    .domain([0, dataByCategory.get("Configuration").length - 1])
+    .range(["#4285F4", "#D2E3FC"]),
+  "Measurement": d3.scaleLinear()
+    .domain([0, dataByCategory.get("Measurement").length - 1])
+    .range(["#0D652D", "#34A853"]),
+  "Spatiotemporal": d3.scaleLinear()
+    .domain([0, dataByCategory.get("Spatiotemporal").length - 1])
+    .range(["#FBBC04", "#FBBC04"])
+};
+
+
+
+
+data.forEach(d => {
+  const subcategories = dataByCategory.get(d.category);
+  const index = subcategories.findIndex(s => s.subcategory === d.subcategory);
+  d.color = categoryColorScales[d.category](index);
+});
+
+const pie = d3.pie()
+  .value(d => d.value)
+  .sort(null);
+
+const outerArc = d3.arc()
+  .innerRadius(radius * 0.66)
+  .outerRadius(radius * 0.85);
+
+const innerArc = d3.arc()
+  .innerRadius(radius * 0.45)
+  .outerRadius(radius * 0.65);
+
+const categoryData = Array.from(
+  d3.rollup(
+    data,
+    v => d3.sum(v, d => d.value),
+    d => d.category
+  ),
+  ([category, value]) => ({ category, value })
+);
+
+const defs = svg.append("defs");
+
+const categoryGradients = {
+  "Configuration": ["#174EA6","#174EA6"],
+  "Measurement": ["#0D652D","#0D652D"],
+  "Spatiotemporal": ["#E37400","#E37400"]
+};
+
+Object.entries(categoryGradients).forEach(([category, [color1, color2]], index) => {
+  const gradient = defs.append("linearGradient")
+    .attr("id", `gradient${index}`)
+    .attr("x1", "0%")
+    .attr("x2", "100%")
+    .attr("y1", "0%")
+    .attr("y2", "0%");
+
+  gradient.append("stop").attr("offset", "0%").attr("stop-color", color1);
+  gradient.append("stop").attr("offset", "100%").attr("stop-color", color2);
+});
+
+const innerPieData = pie(categoryData);
+
+const innerSlices = svg.selectAll(".innerSlice")
+  .data(innerPieData)
+  .enter().append("g");
+
+innerSlices.append("path")
+  .style("fill", (d, i) => `url(#gradient${i})`)
+  .transition()
+  .duration(1000)
+  .attrTween("d", function(d) {
+    const interpolate = d3.interpolate({ startAngle: 0, endAngle: 0 }, d);
+    return function(t) {
+      return innerArc(interpolate(t));
+    };
+  });
+
+d3.timeout(() => {
+  innerSlices.each(function(d, i) {
+    d3.select(this).append("path")
+      .attr("id", `categoryArc${i}`)
+      .attr("d", innerArc
+        .innerRadius(radius * 0.53)
+        .outerRadius(radius * 0.53)
+        .startAngle(d.startAngle)
+        .endAngle(d.endAngle))
+      .style("fill", "none");
+    
+    d3.select(this).append("text")
+      .attr("class", "innerRingText")
+      .classed("largeFont", d.data.category === "Configuration" || d.data.category === "Measurement")
+      .classed("regularFont", d.data.category === "Spatiotemporal")
+      .append("textPath")
+      .attr("xlink:href", `#categoryArc${i}`)
+      .attr("startOffset", "25%")
+      .attr("text-anchor", "middle")
+      .text(d.data.category);
+  });
+}, 1000);
+
+const outerPieData = pie(data);
+
+d3.timeout(() => {
+  const outerSlices = svg.selectAll(".outerSlice")
+    .data(outerPieData)
+    .enter().append("g");
+
+  outerSlices.append("path")
+    .style("fill", d => d.data.color)
+    .transition()
+    .duration(1000)
+    .attrTween("d", function(d) {
+      const interpolate = d3.interpolate({ startAngle: 0, endAngle: 0 }, d);
+      return function(t) {
+        return outerArc(interpolate(t));
+      };
+    });
+}, 1000);
+svg.append("circle")
+  .attr("cx", 0)
+  .attr("cy", 0)
+  .attr("r", radius * 0.3) 
+  .style("fill", "white"); 
+
+svg.append("text")
+  .attr("text-anchor", "middle")
+  .attr("x", 0)
+  .attr("y", 0)
+  .attr("class", "innerRingText")
+  .classed("largeFont", true)
+  .style("fill", "black")
+  .text("VSI-Bench");
+
+d3.timeout(() => {
+  const legend = d3.select("#legend");
+
+  categoryData.forEach(category => {
+    legend.append("div")
+      .attr("class", "categoryLabel")
+      .style("background-color", categoryGradients[category.category][0])
+      .text(`${category.category} (${(category.value / d3.sum(categoryData, d => d.value) * 100).toFixed(1)}%)`);
+  
+    dataByCategory.get(category.category).forEach(subcategory => {
+      legend.append("div")
+        .attr("class", "subcategoryLabel")
+        .html(`<span class="subcategoryBox" style="background-color: ${subcategory.color}"></span> ${subcategory.subcategory} (${subcategory.value}%)`);
+    });
+  });
+}, 2000);
+
+</script>
+
+</body>
+</html>

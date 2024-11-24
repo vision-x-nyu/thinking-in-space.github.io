@@ -1099,7 +1099,7 @@ figure {
 }
 
 #fig-teaser {
-      margin-top: -170px; 
+      margin-top: -10px; 
       padding-top: 0;
   }
 
@@ -1130,6 +1130,11 @@ figcaption {
 
 #mllm_interface_click_hint {
     display: block;
+}
+
+.formula {
+  text-align: center;
+  margin: 20px 0;
 }
 
 @media (max-width: 720px) {
@@ -1342,72 +1347,50 @@ div.takeaway-tags img {
 /* tables */
 
 .table-container {
-    overflow: auto;
-    overflow-y: hidden;
-    max-width: 90vw;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch; /* for smoother scrolling on iOS */
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
 }
 
-.data-table {
-    border-collapse: separate;
-    border-spacing: 2.5px;
-    margin: 0 auto;
-    font-size: 12px;
-    min-width: 100%;
-    /* width: max-content; */
-    width: 100%;
-    line-height: 1.25;
-    border-collapse: separate;
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  text-align: center;
 }
 
-.data-table td {
-    font-feature-settings: 'tnum';
-    font-variant-numeric: tabular-nums;
-    text-align: center;
+.styled-table th, .styled-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-.data-table td, .data-table th {
-    padding: 0.25em 0.25em;
+.styled-table thead th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  padding: 10px;
 }
 
-.data-table th:first-child, .data-table td:first-child {
-    text-align: right;
-    font-weight: bold;
+.styled-table tbody .section-header td {
+  background-color: #e3f2fd;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
 }
 
-.tb-hdr {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    text-align: center !important;
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
-.highlight {
-    background-color: #e6ffe6;
-    font-weight: bold;
+.styled-table tbody tr:hover {
+  background-color: #f1f1f1;
 }
 
-.highlight-green {
-    background-color: #e6ffe6;
+.styled-table th[colspan="4"] {
+  background-color: #FFF2CC; /* Custom color for "Numerical Answer" */
 }
 
-.highlight-orange {
-    background-color: #fff2e6;
-}
-
-.highlight-gray td {
-    background-color: #f2f2f2;
-    text-align: left !important;
-}
-
-.highlight-blue {
-    background-color: #e6f2ff;
-}
-
-caption {
-    padding: 10px;
-    caption-side: bottom;
-    font-weight: 500;
+.styled-table th[colspan="4"]:nth-of-type(2) {
+  background-color: #FFECB3; /* Custom color for "Multiple-Choice Answer" */
 }
 
 /* Mobile-specific styles */

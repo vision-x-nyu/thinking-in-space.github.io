@@ -11,6 +11,7 @@
         <meta property="og:url" content="https://VSI-Bench.github.io/" />
         <meta property="og:image" content="static/img/preview.png" />
         <meta property="og:title" content="Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces" />
+        <!-- <meta property="og:description" content="Cambrian-1 is a family of multimodal LLMs with a vision-centric design. We also release CV-Bench, a new vision-centric benchmark, and Cambrian-10M, a multimodal instruction-tuning dataset." /> -->
         
         <!-- Twitter -->
         <meta name="twitter:url" content="https://VSI-Bench.github.io/" />
@@ -159,7 +160,7 @@
             <figure>
                 <img data-zoomable="" draggable="false" src="static/img/teaser.png" alt="Visual-Spatial Intelligence Teaser">
                 <figcaption>
-                    <strong>Figure 1:</strong> Recent Multimodal LLMs can understand general videos, but can they “think spatially” when presented with a video recording of an environment? Can they build an accurate, implicit “cognitive map” that allows them to answer questions about a space? What are the strengths and limitations of using MLLMs to enhance spatial intelligence? We dig into these questions by setting up video data for MLLMs to watch, building a VQA benchmark to check their recall, and examining what the MLLMs actually remember and understand.
+                    <strong>Figure 1:</strong> Can Multimodal LLMs “think spatially” when presented with a video recording of an environment? Can they build an accurate, implicit “cognitive map” that allows them to answer questions about a space? What are the strengths and limitations of using MLLMs to enhance spatial intelligence? We dig into these questions by setting up video data for MLLMs to watch, building a VQA benchmark to check their recall, and examining what the MLLMs actually remember and understand.
                 </figcaption>
             </figure>
         </d-figure>
@@ -176,10 +177,122 @@
 
         <hr>
 
-        <div id='visual_representations' class="vision-block">
+        <div id='vsi-benchmark' class="vsi-benchmark">
             
-            <div id="sec:benchmarking" class="sub-section">
-                <h1 class="text">Visual-Spatial Intelligence</h1>
+            <div id="sec:vsi-overview" class="sub-section">
+                <h1 class="text">VSI-Bench</h1>
+
+                    <p class="text">
+                        <p class="text">
+                        <strong>Benchmark Overview:</strong> We develope VSI-Bench, a benchmark to evaluate the visual-spatial intelligence of Multimodal LLMs (MLLMs) using over 5,000 question-answer pairs derived from 288 egocentric videos sourced from the validation sets of public indoor 3D scene reconstruction datasets ScanNet, ScanNet++, and ARKitScenes. VSI-Bench includes eight tasks under three task types: configurational, measurement estimation, and spatiotemporal. See Fig. 2 for an overview of the tasks in VSI-Bench and Fig. 3 for dataset statistics. Iteratively refined for quality, VSI-Bench provides a foundation to study the connection between MLLMs and 3D reconstruction.</p>
+                    <d-figure id="fig-task-demo" >
+                        <figure>
+                            <img data-zoomable="" draggable="false" src="static/img/task-demo.png" alt="benchmark category">
+                            <figcaption>
+                                <strong>Figure 2: Tasks demonstration of VSI-Bench.</strong> 
+                                Note: the questions above are simplified slightly for clarity and brevity.
+                            </figcaption>
+                        </figure>
+                    </d-figure>
+                    <d-figure id="fig-bench-stats">
+                        <figure>
+                            <!-- <div style="display: flex; align-items: center; gap: 0px; margin-left: -250px">
+                                <div style="flex: 3; display: flex; justify-content: center; align-items: center; overflow: hidden; position: relative; margin: 0;">
+                                    <iframe 
+                                        src="static/img/dataset_overview_donut_chart.html" 
+                                        style="width: 100%; height: 450px; border: none; transform: scale(0.7); transform-origin: center; padding: 0; margin: 0;" 
+                                        title="Dataset Overview Donut Chart">
+                                    </iframe>
+                                </div>
+                     -->
+                                <!-- Display the image -->
+                                <!-- <div style="flex: 1; height: 500px; margin-left: -300px;">
+                                    <img 
+                                        data-zoomable="" 
+                                        draggable="false" 
+                                        src="static/img/video-length.png" 
+                                        alt="Fit Visualization" 
+                                        style="width: 100%; height: 100%; object-fit: contain; margin: 0px; padding: 0;">
+                                </div>
+                            </div> -->
+                            <img data-zoomable="" draggable="false" src="static/img/benchmark-stats.png" alt="benchmark category" style="width: 90%; height: auto; display: block; margin: 0 auto;">
+
+
+            
+                            <figcaption style="text-align: center; margin-top: 20px;">
+                                <strong>Figure 3: Benchmark Statistics.</strong> 
+                                <strong>Top</strong>: The distribution of tasks across three main categories. <strong>Bottom</strong>: The video length statistic.
+                            </figcaption>
+                        </figure>
+                    </d-figure>
+                    
+            </div>
+            <div id="vsi-construct" class="sub-section">
+                
+
+                    <p class="text"><strong>VSI-Bench Construction:</strong>
+                        We develop a robust pipeline to construct VSI-Bench that enables high-quality question-answer (QA) pair generation at scale. Starting with data collection and unification, we standardize diverse 3D indoor scene datasets into a unified meta-information format, incorporating object categories, bounding boxes, and video specifications to support dataset-agnostic QA generation. QA pairs are generated using automated annotations from meta-information and task-specific question templates, with route planning tasks manually annotated. To ensure quality, we implement a human-in-the-loop review process, iteratively refining question templates, annotations, and QA generation rules by addressing ambiguities and errors flagged by evaluators. </p>
+
+                    <d-figure id="fig-bench-pipeline" >
+                        <figure>
+                            <img data-zoomable="" draggable="false" src="static/img/benchmark_construction.png" alt="benchmark category">
+                            <figcaption>
+                                <strong>Figure 3: Benchmark curation pipeline.</strong> The pipeline unifies datasets into a standardized format and semantic space for consistent processing. QA pairs are then generated through both human annotation and question templates. To ensure quality, human verification is implemented at all key stages for filtering low-quality videos, annotations, and ambiguous QA pairs.
+                            </figcaption>
+                        </figure>
+                    </d-figure>
+
+            </div>
+        <div id="sec:vsi-eval" class="vsi-evaluation">
+            <h1 class="text">Evaluation on VSI-Bench</h1>
+
+                    <!-- <p class="text">
+                        <p class="text">
+                        We benchmarked 15 video-supporting MLLMs from diverse model families. For proprietary models, we consider Gemini-1.5 and GPT-4o. For open-source models, we evaluate models from InternVL2, ViLA, 203 LongViLA, LongVA, LLaVA-OneVision, and LLaVA-NeXT-Video. All evaluations were conducted in zero-shot settings with default prompts and greedy decoding for reproducibility. Tasks were evaluated using either Multiple-Choice Answer (MCA) accuracy or our proposed Mean Relative Accuracy (MRA) for Numerical Answer (NA) tasks. Baselines include random selection and frequency-based answer selection to identify performance gains due to distribution biases. Additionally, human performance was assessed on a randomly sampled subset of 400 questions (VSI-Bench tiny), with metrics compared to Gemini-1.5 Pro.
+                    </p> -->
+                    <script type="text/javascript" id="MathJax-script" async
+                    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+                    </script>
+            <p class="text"><strong>Evaluation Setup</strong>:
+                We benchmarked 15 video-supporting MLLMs from diverse model families. For proprietary models, we consider Gemini-1.5 and GPT-4o. For open-source models, we evaluate models from InternVL2, ViLA, LongViLA, LongVA, LLaVA-OneVision, and LLaVA-NeXT-Video. All evaluations are conducted in zero-shot settings with default prompts and greedy decoding for reproducibility. Tasks are evaluated using either Multiple-Choice Answer (MCA) accuracy or our proposed Mean Relative Accuracy (MRA) for Numerical Answer (NA) tasks.
+            </p>
+        
+            <div class="formula">
+                $$\text{MRA} = \frac{1}{10} \sum_{\theta \in C} \mathbb{1}\left(\frac{| \hat{y} - y |}{y} < 1 - \theta\right)$$
+            </div>
+        
+            <p class="text">
+                Baselines include random selection and frequency-based answer selection to identify performance gains due to distribution biases. Additionally, human performance is assessed on a randomly sampled subset of 400 questions (VSI-Bench tiny), with metrics compared to Gemini-1.5 Pro.
+            </p>
+                   
+            
+            <p class="text"><strong>Main Results</strong>:
+                Human evaluators achieve an average accuracy of 79%, outperforming the best model by 33%, with near-perfect performance (94%-100%) on configuration and spatiotemporal tasks. However, the gap narrows on measurement tasks that require precise estimation, where MLLMs demonstrate relative strength in quantitative tasks. Among proprietary models, Gemini-1.5 Pro stands out, significantly exceeding chance baselines and approaching human performance in tasks like absolute distance and room size estimation, despite being trained only on 2D digital data. Top-performing open-source models, such as LLaVA-NeXT-Video-72B and LLaVA-OneVision-72B, achieve competitive results, trailing Gemini-1.5 Pro by just 4%-5%. However, most open-source models (7/12) fall below chance baselines, revealing notable deficiencies in visual-spatial intelligence.
+            </p>
+            <d-figure id="fig-eval-bench" >
+                <figure>
+                    <img data-zoomable="" draggable="false" src="static/img/eval-bench.png" alt="benchmark category">
+                    <figcaption>
+                        <strong>Table 1:  Evaluation on VSI-Bench.</strong> Left: Dark gray indicates the best result among all models and light gray indicates the best
+                        result among open-source models. † indicates results on VSI-Bench (tiny) set. Right: Results including the top-3 open-source models.Abs. Dist.
+                    </figcaption>
+                </figure>
+            </d-figure>
+
+            <p class="text"><strong>Blind Evaluation</strong>:
+                We compare MLLMs’ performance against “Chance Level (frequency)” and “Vision Disabled” (blind) results, averaged across six top models (three open-source and three closed-source). The consistent improvements in “Enabled−Disabled” and the general degradation in “Disabled−Chance” highlight the importance of video input for VSI-Bench, as blind models perform worse than chance. However, MLLMs struggle to surpass chance level on tasks such as absolute distance estimation, route planning, and relative direction, reflecting the inherent difficulty of these tasks. Interestingly, “Vision Disabled” models significantly outperform chance on object size tasks, likely due to the integration of common-sense knowledge from language model training.
+            </p>
+
+            <d-figure id="fig-blind-eval" >
+                <figure>
+                    <img data-zoomable="" draggable="false" src="static/img/blind_evaluation.png" alt="benchmark category" style="width: 80%; display: block; margin: 0 auto;">
+                    <figcaption>
+                        <strong>Figure 4</strong>: Performance comparisons between Vision Enabled
+                        (w/ video), Vision Disabled (w/o video) and Chance Level
+                        (Freq.). 
+                    </figcaption>
+                </figure>
+            </d-figure>
 
     </body>
 </html>

@@ -1343,6 +1343,27 @@ div.takeaway-tags img {
     display: none;
   }
 }
+.highlight-box {
+  border: 2px solid #CCCCCC; /* Slightly thicker border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 15px; /* Inner spacing */
+  background-color: #F9F9F9; /* Light gray background */
+  font-size: 1.2em; /* Adjust font size */
+  font-style: italic; /* Italicized text */
+  font-weight: bold; /* Bold the text */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15); /* Box shadow */
+  margin: 20px auto; /* Centers the box horizontally */
+  width: 150%; /* Increase width by 20% */
+  max-width: 150%; /* Ensure it doesn’t overflow the container */
+  text-align: center; /* Center the text inside the box */
+  transform: translateX(-15%); /* Adjust position to stay centered */
+}
+
+
+
+
+
+
 
 /* tables */
 

@@ -237,7 +237,7 @@
                         <figure>
                             <img data-zoomable="" draggable="false" src="static/img/benchmark_construction.png" alt="benchmark category">
                             <figcaption>
-                                <strong>Figure 3: Benchmark curation pipeline.</strong> The pipeline unifies datasets into a standardized format and semantic space for consistent processing. QA pairs are then generated through both human annotation and question templates. To ensure quality, human verification is implemented at all key stages for filtering low-quality videos, annotations, and ambiguous QA pairs.
+                                <strong>Figure 4: Benchmark curation pipeline.</strong> The pipeline unifies datasets into a standardized format and semantic space for consistent processing. QA pairs are then generated through both human annotation and question templates. To ensure quality, human verification is implemented at all key stages for filtering low-quality videos, annotations, and ambiguous QA pairs.
                             </figcaption>
                         </figure>
                     </d-figure>
@@ -273,8 +273,8 @@
                 <figure>
                     <img data-zoomable="" draggable="false" src="static/img/eval-bench.png" alt="benchmark category">
                     <figcaption>
-                        <strong>Table 1:  Evaluation on VSI-Bench.</strong> Left: Dark gray indicates the best result among all models and light gray indicates the best
-                        result among open-source models. † indicates results on VSI-Bench (tiny) set. Right: Results including the top-3 open-source models.Abs. Dist.
+                        <strong>Table 1:  Evaluation on VSI-Bench.</strong> <strong>Left</strong>: Dark gray indicates the best result among all models and light gray indicates the best
+                        result among open-source models. † indicates results on VSI-Bench (tiny) set. <strong>Right</strong>: Results including the top-3 open-source models.
                     </figcaption>
                 </figure>
             </d-figure>
@@ -285,14 +285,190 @@
 
             <d-figure id="fig-blind-eval" >
                 <figure>
-                    <img data-zoomable="" draggable="false" src="static/img/blind_evaluation.png" alt="benchmark category" style="width: 80%; display: block; margin: 0 auto;">
+                    <img data-zoomable="" draggable="false" src="static/img/blind_evaluation.png" alt="benchmark category" style="width: 70%; display: block; margin: 0 auto;">
                     <figcaption>
-                        <strong>Figure 4</strong>: Performance comparisons between Vision Enabled
+                        <strong>Figure 5</strong>: Performance comparisons between Vision Enabled
                         (w/ video), Vision Disabled (w/o video) and Chance Level
                         (Freq.). 
                     </figcaption>
                 </figure>
             </d-figure>
 
+            <div id='visual-representation' class="viusal-representation-block">
+            <h1 class="text">How MLLMs Think in Space Linguistically</h1>
+                
+                <p class="text">
+                    To better understand when and why models succeed or fail and to elucidate the facets of visual-spatial intelligence they possess, we examine how MLLMs think in space linguistically.
+                </p>
+
+                              
+                </d-figure>
+                <p class="text">
+                    <strong>Case Studies</strong>:
+                    In the success example, the model demonstrates advanced video understanding with accurate timestamped descriptions and a correct step-by-step reasoning process. The use of a global coordinate system suggests that MLLMs may construct implicit world models by integrating spatial context and reasoning. In the error case, the model fails in egocentric-allocentric transformation, incorrectly interpreting a video sequence due to reliance on the egocentric view, leading to a flawed spatial inference.
+                </p>
+
+                <d-figure id="fig-case-study" >
+                    <figure>
+                        <img data-zoomable="" draggable="false" src="static/img/case-study.png" alt="benchmark category" style="width: 90%; display: block; margin: 0 auto;">
+                        <figcaption>
+                            <strong>Figure 6</strong>: Examples of how a MLLM thinks as seen in self-explanations. 
+                        </figcaption>
+                    </figure>
+                </d-figure>
+
+            
+                <p class="text">
+                    <strong>Error Analysis</strong>:
+                    Analysis of errors from the best-performing MLLM on VSI-Bench (tiny) identifies four main error types: visual perception, linguistic intelligence, relational reasoning, and egocentric-allocentric transformation. Figure 6 reveals that 71% of errors stem from spatial reasoning, particularly in understanding distance, size, and direction. This indicates that spatial reasoning remains the key bottleneck for improving MLLM performance on VSI-Bench.
+                </p>
+                <d-figure id="fig-error-breakdown" >
+                    <figure>
+                        <img data-zoomable="" draggable="false" src="static/img/error_breakdown.png" alt="benchmark category" style="width: 50%; display: block; margin: 0 auto;">
+                        <figcaption>
+                            <strong>Figure 7</strong>: Human-conducted analysis of errors by type. 
+                        </figcaption>
+                    </figure>
+                </d-figure>
+
+                <div class="highlight-box">
+                    <em>Findings 1: Spatial reasoning is the primary bottleneck for MLLM performance on VSI-Bench.</em>
+                </div>
+                
+
+                <p class="text">
+                    <strong>Limits of CoT Methods in Visuospatial Tasks</strong>:
+                    We investigated three prompting techniques—Zero-Shot Chain-of-Thought (CoT), Self-Consistency with CoT, and Tree-of-Thoughts (ToT)—to improve MLLM reasoning on VSI-Bench. Surprisingly, all three methods led to performance degradation, with Zero-Shot CoT and ToT reducing average performance by 4%, and Self-Consistency falling 1.1% below the baseline. While tasks like appearance order and absolute distance estimation saw slight improvements due to reduced linguistic errors, tasks like room size and object size suffered significant declines (8%-21%), indicating that prompting for deeper reasoning can be unreliable and even detrimental for visual-spatial tasks.
+                </p>
+                <d-figure id="fig-zero-shot" >
+                    <figure>
+                        <img data-zoomable="" draggable="false" src="static/img/zero-shot.png" alt="benchmark category" style="width: 90%; display: block; margin: 0 auto;">
+                        <figcaption>
+                            <strong>Figure 8</strong>: Relative improvements of CoT, self-consistency and
+                            Tree-of-Thought compared to the baseline. 
+                        </figcaption>
+                    </figure>
+                </d-figure>
+                <div class="highlight-box">
+                    <em>Findings 2: Linguistic prompting techniques, although effective in language reasoning tasks, are primarily harmful for spatial reasoning.</em>
+                </div>
+
+                
+                <h1 class="text"> How MLLMs Think in Space Visually</h1>
+                <p class="text">
+                    Since humans subconsciously build mental representations of space when reasoning spatially, we explore how MLLMs remember spaces. </p>
+
+                    <p class="text">
+                        <strong> Probing via Cognitive Maps</strong>:
+                        We evaluate MLLMs’ ability to create cognitive maps, a framework for spatial representation, by prompting Gemini-1.5 Pro to predict object center positions within a 10 × 10 grid based on video input. Accuracy was measured by comparing predicted object distances with ground truth maps, considering deviations within one grid unit as correct. The model achieved 64% accuracy in positioning adjacent objects, demonstrating strong local spatial awareness but struggling with larger distances, reflecting challenges in forming global spatial representations from discrete video frames. 
+                    </p>
+
+                    <d-figure id="fig-cog-map" >
+                        <figure>
+                            <img data-zoomable="" draggable="false" src="static/img/cog-map.png" alt="benchmark category" style="width: 90%; display: block; margin: 0 auto;">
+                            <figcaption>
+                                <strong>Figure 9</strong>. <strong>Left</strong>: Visualizations of cognitive maps from MLLM and GT. <strong>Right</strong>: Locality of the MLLM’s predicted cognitive maps.
+                            </figcaption>
+                        </figure>
+                    </d-figure>
+                    <div class="highlight-box">
+                        <em>Findings 3: When remembering spaces, a MLLM forms a series of local world models in its mind from a given video, rather than a unified global model.</em>
+                    </div>
+
+                    <p class="text">
+                        <strong>Better Distance Reasoning via Cognitive Maps</strong>:
+                        We explored whether cognitive maps could enhance MLLMs’ spatial reasoning by prompting Gemini-1.5 Pro to generate a map from video input and use it to answer relative distance questions. Results showed a 10% accuracy improvement with the model’s own map and a 20%-32% gain using ground truth maps, highlighting the value of accurate mental imagery for enforcing global scene topology. This suggests cognitive mapping as a promising approach to improve MLLMs’ visual-spatial reasoning. 
+                    </p>
+                    <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
+                        <!-- Table (a) -->
+                        <table border="1" style="border-collapse: collapse; text-align: center;">
+                            <caption style="caption-side: bottom; font-style: italic;">(a) Cognitive map prompting.</caption>
+                            <thead>
+                                <tr>
+                                    <th>Case</th>
+                                    <th>Rel. Dist Acc.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>w/o Cog. map</td>
+                                    <td>46.0</td>
+                                </tr>
+                                <tr>
+                                    <td>w/ Cog. map</td>
+                                    <td>56.0</td>
+                                </tr>
+                                <tr>
+                                    <td>w/ Cog. map (GT)</td>
+                                    <td>66.0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    
+                        <!-- Table (b) -->
+                        <table border="1" style="border-collapse: collapse; text-align: center;">
+                            <caption style="caption-side: bottom; font-style: italic;">(b) Cognitive map canvas size.</caption>
+                            <thead>
+                                <tr>
+                                    <th>Cog. Map Src.</th>
+                                    <th>Size</th>
+                                    <th>Rel. Dist Acc.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MLLM</td>
+                                    <td>10 × 10</td>
+                                    <td>56.0</td>
+                                </tr>
+                                <tr>
+                                    <td>MLLM</td>
+                                    <td>20 × 20</td>
+                                    <td>54.0</td>
+                                </tr>
+                                <tr>
+                                    <td>GT</td>
+                                    <td>10 × 10</td>
+                                    <td>66.0</td>
+                                </tr>
+                                <tr>
+                                    <td>GT</td>
+                                    <td>20 × 20</td>
+                                    <td>78.0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Combined Table Caption -->
+                    <p style="text-align: center; font-weight: bold;">Table 2. Relative distance task with cognitive map.</p>
+                    
+
+        </div>
+        </div>
+
+       
+
+        <div id="conclusion" style="position: relative; margin-top: 40px; margin-bottom: 0px;">
+            <h2 class="text" style="margin-top:0px; margin-bottom:10px">Conclusion</h2>
+            <p class="text">
+                We study how models see, remember, and recall spaces by building VSI-Bench and investigating the performance 
+                and behavior of MLLMs on it. Our analysis of how MLLMs think in space linguistically and visually identifies existing strengths (e.g., prominent perceptual, temporal, and linguistic abilities) and bottlenecks for visual-spatial intelligence (e.g., egocentric-allocentric transformation and relational reasoning). While prevailing linguistic prompting methods fail to improve spatial reasoning, building explicit cognitive maps does enhance the spatial distance reasoning of MLLMs.
+
+            </p>
+        </div>
+
+        </d-article>
+        <d-appendix>
+            <h3>BibTeX</h3>
+            <p class="bibtex">
+            </p>
+
+            <d-footnote-list></d-footnote-list>
+            <d-citation-list></d-citation-list>
+        </d-appendix>   
+        <!-- bibliography will be inlined during Distill pipeline's pre-rendering -->
+        <d-bibliography src="bibliography.bib"></d-bibliography>
+        <script src="./static/js/nav-bar.js"></script>
     </body>
 </html>

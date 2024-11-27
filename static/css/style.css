@@ -79,6 +79,20 @@ body {
     filter: invert(87%) sepia(11%) saturate(748%) hue-rotate(340deg) brightness(110%) contrast(100%);
 }
 
+.icon-item-world {
+  align-items: center;
+  display: flex;
+  border: 1px solid red; /* Debug */
+}
+
+.icon-item-world img {
+  width: 30px;
+  height: 30px;
+  margin-right: 1em;
+  border: 1px solid red; /* Debug */
+  /* filter: invert(87%) sepia(11%) saturate(748%) hue-rotate(340deg) brightness(110%) contrast(100%); */
+}
+
 @media (max-width: 768px) {
   .icon-item img {
     margin-bottom: 1em;
@@ -110,6 +124,8 @@ body {
 .header-container p {
     font-size: 1.2rem;
 }
+
+
 
 @media (max-width: 768px) {
   .header-container {

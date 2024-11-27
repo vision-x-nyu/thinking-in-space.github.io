@@ -58,24 +58,21 @@
 
                         <div class="icon-container">
                             <div class="icon-item">
-                                <img src="./static/img/icons/visual.svg" alt="Visual Representation Icon">
-                                <div><strong>Visual Representations</strong>: We explore various vision encoders and their combinations.</div>
+                                
+                                <img src="./static/img/icons/bench.svg" alt="Visual Representation Icon">
+                                <div><strong>VSI-Bench</strong>: We introduce a high-quality benchmark for the evaluation of 3D, video-based, visual-spatial intelligence of MLLMs.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="./static/img/icons/connector.svg" alt="Connector Design Icon">
-                                <div><strong>Connector Design</strong>: We design a new dynamic and <i>spatially-aware</i> connector that integrates visual features from several models with LLMs while reducing the number of tokens.</div>
+                                <img src="./static/img/icons/evaluation.svg" alt="Connector Design Icon">
+                                <div><strong>Evaluation Protocol</strong>: We attribute VSI-Bench performance to spatial cognitive capabilities, shedding light on areas of improvement.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="./static/img/icons/data.svg" alt="Instruction Tuning Data Icon">
-                                <div><strong>Instruction Tuning Data</strong>: We curate high-quality visual instruction-tuning data from public sources, emphasizing the importance of distribution balancing.</div>
+                                <img src="./static/img/icons/world.svg" alt="Instruction Tuning Data Icon">
+                                <div><strong>World Models</strong>: We analyze the implicit linguistic and visual world models.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="./static/img/icons/recipe.svg" alt="Instruction Tuning Recipes Icon">
-                                <div><strong>Instruction Tuning Recipes</strong>: We discuss instruction tuning strategies and practices.</div>
-                            </div>
-                            <div class="icon-item">
-                                <img src="./static/img/icons/eval.svg" alt="Benchmarking Icon">
-                                <div><strong>Benchmarking</strong>: We examine existing MLLM benchmarks and introduce a new vision-centric benchmark, "CV-Bench".</div>
+                                <img src="./static/img/icons/improvement.svg" alt="Instruction Tuning Recipes Icon">
+                                <div><strong>Improvements</strong>: We conduct preliminary exploration of methods for improvement.</div>
                             </div>
                         </div>
                     
@@ -196,6 +193,30 @@
         </p>
         
 
+        <div class="icon-row">
+            <a href="#vsi-benchmark" class="icon-link">
+                <img src="./static/img/icons/bench.svg" alt="Visual Representation Logo" class="icon">
+                VSI-Bench<br>Construction
+            </a>
+            <a href="#vsi-evaluation" class="icon-link">
+                <img src="./static/img/icons/evaluation.svg" alt="Connector Logo" class="icon">
+                Evaluation<br>Protocol
+            </a>
+            <a href="#vsi-world" class="icon-link">
+                <img src="./static/img/icons/world.svg" alt="Data Logo" class="icon">
+                World<br>Models
+            </a>
+            <a href="#vsi-improvements" class="icon-link">
+                <img src="./static/img/icons/improvement.svg" alt="Recipe Logo" class="icon">
+                Improvements<br>Exploration
+            </a>
+
+        </div>
+
+        <p class="click-hint" style="width: 85%;">
+            <img src="static/img/icons/click.gif" style="width: 1.5rem">
+            <strong>Click to jump to each section.</strong>
+        </p>
         
 
         <hr>
@@ -207,7 +228,7 @@
 
                     <p class="text">
                         <p class="text">
-                        <strong>Benchmark Overview:</strong> We develope VSI-Bench, a benchmark to evaluate the visual-spatial intelligence of Multimodal LLMs (MLLMs) using over 5,000 question-answer pairs derived from 288 egocentric videos sourced from the validation sets of public indoor 3D scene reconstruction datasets ScanNet, ScanNet++, and ARKitScenes. VSI-Bench includes eight tasks under three task types: configurational, measurement estimation, and spatiotemporal. See Fig. 2 for an overview of the tasks in VSI-Bench and Fig. 3 for dataset statistics. Iteratively refined for quality, VSI-Bench provides a foundation to study the connection between MLLMs and 3D reconstruction.</p>
+                        <strong>Benchmark Overview:</strong> We develop VSI-Bench, a benchmark to evaluate the visual-spatial intelligence of Multimodal LLMs (MLLMs) using over 5,000 question-answer pairs derived from 288 egocentric videos sourced from the validation sets of public indoor 3D scene reconstruction datasets ScanNet, ScanNet++, and ARKitScenes. VSI-Bench includes eight tasks under three task types: configurational, measurement estimation, and spatiotemporal. See Fig. 2 for an overview of the tasks in VSI-Bench and Fig. 3 for dataset statistics. Iteratively refined for quality, VSI-Bench provides a foundation to study the connection between MLLMs and 3D reconstruction.</p>
                     <d-figure id="fig-task-demo" >
                         <figure>
                             <img data-zoomable="" draggable="false" src="static/img/task-demo.png" alt="benchmark category">
@@ -266,7 +287,7 @@
                     </d-figure>
 
             </div>
-        <div id="sec:vsi-eval" class="vsi-evaluation">
+        <div id="vsi-evaluation" class="vsi-evaluation">
             <h1 class="text">Evaluation on VSI-Bench</h1>
 
                     <!-- <p class="text">
@@ -355,13 +376,19 @@
                 </d-figure>
 
                 <div class="highlight-box">
-                    <em>Findings 1: Spatial reasoning is the primary bottleneck for MLLM performance on VSI-Bench.</em>
+                    <em>Finding 1: Spatial reasoning is the primary bottleneck for MLLM performance on VSI-Bench.</em>
                 </div>
+
+
+
+                <div id='vsi-improvements' class="vsi-improvements">
+                
                 
 
                 <p class="text">
+        
                     <strong>Limits of CoT Methods in Visuospatial Tasks</strong>:
-                    We investigated three prompting techniques—Zero-Shot Chain-of-Thought (CoT), Self-Consistency with CoT, and Tree-of-Thoughts (ToT)—to improve MLLM reasoning on VSI-Bench. Surprisingly, all three methods led to performance degradation, with Zero-Shot CoT and ToT reducing average performance by 4%, and Self-Consistency falling 1.1% below the baseline. While tasks like appearance order and absolute distance estimation saw slight improvements due to reduced linguistic errors, tasks like room size and object size suffered significant declines (8%-21%), indicating that prompting for deeper reasoning can be unreliable and even detrimental for visual-spatial tasks.
+                    We investigate three prompting techniques—Zero-Shot Chain-of-Thought (CoT), Self-Consistency with CoT, and Tree-of-Thoughts (ToT)—to improve MLLM reasoning on VSI-Bench. Surprisingly, all three methods led to performance degradation, with Zero-Shot CoT and ToT reducing average performance by 4%, and Self-Consistency falling 1.1% below the baseline. While tasks like appearance order and absolute distance estimation saw slight improvements due to reduced linguistic errors, tasks like room size and object size suffered significant declines (8%-21%), indicating that prompting for deeper reasoning can be unreliable and even detrimental for visual-spatial tasks.
                 </p>
                 <d-figure id="fig-zero-shot" >
                     <figure>
@@ -373,10 +400,14 @@
                     </figure>
                 </d-figure>
                 <div class="highlight-box">
-                    <em>Findings 2: Linguistic prompting techniques, although effective in language reasoning tasks, are primarily harmful for spatial reasoning.</em>
+                    <em>Finding 2: Linguistic prompting techniques, although effective in language reasoning tasks, are primarily harmful for spatial reasoning.</em>
                 </div>
 
-                
+            </div>
+
+            <div id='vsi-world' class="vsi-world">
+
+
                 <h1 class="text"> How MLLMs Think in Space Visually</h1>
                 <p class="text">
                     Since humans subconsciously build mental representations of space when reasoning spatially, we explore how MLLMs remember spaces. </p>
@@ -395,7 +426,7 @@
                         </figure>
                     </d-figure>
                     <div class="highlight-box">
-                        <em>Findings 3: When remembering spaces, a MLLM forms a series of local world models in its mind from a given video, rather than a unified global model.</em>
+                        <em>Finding 3: When remembering spaces, a MLLM forms a series of local world models in its mind from a given video, rather than a unified global model.</em>
                     </div>
 
                     <p class="text">
@@ -469,6 +500,7 @@
 
         </div>
         </div>
+    </div>
 
        
 

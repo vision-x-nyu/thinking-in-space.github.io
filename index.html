@@ -170,14 +170,355 @@
                 
             </div>
         </div>
+    <div class = "new-class-author">
 
         <p style="text-align: center;">
             <span class="author-note"><sup>*</sup>Equal contribution</span>&emsp;
             <!-- <span class="author-note"><sup>†</sup>Project lead</span>&emsp; -->
             <!-- <span class="author-note"><sup>†</sup>Corresponding author</span> -->
         </p>
+    </div>
+        
+
+
+        <!-- <div id="slider-video-tourist" class="slider-video-container">
+            <div class="my-slides">
+                <p class="video-question">Question 1: What do you think is the main idea of this video?</p>
+                <video class="video-slide" controls preload="metadata" playsinline>
+                    <source src="static/video/intentional_explorer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <textarea class="answer-box" placeholder="Type your answer here..."></textarea>
+            </div>
+        
+            <div class="my-slides">
+                <p class="video-question">Question 2: What message does this collaboration convey?</p>
+                <video class="video-slide" controls preload="metadata" playsinline>
+                    <source src="static/video/rx-399_hk.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <textarea class="answer-box" placeholder="Type your answer here..."></textarea>
+            </div>
+        
+            <div class="my-slides">
+                <p class="video-question">Question 3: How does this video portray cultural exchange?</p>
+                <video class="video-slide" controls preload="metadata" playsinline>
+                    <source src="static/video/intentional_explorer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <textarea class="answer-box" placeholder="Type your answer here..."></textarea>
+            </div>
+        
+            <div class="my-slides">
+                <p class="video-question">Question 4: What elements make this video stand out?</p>
+                <video class="video-slide" controls preload="metadata" playsinline>
+                    <source src="static/video/intentional_explorer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <textarea class="answer-box" placeholder="Type your answer here..."></textarea>
+            </div>
+        
+            <a class="prev" onclick="plusSlides('slider-video-tourist', -1)">❮</a>
+            <a class="next" onclick="plusSlides('slider-video-tourist', 1)">❯</a>
+            
+        </div>
+         -->
+
+
+         <div class="l-body">
+            <!-- Video 1 -->
+            <div id="Touristvideo1Container" class="video-container">
+                <video class="video-music" controls preload="metadata" playsinline>
+                    <source src="static/videos/41069025.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="video-qa">
+                    <div class="qa-item">
+                        <p><strong>Question:</strong> How many table(s) are in this room?</p>
+                    </div>
+            
+                    <div id="answer-1" style="display:none;">
+                        <p>
+                            <strong style="color: green;">Ground Truth:</strong> 4. 
+                            <strong style="color: red;">Gemini:</strong> 196cm.
+                        </p>                        
+                    </div>
+            
+                    <!-- Click-to-see hint -->
+                    <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-1', this)">
+                        <img src="static/img/icons/click.gif" style="width:1.5rem">
+                        <strong>Click to see answer</strong>
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Video 2 -->
+            <div id="Touristvideo2Container" class="video-container" style="display:none;">
+                <video class="video-music" controls preload="metadata" playsinline>
+                    <source src="static/videos/41125700.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="video-qa">
+                    <div class="qa-item">
+                        <p><strong>Question:</strong> How many sofa(s) are in this room?</p>
+                        
+                        <!-- Hidden Ground Truth Answer for Q1 -->
+                        <div id="answer-2" style="display:none;">
+                            <p>
+                                <strong style="color: green;">Ground Truth:</strong> 2.
+                                <strong style="color: red;">Gemini:</strong> (Optional Gemini comparison, if needed)
+                            </p>
+                        </div>
+            
+                        <!-- Click-to-see hint for Q1 -->
+                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-2', this)">
+                            <img src="static/img/icons/click.gif" style="width:1.5rem">
+                            <strong>Click to see answer</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div id="Touristvideo3Container" class="video-container" style="display:none;">
+                <video class="video-music" controls preload="metadata" playsinline>
+                    <source src="static/videos/42445981.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="video-qa">
+                    <div class="qa-item">
+                        <p><strong>Question:</strong> How many chair(s) are in this room?</p>
+                        
+                        <!-- Hidden Ground Truth Answer for Q1 -->
+                        <div id="answer-3" style="display:none;">
+                            <p>
+                                <strong style="color: green;">Ground Truth:</strong> 5.
+                                <strong style="color: red;">Gemini:</strong> (Optional Gemini comparison, if needed)
+                            </p>
+                        </div>
+            
+                        <!-- Click-to-see hint for Q1 -->
+                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-3', this)">
+                            <img src="static/img/icons/click.gif" style="width:1.5rem">
+                            <strong>Click to see answer</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Video 4 -->
+            <div id="Touristvideo4Container" class="video-container" style="display:none;">
+                <video class="video-music" controls preload="metadata" playsinline>
+                    <source src="static/videos/42446049.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="video-qa">
+                    <div class="qa-item">
+                        <p><strong>Question:</strong> If I am standing by the refrigerator and facing the washer, is the stove to my left, right, or back?
+                            An object is to my back if I would have to turn at least 135 degrees in order to face it.</p>
+                            <p><strong>Options:</strong></p>
+                            <ul>
+                                <li>A. Back</li>
+                                <li>B. Right</li>
+                                <li>C. Left</li>
+                            </ul>                        
+                        <!-- Hidden Ground Truth Answer for Q1 -->
+                        <div id="answer-4" style="display:none;">
+                            <p>
+                                <strong style="color: green;">Ground Truth:</strong> B. Right.
+                                <strong style="color: red;">Gemini:</strong> (Optional Gemini comparison, if needed)
+                            </p>
+                        </div>
+            
+                        <!-- Click-to-see hint for Q1 -->
+                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-4', this)">
+                            <img src="static/img/icons/click.gif" style="width:1.5rem">
+                            <strong>Click to see answer</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 5 -->
+            <div id="Touristvideo5Container" class="video-container" style="display:none;">
+                <video class="video-music" controls preload="metadata" playsinline>
+                    <source src="static/videos/41069025.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="video-qa">
+                    <div class="qa-item">
+                        <p><strong>Question:</strong> If I am standing by the stove and facing the sofa, is the tv to the left or the right of the sofa?</p>
+                        <p><strong>Options:</strong></p>
+                        <ul>
+                            <li>A. Left</li>
+                            <li>B. Right</li>
+                        </ul>                        
+                        <!-- Hidden Ground Truth Answer for Q1 -->
+                        <div id="answer-5" style="display:none;">
+                            <p>
+                                <strong style="color: green;">Ground Truth:</strong> A. Left.
+                                <strong style="color: red;">Gemini:</strong> (Optional Gemini comparison, if needed)
+                            </p>
+                        </div>
+            
+                        <!-- Click-to-see hint for Q1 -->
+                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-5', this)">
+                            <img src="static/img/icons/click.gif" style="width:1.5rem">
+                            <strong>Click to see answer</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 6 -->
+            <div id="Touristvideo6Container" class="video-container" style="display:none;">
+                <video class="video-music" controls preload="metadata" playsinline>
+                    <source src="static/videos/47334096.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="video-qa">
+                    <div class="qa-item">
+                        <p><strong>Question:</strong> Measuring from the closest point of each object, which of these objects (table, stool, sofa, stove) is the closest to the tv?</p>
+                        <p><strong>Options:</strong></p>
+                        <ul>
+                            <li>A. Table</li>
+                            <li>B. Stool</li>
+                            <li>C. Sofa</li>
+                            <li>D. Stove</li>
+                        </ul>                        
+                        <!-- Hidden Ground Truth Answer for Q1 -->
+                        <div id="answer-6" style="display:none;">
+                            <p>
+                                <strong style="color: green;">Ground Truth:</strong> A. Table.
+                                <strong style="color: red;">Gemini:</strong> (Optional Gemini comparison, if needed)
+                            </p>
+                        </div>
+            
+                        <!-- Click-to-see hint for Q1 -->
+                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-6', this)">
+                            <img src="static/img/icons/click.gif" style="width:1.5rem">
+                            <strong>Click to see answer</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Video 7 -->
+            <div id="Touristvideo7Container" class="video-container" style="display:none;">
+                <video class="video-music" controls preload="metadata" playsinline>
+                    <source src="static/videos/47332899.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="video-qa">
+                    <div class="qa-item">
+                        <p><strong>Question:</strong> Measuring from the closest point of each object, what is the distance between the stool and the bed (in meters)?</p>
+                        <p><strong>Options:</strong></p>
+                        <ul>
+                            <li>A. 0.7</li>
+                            <li>B. 0.3</li>
+                            <li>C. 1.2</li>
+                            <li>D. 0.9</li>
+                        </ul>
+                                                
+                        <!-- Hidden Ground Truth Answer for Q1 -->
+                        <div id="answer-7" style="display:none;">
+                            <p>
+                                <strong style="color: green;">Ground Truth:</strong> A. 0.7
+                                <strong style="color: red;">Gemini:</strong> (Optional Gemini comparison, if needed)
+                            </p>
+                        </div>
+            
+                        <!-- Click-to-see hint for Q1 -->
+                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-7', this)">
+                            <img src="static/img/icons/click.gif" style="width:1.5rem">
+                            <strong>Click to see answer</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>     
+            
+            
+            <!-- Video 8 -->
+            <div id="Touristvideo8Container" class="video-container" style="display:none;">
+                <video class="video-music" controls preload="metadata" playsinline>
+                    <source src="static/videos/09c1414f1b.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="video-qa">
+                    <div class="qa-item">
+                        <p><strong>Question:</strong> What will be the first-time appearance order of the following categories in the video: blanket, trash can, microwave, plant?</p>
+                        <p><strong>Options:</strong></p>
+                        <ul>
+                            <li>A. microwave, blanket, plant, trash can</li>
+                            <li>B. plant, blanket, microwave, trash can</li>
+                            <li>C. plant, blanket, trash can, microwave</li>
+                            <li>D. blanket, trash can, microwave, plant</li>
+                        </ul>
+
+                        
+                        <!-- Hidden Ground Truth Answer for Q1 -->
+                        <div id="answer-8" style="display:none;">
+                            <p>
+                                <strong style="color: green;">Ground Truth:</strong> C. plant, blanket, trash can, microwave.
+                                <strong style="color: red;">Gemini:</strong> (Optional Gemini comparison, if needed)
+                            </p>
+                        </div>
+            
+                        <!-- Click-to-see hint for Q1 -->
+                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-8', this)">
+                            <img src="static/img/icons/click.gif" style="width:1.5rem">
+                            <strong>Click to see answer</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>              
+            <script>
+            function toggleAnswer(answerId, element) {
+                const answerElement = document.getElementById(answerId);
+                const currentlyHidden = answerElement.style.display === "none";
+            
+                if (currentlyHidden) {
+                    // Show the answer
+                    answerElement.style.display = "block";
+                    element.innerHTML = '<img src="static/img/icons/click.gif" style="width:1.5rem"> <strong>Hide answer</strong>';
+                } else {
+                    // Hide the answer
+                    answerElement.style.display = "none";
+                    element.innerHTML = '<img src="static/img/icons/click.gif" style="width:1.5rem"> <strong>Click to see answer</strong>';
+                }
+            }
+            </script>
+        
+            <!-- Preview Images in a Flex Container - placed below the Q&A sections -->
+            <div class="preview-container">
+                <img id="Touristvideo1Preview" class="preview" src="static/img/video-preview/41069025-thumbnail.jpg" alt="video-thumbnail0" onclick="switchVideo('Tourist', 'video1Container', 'video1Preview')">
+                <img id="Touristvideo2Preview" class="preview" src="static/img/video-preview/41125700-thumbnail.jpg" alt="video-thumbnail3" onclick="switchVideo('Tourist','video2Container', 'video2Preview')">
+                <img id="Touristvideo3Preview" class="preview" src="static/img/video-preview/42445981-thumbnail.jpg" alt="video-thumbnail18" onclick="switchVideo('Tourist', 'video3Container', 'video3Preview')">
+                <img id="Touristvideo4Preview" class="preview" src="static/img/video-preview/42446049-thumbnail.jpg" alt="video-thumbnail1129" onclick="switchVideo('Tourist','video4Container', 'video4Preview')">
+                <img id="Touristvideo5Preview" class="preview" src="static/img/video-preview/41069025-thumbnail.jpg" alt="video-thumbnail1236" onclick="switchVideo('Tourist', 'video5Container', 'video5Preview')">
+                <img id="Touristvideo6Preview" class="preview" src="static/img/video-preview/47334096-thumbnail.jpg" alt="video-thumbnail1462" onclick="switchVideo('Tourist','video6Container', 'video6Preview')">
+                <img id="Touristvideo7Preview" class="preview" src="static/img/video-preview/47332899-thumbnail.jpg" alt="video-thumbnail879" onclick="switchVideo('Tourist', 'video7Container', 'video7Preview')">
+                <img id="Touristvideo8Preview" class="preview" src="static/img/video-preview/09c1414f1b-thumbnail.jpg" alt="video-thumbnail2871" onclick="switchVideo('Tourist','video8Container', 'video8Preview')">
+            </div>
+        </div>
+        
+        
+
 
         
+        
+        
+
         <d-figure id="fig-teaser">
             <figure>
                 <img data-zoomable="" draggable="false" src="static/img/teaser.png" alt="Visual-Spatial Intelligence Teaser">
@@ -186,14 +527,15 @@
                 </figcaption>
             </figure>
         </d-figure>
-        
-        <p class="text abstract">
-            We present a novel video-based visual-spatial intelligence benchmark (VSI-Bench) of over 5,000 question-answer pairs, and find that MLLMs exhibit competitive - though subhuman - visual-spatial intelligence. 
-            Our evaluation reveals that MLLMs exhibit competitive visual-spatial intelligence, if still well short of human-level. 
-            To understand the MLLMs' behavior, we probe models to express how they think in space both linguistically and visually and find that while spatial reasoning capabilities remain the primary bottleneck for MLLMs to reach higher benchmark performance, local world models and spatial awareness do emerge within these models.
-            <br>
-        </p>
-        
+        <div class="text-container">
+            <p class="text abstract">
+                We present a novel video-based visual-spatial intelligence benchmark (VSI-Bench) of over 5,000 question-answer pairs, and find that MLLMs exhibit competitive - though subhuman - visual-spatial intelligence. 
+                Our evaluation reveals that MLLMs exhibit competitive visual-spatial intelligence, if still well short of human-level. 
+                To understand the MLLMs' behavior, we probe models to express how they think in space both linguistically and visually and find that while spatial reasoning capabilities remain the primary bottleneck for MLLMs to reach higher benchmark performance, local world models and spatial awareness do emerge within these models.
+                <br>
+            </p>
+        </div>
+
 
         <div class="icon-row">
             <a href="#vsi-benchmark" class="icon-link">
@@ -536,5 +878,22 @@
         <!-- bibliography will be inlined during Distill pipeline's pre-rendering -->
         <d-bibliography src="bibliography.bib"></d-bibliography>
         <script src="./static/js/nav-bar.js"></script>
+
+        <script type="text/javascript">
+            changeContent('Place1');
+            switchVideo('RX399', 'video1Container', 'video1Preview');
+            switchVideo('UrbanPlanner', 'video1Container', 'video1Preview');
+            switchVideo('Tourist', 'video1Container', 'video1Preview');
+
+            let slideIndex = 1;
+            showSlides("slider-video-tourist", slideIndex);
+            showSlides("slider-img-tourist", slideIndex, 'tourist-aside');
+            showSlides("slider-img-photographer", slideIndex);
+            showSlides("slider-img-street-place", slideIndex);
+            showSlides("slider-img-explorer", slideIndex, 'explorer-aside');
+            showSlides("slider-img-diego-revise-verbal", slideIndex);
+            showSlides("slider-img-diego-revise-state", slideIndex);
+
+        </script>
     </body>
 </html>

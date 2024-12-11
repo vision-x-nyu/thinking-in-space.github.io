@@ -1,46 +1,37 @@
 function switchVideo(prefix, videoContainerId, preview_id) {
-    // Reference to all video containers
-    var video1Container = document.getElementById(prefix + 'video1Container');
-    var video2Container = document.getElementById(prefix + 'video2Container');
+    var totalVideos = 8;
 
-    // Hide all video containers first
-    video1Container.style.display = 'none';
-    video2Container.style.display = 'none';
-
-    // Stop and reset videos
-    var videos = video1Container.getElementsByTagName('video');
-    for (var i = 0; i < videos.length; i++) {
-        videos[i].pause();
-    }
-
-    videos = video2Container.getElementsByTagName('video');
-    for (var i = 0; i < videos.length; i++) {
-        videos[i].pause();
+    // Hide all video containers and pause their videos
+    for (var i = 1; i <= totalVideos; i++) {
+        var container = document.getElementById(prefix + 'video' + i + 'Container');
+        if (container) {
+            container.style.display = 'none';
+            var vids = container.getElementsByTagName('video');
+            for (var j = 0; j < vids.length; j++) {
+                vids[j].pause();
+            }
+        }
     }
 
     // Show the selected video container
     var selectedVideoContainer = document.getElementById(prefix + videoContainerId);
-    selectedVideoContainer.style.display = 'block';
+    if (selectedVideoContainer) {
+        selectedVideoContainer.style.display = 'block';
+    }
 
-    // Update preview images
-    var videoPreview1 = document.getElementById(prefix + 'video1Preview');
-    var videoPreview2 = document.getElementById(prefix + 'video2Preview');
+    // Update preview images: remove active class from all previews
+    for (var i = 1; i <= totalVideos; i++) {
+        var preview = document.getElementById(prefix + 'video' + i + 'Preview');
+        if (preview) {
+            preview.className = preview.className.replace(" preview-video-active", "");
+        }
+    }
 
-    videoPreview1.className = videoPreview1.className.replace(" preview-video-active", "");
-    videoPreview2.className = videoPreview2.className.replace(" preview-video-active", "");
-
-    document.getElementById(prefix + preview_id).className += " preview-video-active";
-}
-
-
-function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+    // Add active class to the selected preview
+    var selectedPreview = document.getElementById(prefix + preview_id);
+    if (selectedPreview) {
+        selectedPreview.className += " preview-video-active";
+    }
 }
 
 function isElementInViewport(el) {
@@ -79,5 +70,3 @@ document.addEventListener("DOMContentLoaded", function() {
         video.volume = 0.25; // 25% volume
     });
 });
-
-

@@ -423,13 +423,24 @@ d-article section{
   height: 100%;
 }
 
+ 
 .preview-container {
   display: flex;
-  justify-content: left;
   align-items: center;
-  margin-top: 10px;
+  justify-content: center; /* Centers items horizontally */
+  flex-wrap: wrap;
+
+
+  margin-top: 470px; /* Increase this value as needed */
   margin-bottom: 20px;
+  clear: both;
 }
+
+.video-qa {
+  display: block;
+  margin-top: 20px; /* Add some spacing if needed */
+}
+
 
 .preview {
   cursor: pointer;
@@ -1459,3 +1470,167 @@ iframe {
     color: #222;
     font-size: 1em;
 }
+
+
+
+.teaser-video video {
+  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; /* Prevent inline spacing issues */
+  max-width: 100%;
+}
+
+.teaser-video {
+  width: 100%; /* Set width to 100% */
+  margin-bottom: 2em;
+}
+
+.video-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0; /* Collapse the container to the aspect ratio */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+div .preview-video-active,
+.preview:hover {
+  opacity: 1.0; /* Fully opaque on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow effect on hover */
+}
+.auto-video {
+  width: 130%;
+  margin-left: -15%;
+}
+
+#diego-plan-video, #diego-plan-video-cap {
+  width: 150%; 
+  margin-left: -20%;
+}
+
+
+.auto-video, .diego-revise-img,
+#diego-plan-video, #diego-plan-video-cap {
+  width: 100%;
+  margin-left: 0%;
+}
+
+.slider-video-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.video-question {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.video-slide {
+  width: 100%;
+  height: auto;
+}
+.answer-box {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+.slider-video-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+ 
+
+.video-question {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.video-slide {
+  width: 100%; /* Ensures the video fills the container */
+  max-height: 400px; /* Set a reasonable height for visibility */
+  object-fit: cover; /* Ensures video content fits nicely */
+}
+
+.answer-box {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+.diego-revise-img {
+  width: 130%;
+  margin-left: -15%;
+}
+
+#prev-diego-revise-1, #prev-diego-revise-2 {
+  top: 75%;
+  left: -20%
+}
+
+#next-diego-revise-1, #next-diego-revise-2 {
+  top: 75%;
+  right: -20%
+}
+
+.text.abstract {
+  margin-bottom: 20px; /* Add space below the text */
+}
+.slider-img-container {
+  margin-top: 20px; /* Add space above the slider */
+}
+.slider-img-container {
+  position: relative;
+  z-index: 1;
+}
+.text.abstract {
+  position: relative;
+  z-index: 2;
+}
+
+.text.abstract, .slider-img-container {
+  width: 100%;
+  max-width: 1200px; /* Example: constrain to a reasonable width */
+  margin: 0 auto; /* Center elements */
+}
+.diego-revise-img {
+  width: 100%;
+  margin-left: 0; /* Ensure no unnecessary offsets */
+}
+.video-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+}
+
+.question {
+  position: relative; /* or static, depending on your layout goals */
+  margin: 10px 0;     /* Adjust spacing as needed */
+  background-color: rgba(154, 160, 166, 0.2);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+
+

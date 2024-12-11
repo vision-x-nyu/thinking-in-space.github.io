@@ -1591,9 +1591,7 @@ div .preview-video-active,
   right: -20%
 }
 
-.text.abstract {
-  margin-bottom: 20px; /* Add space below the text */
-}
+
 .slider-img-container {
   margin-top: 20px; /* Add space above the slider */
 }
@@ -1601,20 +1599,8 @@ div .preview-video-active,
   position: relative;
   z-index: 1;
 }
-.text.abstract {
-  position: relative;
-  z-index: 2;
-}
 
-.text.abstract, .slider-img-container {
-  width: 100%;
-  max-width: 1200px; /* Example: constrain to a reasonable width */
-  margin: 0 auto; /* Center elements */
-}
-.diego-revise-img {
-  width: 100%;
-  margin-left: 0; /* Ensure no unnecessary offsets */
-}
+
 .video-container {
   position: relative;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */

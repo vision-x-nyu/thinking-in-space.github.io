@@ -136,7 +136,7 @@
                         <sup style="font-size: 0.7em;">▲*</sup>
                     </p>
                     <p style="margin: 0;">
-                        <a href="https://profiles.stanford.edu/fei-fei-li" class="author-link" target="_blank" style="font-size: 0.9em;">Fei-Fei Li</a> 
+                        <a href="https://profiles.stanford.edu/fei-fei-li" class="author-link" target="_blank" style="font-size: 0.9em;">Li Fei-Fei</a> 
                         <sup style="font-size: 0.7em;">★</sup>
                     </p>
                     <p style="margin: 0;">
@@ -224,6 +224,9 @@
         </div>
          -->
 
+         <p style="text-align: center; font-weight: bold; margin-top: 20px;">
+            Compare your spatial intelligence abilities with Gemini!
+        </p>
 
          <div class="l-body">
             <!-- Video 1; ID: 0 -->
@@ -237,25 +240,36 @@
                     <div class="qa-item">
                         <p><strong>Question:</strong> How many table(s) are in this room?</p>
                         <p><strong>Options:</strong></p>
-                        <ul>
-                            <li>A. 7</li>
-                            <li>B. 4</li>
-                            <li>C. 1</li>
-                            <li>D. 6</li>
+                        <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: space-between; text-align: left; max-width: 60%; margin: 0 auto;">
+                            <li><input type="checkbox"> A. 7</li>
+                            <li><input type="checkbox"> B. 4</li>
+                            <li><input type="checkbox"> C. 1</li>
+                            <li><input type="checkbox"> D. 6</li>
                         </ul>  
-                    </div>
+                                           
+                    
             
-                    <div id="answer-1" style="display:none;">
-                        <p>
-                            <strong style="color: green;">Ground Truth:</strong> B. 4. 
-                            <strong style="color: red;">Gemini:</strong> 2.
-                        </p>                        
+                    <div id="answer-1" style="display:none; text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+                            <!-- GT aligned with A and C -->
+                            <p>
+                                <strong style="color: green;">Ground Truth:</strong> B. 4
+                            </p>
+                            <!-- Gemini aligned with B and D -->
+                            <p>
+                                <strong style="color: red;">Gemini:</strong> 2
+                            </p>
+                        </div>
                     </div>
+                    
             
-                    <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-1', this)">
-                        <img src="static/img/icons/click.gif" style="width:1.5rem">
-                        <strong>Click to see answer</strong>
-                    </p>
+                    <div style="margin-top: 20px; text-align: center;"> <!-- Increased margin-top -->
+                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-1', this)">
+                            <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                            <strong>Click to view Ground Truth and the answer from Gemini!</strong>
+                        </p>
+                    </div>
+                </div>
                 </div>
             </div>
         
@@ -268,29 +282,35 @@
                 
                 <div class="video-qa">
                     <div class="qa-item">
-                        <p><strong>Question:</strong> How many sofa(s) are in this room?</p>
-                        <p><strong>Options:</strong></p>
-                        <ul>
-                            <li>A. 4</li>
-                            <li>B. 5</li>
-                            <li>C. 2</li>
-                            <li>D. 1</li>
-                        </ul>  
+                                <p><strong>Question:</strong> How many sofa(s) are in this room?</p>
+                                <p><strong>Options:</strong></p>
+                                <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: space-between; text-align: left; max-width: 60%; margin: 0 auto;">
+                                    <li><input type="checkbox"> A. 4</li>
+                                    <li><input type="checkbox"> B. 5</li>
+                                    <li><input type="checkbox"> C. 2</li>
+                                    <li><input type="checkbox"> D. 1</li>
+                                </ul>  
                         
-                        <div id="answer-2" style="display:none;">
-                            <p>
-                                <strong style="color: green;">Ground Truth:</strong> C. 2.
-                                <strong style="color: red;">Gemini:</strong> D. 1.
-                            </p>
+                                <div id="answer-2" style="display:none; text-align: center; margin-top: 20px;">
+                                    <div style="display: flex; justify-content: center; gap: 20px;">
+                                        <!-- GT aligned with A and C -->
+                                        <p>
+                                            <strong style="color: green;">Ground Truth:</strong> C. 2
+                                        </p>
+                                        <!-- Gemini aligned with B and D -->
+                                        <p>
+                                            <strong style="color: red;">Gemini:</strong> D. 1
+                                        </p>
+                                    </div>
+                                </div>
+                        
+                                <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-2', this)">
+                                    <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                                    <strong>Click to view Ground Truth and the answer from Gemini!</strong>
+                                </p>
+                            </div>
                         </div>
-            
-                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-2', this)">
-                            <img src="static/img/icons/click.gif" style="width:1.5rem">
-                            <strong>Click to see answer</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                    </div>    
 
             <!-- Video 3; ID: 18 -->
             <div id="Touristvideo3Container" class="video-container" style="display:none;">
@@ -303,26 +323,30 @@
                     <div class="qa-item">
                         <p><strong>Question:</strong> How many chair(s) are in this room?</p>
                         <p><strong>Options:</strong></p>
-                        <ul>
-                            <li>A. 5</li>
-                            <li>B. 8</li>
-                            <li>C. 4</li>
-                            <li>D. 3</li>
-                        </ul> 
-                        
-                        <div id="answer-3" style="display:none;">
+                        <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: space-between; text-align: left; max-width: 60%; margin: 0 auto;">
+                            <li><input type="checkbox"> A. 5</li>
+                            <li><input type="checkbox"> B. 8</li>
+                            <li><input type="checkbox"> C. 4</li>
+                            <li><input type="checkbox"> D. 3</li>
+                        </ul>  
+                
+                        <div id="answer-3" style="display:none; text-align: center; margin-top: 20px;">
+                            <div style="display: flex; justify-content: center; gap: 20px;">                            <p>
+                                <strong style="color: green;">Ground Truth:</strong> A. 5
+                            </p>
                             <p>
-                                <strong style="color: green;">Ground Truth:</strong> A. 5.
-                                <strong style="color: red;">Gemini:</strong> D. 3.
+                                <strong style="color: red;">Gemini:</strong> D. 3
                             </p>
                         </div>
-            
-                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-3', this)">
-                            <img src="static/img/icons/click.gif" style="width:1.5rem">
-                            <strong>Click to see answer</strong>
+                    </div>
+                
+                        <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-3', this)">
+                            <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                            <strong>Click to view Ground Truth and the answer from Gemini!</strong>
                         </p>
                     </div>
-                </div>
+                
+            </div>
             </div>
 
 
@@ -335,27 +359,34 @@
                 
                 <div class="video-qa">
                     <div class="qa-item">
-                        <p><strong>Question:</strong> If I am standing by the refrigerator and facing the washer, is the stove to my left, right, or back?
-                            An object is to my back if I would have to turn at least 135 degrees in order to face it.</p>
-                            <p><strong>Options:</strong></p>
-                            <ul>
-                                <li>A. Back</li>
-                                <li>B. Right</li>
-                                <li>C. Left</li>
-                            </ul>                        
-                        <div id="answer-4" style="display:none;">
+                        <p><strong>Question:</strong> If I am standing by the refrigerator and facing the washer, is the stove to my left, right, or back? 
+                            An object is to my back if I would have to turn at least 135 degrees in order to face it.
+                        </p>
+                        <p><strong>Options:</strong></p>
+                        <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: space-evenly; text-align: left; max-width: 60%; margin: 0 auto;">
+                            <li><input type="checkbox"> A. Back</li>
+                            <li><input type="checkbox"> B. Right</li>
+                            <li><input type="checkbox"> C. Left</li>
+                        </ul>  
+                
+                        <div id="answer-4" style="display:none; text-align: center; margin-top: 20px;">
+                            <div style="display: flex; justify-content: center; gap: 20px;">    
                             <p>
-                                <strong style="color: green;">Ground Truth:</strong> B. Right.
-                                <strong style="color: red;">Gemini:</strong> C. Left.
+                                <strong style="color: green;">Ground Truth:</strong> B. Right
+                            </p>
+                            <p>
+                                <strong style="color: red;">Gemini:</strong> C. Left
                             </p>
                         </div>
-            
-                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-4', this)">
-                            <img src="static/img/icons/click.gif" style="width:1.5rem">
-                            <strong>Click to see answer</strong>
+                    </div>
+                
+                        <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-4', this)">
+                            <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                            <strong>Click to view Ground Truth and the answer from Gemini!</strong>
                         </p>
                     </div>
                 </div>
+                
             </div>
 
             <!-- Video 5; ID: 1236 -->
@@ -365,27 +396,32 @@
                     Your browser does not support the video tag.
                 </video>
                 
-                <div class="video-qa">
-                    <div class="qa-item">
-                        <p><strong>Question:</strong> If I am standing by the stove and facing the sofa, is the tv to the left or the right of the sofa?</p>
-                        <p><strong>Options:</strong></p>
-                        <ul>
-                            <li>A. Left</li>
-                            <li>B. Right</li>
-                        </ul>                        
-                        <div id="answer-5" style="display:none;">
-                            <p>
-                                <strong style="color: green;">Ground Truth:</strong> A. Left.
-                                <strong style="color: red;">Gemini:</strong> B. Right.
-                            </p>
+
+                        <div class="video-qa">
+                            <div class="qa-item">
+                                <p><strong>Question:</strong> If I am standing by the stove and facing the sofa, is the TV to the left or the right of the sofa?</p>
+                                <p><strong>Options:</strong></p>
+                                <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: center; text-align: left; max-width: 60%; margin: 0 auto;">
+                                    <li style="margin-right: 30px;"><input type="checkbox"> A. Left</li>
+                                    <li><input type="checkbox"> B. Right</li>
+                                </ul>  
+                        
+                                <div id="answer-5" style="display:none; text-align: center; margin-top: 20px;">
+                                    <div style="display: flex; justify-content: center; gap: 20px;">    
+                                    <p>
+                                        <strong style="color: green;">Ground Truth:</strong> A. Left
+                                    </p>
+                                    <p>
+                                        <strong style="color: red;">Gemini:</strong> B. Right
+                                    </p>
+                                </div>
+                            </div>
+                                <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-5', this)">
+                                    <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                                    <strong>Click to view Ground Truth and the answer from Gemini!</strong>
+                                </p>
+                            </div>
                         </div>
-            
-                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-5', this)">
-                            <img src="static/img/icons/click.gif" style="width:1.5rem">
-                            <strong>Click to see answer</strong>
-                        </p>
-                    </div>
-                </div>
             </div>
 
             <!-- Video 6; ID: 1462 -->
@@ -397,27 +433,32 @@
                 
                 <div class="video-qa">
                     <div class="qa-item">
-                        <p><strong>Question:</strong> Measuring from the closest point of each object, which of these objects (table, stool, sofa, stove) is the closest to the tv?</p>
+                        <p><strong>Question:</strong> Measuring from the closest point of each object, which of these objects (table, stool, sofa, stove) is the closest to the TV?</p>
                         <p><strong>Options:</strong></p>
-                        <ul>
-                            <li>A. Table</li>
-                            <li>B. Stool</li>
-                            <li>C. Sofa</li>
-                            <li>D. Stove</li>
-                        </ul>                        
-                        <div id="answer-6" style="display:none;">
+                        <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: space-between; text-align: left; max-width: 60%; margin: 0 auto;">
+                            <li><input type="checkbox"> A. Table</li>
+                            <li><input type="checkbox"> B. Stool</li>
+                            <li><input type="checkbox"> C. Sofa</li>
+                            <li><input type="checkbox"> D. Stove</li>
+                        </ul>  
+                
+                        <div id="answer-6" style="display:none; text-align: center; margin-top: 20px;">
+                            <div style="display: flex; justify-content: center; gap: 20px;">
                             <p>
-                                <strong style="color: green;">Ground Truth:</strong> A. Table.
-                                <strong style="color: red;">Gemini:</strong> C. Sofa.
+                                <strong style="color: green;">Ground Truth:</strong> A. Table
+                            </p>
+                            <p>
+                                <strong style="color: red;">Gemini:</strong> C. Sofa
                             </p>
                         </div>
-            
-                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-6', this)">
-                            <img src="static/img/icons/click.gif" style="width:1.5rem">
-                            <strong>Click to see answer</strong>
+                    </div>
+                        <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-6', this)">
+                            <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                            <strong>Click to view Ground Truth and the answer from Gemini!</strong>
                         </p>
                     </div>
                 </div>
+                
             </div>
 
 
@@ -432,26 +473,30 @@
                     <div class="qa-item">
                         <p><strong>Question:</strong> Measuring from the closest point of each object, what is the distance between the stool and the bed (in meters)?</p>
                         <p><strong>Options:</strong></p>
-                        <ul>
-                            <li>A. 0.7</li>
-                            <li>B. 0.3</li>
-                            <li>C. 1.2</li>
-                            <li>D. 0.9</li>
-                        </ul>
-                                                
-                        <div id="answer-7" style="display:none;">
+                        <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: space-between; text-align: left; max-width: 60%; margin: 0 auto;">
+                            <li><input type="checkbox"> A. 0.7</li>
+                            <li><input type="checkbox"> B. 0.3</li>
+                            <li><input type="checkbox"> C. 1.2</li>
+                            <li><input type="checkbox"> D. 0.9</li>
+                        </ul>  
+                
+                        <div id="answer-7" style="display:none; text-align: center; margin-top: 20px;">
+                            <div style="display: flex; justify-content: center; gap: 20px;">
                             <p>
-                                <strong style="color: green;">Ground Truth:</strong> A. 0.7.
+                                <strong style="color: green;">Ground Truth:</strong> A. 0.7
+                            </p>
+                            <p>
                                 <strong style="color: red;">Gemini:</strong> 2.5
                             </p>
                         </div>
-            
-                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-7', this)">
-                            <img src="static/img/icons/click.gif" style="width:1.5rem">
-                            <strong>Click to see answer</strong>
+                    </div>
+                        <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-7', this)">
+                            <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                            <strong>Click to view Ground Truth and the answer from Gemini!</strong>
                         </p>
                     </div>
                 </div>
+                
             </div>     
             
             
@@ -466,27 +511,43 @@
                     <div class="qa-item">
                         <p><strong>Question:</strong> What will be the first-time appearance order of the following categories in the video: blanket, trash can, microwave, plant?</p>
                         <p><strong>Options:</strong></p>
-                        <ul>
-                            <li>A. microwave, blanket, plant, trash can</li>
-                            <li>B. plant, blanket, microwave, trash can</li>
-                            <li>C. plant, blanket, trash can, microwave</li>
-                            <li>D. blanket, trash can, microwave, plant</li>
-                        </ul>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; max-width: 800px; margin: 0 auto; gap: 20px;">
+            <div style="flex: 1; min-width: 300px; text-align: left;">
+                <input type="checkbox" id="optionA">
+                <label for="optionA">A. microwave, blanket, plant, trash can</label>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: left;">
+                <input type="checkbox" id="optionB">
+                <label for="optionB">B. plant, blanket, microwave, trash can</label>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: left;">
+                <input type="checkbox" id="optionC">
+                <label for="optionC">C. plant, blanket, trash can, microwave</label>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: left;">
+                <input type="checkbox" id="optionD">
+                <label for="optionD">D. blanket, trash can, microwave, plant</label>
+            </div>
 
-                        
-                        <div id="answer-8" style="display:none;">
-                            <p>
-                                <strong style="color: green;">Ground Truth:</strong> C. plant, blanket, trash can, microwave.               
-                                <strong style="color: red;">Gemini:</strong> B. plant, blanket, microwave, trash can.
-                            </p>
-                        </div>
-            
-                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-8', this)">
-                            <img src="static/img/icons/click.gif" style="width:1.5rem">
-                            <strong>Click to see answer</strong>
+        </div>
+                
+        <div id="answer-8" style="display:none; text-align: center; margin-top: 20px;">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+                <p>
+                    <strong style="color: green;">Ground Truth:</strong> C. plant, blanket, trash can, microwave.
+                </p>
+                <p>
+                    <strong style="color: red;">Gemini:</strong> B. plant, blanket, microwave, trash can.
+                </p>
+            </div>
+        </div>
+        
+                        <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-8', this)">
+                            <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                            <strong>Click to view Ground Truth and the answer from Gemini!</strong>
                         </p>
                     </div>
-                </div>
+                </div>                
             </div>              
             <script>
             function toggleAnswer(answerId, element) {
@@ -496,11 +557,11 @@
                 if (currentlyHidden) {
                     // Show the answer
                     answerElement.style.display = "block";
-                    element.innerHTML = '<img src="static/img/icons/click.gif" style="width:1.5rem"> <strong>Hide answer</strong>';
+                    element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Hide answer</strong>';
                 } else {
                     // Hide the answer
                     answerElement.style.display = "none";
-                    element.innerHTML = '<img src="static/img/icons/click.gif" style="width:1.5rem"> <strong>Click to see answer</strong>';
+                    element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and the answer from Gemini!</strong>';
                 }
             }
             </script>
@@ -563,7 +624,7 @@
 
         </div>
 
-        <p class="click-hint" style="width: 85%;">
+        <p class="click-hint2" style="width: 85%;">
             <img src="static/img/icons/click.gif" style="width: 1.5rem">
             <strong>Click to jump to each section.</strong>
         </p>
@@ -867,7 +928,9 @@
         </div>
 
         </d-article>
+        
         <d-appendix>
+
             <h3>BibTeX</h3>
             <p class="bibtex">
                 @article{yang2024think,<br>
@@ -877,29 +940,13 @@
                     &nbsp;&nbsp;journal={arXiv preprint},<br>
                 }
             </p>
-
+            
             <d-footnote-list></d-footnote-list>
             <d-citation-list></d-citation-list>
-        </d-appendix>   
+        </d-appendix>  
         <!-- bibliography will be inlined during Distill pipeline's pre-rendering -->
         <d-bibliography src="bibliography.bib"></d-bibliography>
         <script src="./static/js/nav-bar.js"></script>
 
-        <script type="text/javascript">
-            changeContent('Place1');
-            switchVideo('RX399', 'video1Container', 'video1Preview');
-            switchVideo('UrbanPlanner', 'video1Container', 'video1Preview');
-            switchVideo('Tourist', 'video1Container', 'video1Preview');
-
-            let slideIndex = 1;
-            showSlides("slider-video-tourist", slideIndex);
-            showSlides("slider-img-tourist", slideIndex, 'tourist-aside');
-            showSlides("slider-img-photographer", slideIndex);
-            showSlides("slider-img-street-place", slideIndex);
-            showSlides("slider-img-explorer", slideIndex, 'explorer-aside');
-            showSlides("slider-img-diego-revise-verbal", slideIndex);
-            showSlides("slider-img-diego-revise-state", slideIndex);
-
-        </script>
     </body>
 </html>

@@ -257,13 +257,23 @@ body {
   margin: 0 auto; /* Center the container */
 }
 
-.byline-column {
-  /* Columns will take up width based on their content */
-  display: flex;
-  flex-direction: column;
-  text-align: left; /* All text within columns left-aligned */
-}
+@media (max-width: 768px) {
 
+  .byline-column {
+    margin-bottom: 20px; /* Space between columns */
+    flex: 1;
+  }
+
+  .byline-column h3 {
+    font-size: 16px;
+  }
+
+  .byline-column p {
+    font-size: 14px;
+    line-height: 1em;
+    margin-bottom: 0.45em;
+  }
+}
 .author-link, .affiliation-link {
     font-size: larger;
     color: black; /* Set the color to match the other text */
@@ -431,7 +441,7 @@ d-article section{
   flex-wrap: wrap;
 
 
-  margin-top: 470px; /* Increase this value as needed */
+  margin-top: 380px; /* Increase this value as needed */
   margin-bottom: 20px;
   clear: both;
 }
@@ -522,11 +532,6 @@ blockquote.storytext:before {
   justify-content: space-between;
 }
 
-.text-box {
-  width: 50%; /* Adjust the width as needed */
-  margin-left: 0%; /* Space between image and text box */
-  height: 100%; /* Make the text box the same height as the image */
-}
 
 .button-bar button {
   background-color: #88AB8E; /* Green background */
@@ -1020,9 +1025,27 @@ aside blockquote {
   top: 91.5%;
   right: -35%;
 }
-
-
 .click-hint{
+  display: block;
+  margin: auto;
+  width: 60%;
+  font-size: 15px; /* Adjust the font size */
+  color: #333333; /* Set text color */
+  /* background-color: #f2f2f2; */
+  border: 2px solid #FBBC04; /* Add border */ 
+  padding: 10px; /* Add padding around text */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(254, 239, 195, 0.3); /* Add a subtle shadow */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Add some margin at the bottom */
+}
+
+.click-hint strong {
+  color: #E37400; /* Highlight the 'strong' element with a different color */
+  /* text-decoration: underline; Underline the 'strong' text */
+}
+
+.click-hint2{
   display: block;
   margin: auto;
   width: 60%;
@@ -1037,7 +1060,7 @@ aside blockquote {
   margin-bottom: 20px; /* Add some margin at the bottom */
 }
 
-.click-hint strong {
+.click-hint2 strong {
   color: #007bff; /* Highlight the 'strong' element with a different color */
   /* text-decoration: underline; Underline the 'strong' text */
 }
@@ -1462,161 +1485,45 @@ iframe {
     height: 650px;
     border: none;
 }
+/* Reset d-appendix to match main content width */
+d-appendix {
+  width: 150%;
+  margin-left: -20%;
+  max-width: none;
+  padding: 0;
+  grid-column: 1 / -1;
+  display: block;
+  position: relative;
+}
 
+/* Style for BibTeX heading */
+d-appendix h3 {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+/* Updated BibTeX styling */
 .bibtex {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #f9f9f9;
-    padding: 2em;
-    color: #222;
-    font-size: 1em;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f9f9f9;
+  padding: 4em;
+  color: #222;
+  font-size: 1em;
 }
 
 
-
-.teaser-video video {
-  height: auto; /* Maintain the aspect ratio of the image */
-  display: block; /* Prevent inline spacing issues */
-  max-width: 100%;
-}
-
-.teaser-video {
-  width: 100%; /* Set width to 100% */
+/* Style horizontal lines consistently */
+hr {
+  width: 150%;
+  margin-left: -20%;
+  border: none;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin-top: 2em;
   margin-bottom: 2em;
 }
-
-.video-container {
-  position: relative;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0; /* Collapse the container to the aspect ratio */
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-div .preview-video-active,
-.preview:hover {
-  opacity: 1.0; /* Fully opaque on hover */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow effect on hover */
-}
-.auto-video {
-  width: 130%;
-  margin-left: -15%;
-}
-
-#diego-plan-video, #diego-plan-video-cap {
-  width: 150%; 
-  margin-left: -20%;
-}
-
-
-.auto-video, .diego-revise-img,
-#diego-plan-video, #diego-plan-video-cap {
-  width: 100%;
-  margin-left: 0%;
-}
-
-.slider-video-container {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
-}
-
-.video-question {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.video-slide {
-  width: 100%;
-  height: auto;
-}
-.answer-box {
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 16px;
-  box-sizing: border-box;
-}
-
-
-.slider-video-container {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
-}
- 
-
-.video-question {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.video-slide {
-  width: 100%; /* Ensures the video fills the container */
-  max-height: 400px; /* Set a reasonable height for visibility */
-  object-fit: cover; /* Ensures video content fits nicely */
-}
-
-.answer-box {
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 16px;
-  box-sizing: border-box;
-}
-
-
-.diego-revise-img {
-  width: 130%;
-  margin-left: -15%;
-}
-
-#prev-diego-revise-1, #prev-diego-revise-2 {
-  top: 75%;
-  left: -20%
-}
-
-#next-diego-revise-1, #next-diego-revise-2 {
-  top: 75%;
-  right: -20%
-}
-
-
-.slider-img-container {
-  margin-top: 20px; /* Add space above the slider */
-}
-.slider-img-container {
-  position: relative;
-  z-index: 1;
-}
-
-
-.video-container {
-  position: relative;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-}
-
-.question {
-  position: relative; /* or static, depending on your layout goals */
-  margin: 10px 0;     /* Adjust spacing as needed */
-  background-color: rgba(154, 160, 166, 0.2);
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-}
-
-
-
-

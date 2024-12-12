@@ -415,6 +415,8 @@ d-article section{
   position: relative;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   height: 0; /* Collapse the container to the aspect ratio */
+  margin-bottom: 370px; /* Increase this value for more white space below videos */
+
 }
 
 .video-container iframe {
@@ -440,16 +442,17 @@ d-article section{
   justify-content: center; /* Centers items horizontally */
   flex-wrap: wrap;
 
-
-  margin-top: 380px; /* Increase this value as needed */
-  margin-bottom: 20px;
+  margin-top: 10px; /* Adjust as needed */
+  margin-bottom: 10px; /* Increase this value for more space below */
   clear: both;
 }
 
+
 .video-qa {
-  display: block;
-  margin-top: 20px; /* Add some spacing if needed */
+  margin-top: 20px; /* Increase spacing above questions/answers */
+  padding-top: 20px; /* Optional: Adds internal spacing */
 }
+
 
 
 .preview {
@@ -1421,7 +1424,11 @@ div.takeaway-tags img {
   width: 100%;
   overflow-x: auto;
   margin-top: 20px;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center the table horizontally */
 }
+
+
 
 .styled-table {
   width: 100%;
@@ -1485,45 +1492,11 @@ iframe {
     height: 650px;
     border: none;
 }
-/* Reset d-appendix to match main content width */
-d-appendix {
-  width: 150%;
-  margin-left: -20%;
-  max-width: none;
-  padding: 0;
-  grid-column: 1 / -1;
-  display: block;
-  position: relative;
-}
 
-/* Style for BibTeX heading */
-d-appendix h3 {
-  width: 100%;
-  max-width: none;
-  margin-left: 0;
-  margin-right: 0;
-  font-size: 1.5em;
-  margin-bottom: 1em;
-  color: #333;
-}
-
-/* Updated BibTeX styling */
 .bibtex {
   font-family: 'Courier New', Courier, monospace;
   background-color: #f9f9f9;
-  padding: 4em;
+  padding: 2em;
   color: #222;
   font-size: 1em;
-}
-
-
-/* Style horizontal lines consistently */
-hr {
-  width: 150%;
-  margin-left: -20%;
-  border: none;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.1);
-  margin-top: 2em;
-  margin-bottom: 2em;
 }

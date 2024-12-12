@@ -20,7 +20,7 @@
         <meta name="twitter:title" content="Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces" />
         <meta name="twitter:description" content="We introduce VSI-Bench, a novel benchmark of over 5,000 video-based visual-spatial intelligence questions, to evaluate and probe MLLMs, which revealed that their emerging spatial reasoning and local world modeling capabilities remain subhuman but promising.        " />
 
-        <script src="./static/js/distill_template.v2.js"></script>
+        <script src="/static/js/distill_template.v2.js"></script>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -28,25 +28,25 @@
         <script src="https://d3js.org/d3-collection.v1.min.js"></script>
         <script src="https://rawgit.com/nstrayer/slid3r/master/dist/slid3r.js"></script>
 
-        <script defer="" src="./static/js/hider.js"></script>
-        <script src="./static/js/image_interact.js"></script>
-        <script src="./static/js/switch_videos.js"></script>
+        <script defer="" src="/static/js/hider.js"></script>
+        <script src="/static/js/image_interact.js"></script>
+        <script src="/static/js/switch_videos.js"></script>
 
-        <link rel="stylesheet" href="./static/css/style.css">
-        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/fontawesome.all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
             onload="renderMathInElement(document.body);"></script>
-        <script defer src="./static/js/fontawesome.all.min.js"></script>
+        <script defer src="/static/js/fontawesome.all.min.js"></script>
 
 
         <!-- medium zoom https://github.com/francoischalifour/medium-zoom -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>  <!-- jquery -->
-        <script defer src="./static/js/medium-zoom.min.js"></script>
-        <script defer src="./static/js/zoom.js"></script>
+        <script defer src="/static/js/medium-zoom.min.js"></script>
+        <script defer src="/static/js/zoom.js"></script>
     </head>
     <body>
         <div class="header-wrapper">
@@ -59,19 +59,19 @@
                         <div class="icon-container">
                             <div class="icon-item">
                                 
-                                <img src="./static/img/icons/bench.svg" alt="Visual Representation Icon">
+                                <img src="/static/img/icons/bench.svg" alt="Visual Representation Icon">
                                 <div><strong>VSI-Bench</strong>: We introduce a high-quality benchmark for the evaluation of 3D, video-based, visual-spatial intelligence of MLLMs.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="./static/img/icons/evaluation.svg" alt="Connector Design Icon">
+                                <img src="/static/img/icons/evaluation.svg" alt="Connector Design Icon">
                                 <div><strong>Evaluation Protocol</strong>: We attribute VSI-Bench performance to spatial cognitive capabilities, shedding light on areas of improvement.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="./static/img/icons/world.svg" alt="Instruction Tuning Data Icon">
+                                <img src="/static/img/icons/world.svg" alt="Instruction Tuning Data Icon">
                                 <div><strong>World Models</strong>: We analyze the implicit linguistic and visual world models.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="./static/img/icons/improvement.svg" alt="Instruction Tuning Recipes Icon">
+                                <img src="/static/img/icons/improvement.svg" alt="Instruction Tuning Recipes Icon">
                                 <div><strong>Improvements</strong>: We conduct preliminary exploration of methods for improvement.</div>
                             </div>
                         </div>
@@ -229,6 +229,17 @@
         </p>
 
          <div class="l-body">
+            <!-- Preview Images in a Flex Container - placed below the Q&A sections -->
+            <div class="preview-container">
+                <img id="Touristvideo1Preview" class="preview" src="static/img/video-preview/41069025-thumbnail.jpg" alt="video-thumbnail0" onclick="switchVideo('Tourist', 'video1Container', 'video1Preview')">
+                <img id="Touristvideo2Preview" class="preview" src="static/img/video-preview/41125700-thumbnail.jpg" alt="video-thumbnail3" onclick="switchVideo('Tourist','video2Container', 'video2Preview')">
+                <img id="Touristvideo3Preview" class="preview" src="static/img/video-preview/42445981-thumbnail.jpg" alt="video-thumbnail18" onclick="switchVideo('Tourist', 'video3Container', 'video3Preview')">
+                <img id="Touristvideo4Preview" class="preview" src="static/img/video-preview/42446049-thumbnail.jpg" alt="video-thumbnail1129" onclick="switchVideo('Tourist','video4Container', 'video4Preview')">
+                <img id="Touristvideo5Preview" class="preview" src="static/img/video-preview/41069025-thumbnail.jpg" alt="video-thumbnail1236" onclick="switchVideo('Tourist', 'video5Container', 'video5Preview')">
+                <img id="Touristvideo6Preview" class="preview" src="static/img/video-preview/47334096-thumbnail.jpg" alt="video-thumbnail1462" onclick="switchVideo('Tourist','video6Container', 'video6Preview')">
+                <img id="Touristvideo7Preview" class="preview" src="static/img/video-preview/47332899-thumbnail.jpg" alt="video-thumbnail879" onclick="switchVideo('Tourist', 'video7Container', 'video7Preview')">
+                <img id="Touristvideo8Preview" class="preview" src="static/img/video-preview/09c1414f1b-thumbnail.jpg" alt="video-thumbnail2871" onclick="switchVideo('Tourist','video8Container', 'video8Preview')">
+            </div>
             <!-- Video 1; ID: 0 -->
             <div id="Touristvideo1Container" class="video-container">
                 <video class="video-music" controls preload="metadata" playsinline>
@@ -566,17 +577,7 @@
             }
             </script>
         
-            <!-- Preview Images in a Flex Container - placed below the Q&A sections -->
-            <div class="preview-container">
-                <img id="Touristvideo1Preview" class="preview" src="static/img/video-preview/41069025-thumbnail.jpg" alt="video-thumbnail0" onclick="switchVideo('Tourist', 'video1Container', 'video1Preview')">
-                <img id="Touristvideo2Preview" class="preview" src="static/img/video-preview/41125700-thumbnail.jpg" alt="video-thumbnail3" onclick="switchVideo('Tourist','video2Container', 'video2Preview')">
-                <img id="Touristvideo3Preview" class="preview" src="static/img/video-preview/42445981-thumbnail.jpg" alt="video-thumbnail18" onclick="switchVideo('Tourist', 'video3Container', 'video3Preview')">
-                <img id="Touristvideo4Preview" class="preview" src="static/img/video-preview/42446049-thumbnail.jpg" alt="video-thumbnail1129" onclick="switchVideo('Tourist','video4Container', 'video4Preview')">
-                <img id="Touristvideo5Preview" class="preview" src="static/img/video-preview/41069025-thumbnail.jpg" alt="video-thumbnail1236" onclick="switchVideo('Tourist', 'video5Container', 'video5Preview')">
-                <img id="Touristvideo6Preview" class="preview" src="static/img/video-preview/47334096-thumbnail.jpg" alt="video-thumbnail1462" onclick="switchVideo('Tourist','video6Container', 'video6Preview')">
-                <img id="Touristvideo7Preview" class="preview" src="static/img/video-preview/47332899-thumbnail.jpg" alt="video-thumbnail879" onclick="switchVideo('Tourist', 'video7Container', 'video7Preview')">
-                <img id="Touristvideo8Preview" class="preview" src="static/img/video-preview/09c1414f1b-thumbnail.jpg" alt="video-thumbnail2871" onclick="switchVideo('Tourist','video8Container', 'video8Preview')">
-            </div>
+
         </div>
         
         
@@ -606,19 +607,19 @@
 
         <div class="icon-row">
             <a href="#vsi-benchmark" class="icon-link">
-                <img src="./static/img/icons/bench.svg" alt="Visual Representation Logo" class="icon">
+                <img src="/static/img/icons/bench.svg" alt="Visual Representation Logo" class="icon">
                 VSI-Bench<br>Construction
             </a>
             <a href="#vsi-evaluation" class="icon-link">
-                <img src="./static/img/icons/evaluation.svg" alt="Evaluation Logo" class="icon">
+                <img src="/static/img/icons/evaluation.svg" alt="Evaluation Logo" class="icon">
                 Evaluation<br>Protocol
             </a>
             <a href="#visual-representation" class="icon-link">
-                <img src="./static/img/icons/speech.svg" alt="Speech Logo" class="icon">
+                <img src="/static/img/icons/speech.svg" alt="Speech Logo" class="icon">
                 Linguistical<br>Analysis
             </a>
             <a href="#vsi-improvements" class="icon-link">
-                <img src="./static/img/icons/vision.svg" alt="Vision Logo" class="icon">
+                <img src="/static/img/icons/vision.svg" alt="Vision Logo" class="icon">
                 Visual<br>Analysis
             </a>
 
@@ -779,7 +780,7 @@
                 </p>
                 <d-figure id="fig-error-breakdown" >
                     <figure>
-                        <img data-zoomable="" draggable="false" src="static/img/error_breakdown.png" alt="benchmark category" style="width: 50%; display: block; margin: 0 auto;">
+                        <img data-zoomable="" draggable="false" src="static/img/error_breakdown.png" alt="benchmark category" style="width: 60%; display: block; margin: 0 auto;">
                         <figcaption>
                             <strong>Figure 7</strong>: Human-conducted analysis of errors by type. 
                         </figcaption>
@@ -794,27 +795,69 @@
 
                 
                 
+            </div>
 
                 <p class="text">
         
                     <strong>Limits of CoT Methods in Visuospatial Tasks</strong>:
-                    We investigate three prompting techniques—Zero-Shot Chain-of-Thought (CoT), Self-Consistency with CoT, and Tree-of-Thoughts (ToT)—to improve MLLM reasoning on VSI-Bench. Surprisingly, all three methods led to performance degradation, with Zero-Shot CoT and ToT reducing average performance by 4%, and Self-Consistency falling 1.1% below the baseline. While tasks like appearance order and absolute distance estimation saw slight improvements due to reduced linguistic errors, tasks like room size and object size suffered significant declines (8%-21%), indicating that prompting for deeper reasoning can be unreliable and even detrimental for visual-spatial tasks.
+                    We investigate three prompting techniques—Zero-Shot Chain-of-Thought (CoT), Self-Consistency with CoT, and Tree-of-Thoughts (ToT)—to improve MLLM reasoning on VSI-Bench. 
+                    Surprisingly, all three methods led to performance degradation (see Fig. 8), 
+                    with Zero-Shot CoT and ToT reducing average performance by 4%, 
+                    and Self-Consistency falling 1.1% below the baseline. 
+                    While the appearance order and absolute distance estimation tasks saw slight improvements due to reduced linguistic errors, 
+                    the room size and object size tasks suffer a large 8% to 21% decrease, 
+                    showing that encouraging a model to think more can be not just unreliable
+                    but downright harmful.
                 </p>
                 <d-figure id="fig-zero-shot" >
                     <figure>
-                        <img data-zoomable="" draggable="false" src="static/img/zero-shot.png" alt="benchmark category" style="width: 90%; display: block; margin: 0 auto;">
+                        <img data-zoomable="" draggable="false" src="static/img/zero-shot.png" alt="benchmark category" style="width: 60%; display: block; margin: 0 auto;">
                         <figcaption>
                             <strong>Figure 8</strong>: Relative improvements of CoT, self-consistency and
                             Tree-of-Thought compared to the baseline. 
                         </figcaption>
                     </figure>
                 </d-figure>
-                <div class="highlight-box">
-                    <em>Finding 2: Linguistic prompting techniques, although effective in language reasoning tasks, are primarily harmful for spatial reasoning.</em>
-                </div>
-
+                <p class="text">
+                    Meanwhile, as shown in Tab. 2, ZeroShot CoT achieves a 1.6% improvement on the general
+                    video understanding benchmark VideoMME.
+                </p>
             
+                <div id="tab:data_balance_result" style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="table-container">
+                        <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Case</th>
+                                <th>Performance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Gemini-1.5 Pro (w/o CoT)</td>
+                                <td>77.2</td>
+                            </tr>
+                            <tr>
+                                <td>Gemini-1.5 Pro (w/ CoT)</td>
+                                <td>79.8</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
+                </div>
+                <figcaption style="text-align: center; width: 100%;">
+                    <strong>Table 2:</strong> Gemini-1.5 Pro CoT performance on a 500-questions
+                    subset in VideoMME.
+                </figcaption>
+                <div class="highlight-box">
+                    <em>Finding 2: Linguistic prompting techniques, although effective in language reasoning and general visual tasks, are primarily harmful for spatial reasoning.</em>
+                </div>
+                
+            </div>        
+        </div>
+
+           
+        </div>
             <div id='vsi-world' class="vsi-world">
 
                 <div id='vsi-improvements' class="vsi-improvements">
@@ -908,8 +951,10 @@
                     </div>
                     
                     <!-- Combined Table Caption -->
-                    <p style="text-align: center; font-weight: bold;">Table 2. Relative distance task with cognitive map.</p>
                     
+                    <figcaption style="text-align: center; width: 100%;">
+                        <strong>Table 3:</strong> Relative distance task with cognitive map.</p>
+                    </figcaption>
                 </div>
 
         </div>
@@ -926,6 +971,7 @@
 
             </p>
         </div>
+    </div>
 
         </d-article>
         
@@ -946,7 +992,7 @@
         </d-appendix>  
         <!-- bibliography will be inlined during Distill pipeline's pre-rendering -->
         <d-bibliography src="bibliography.bib"></d-bibliography>
-        <script src="./static/js/nav-bar.js"></script>
+        <script src="/static/js/nav-bar.js"></script>
 
     </body>
 </html>

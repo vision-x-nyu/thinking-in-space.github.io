@@ -4,7 +4,9 @@ body {
 
 .header-wrapper {
     /* Update the gradient to reflect the vibrant tones in the image */
-    background: linear-gradient(-235deg, #1E0844 10%, #23316E 45%, #FE8383 75%, #F2E6C9 100%);
+    /* background: linear-gradient(-235deg, #1E0844 10%, #23316E 45%, #FE8383 75%, #F2E6C9 100%); */
+    background: linear-gradient(-210deg, #1E0844 10%, #4d3589 45%, #e406b5 75%, #ff99a2 100%);
+
 }
 
 .header-container {

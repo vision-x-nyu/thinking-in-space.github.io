@@ -1502,3 +1502,18 @@ iframe {
   color: #222;
   font-size: 1em;
 }
+
+/* Tag for video label */
+.video-label {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: rgba(128, 0, 128, 0.8); /* Clear purple background */
+  color: white; /* Text color */
+  font-family: Charter; /* Replace with your website's font */
+  font-size: 14px; /* Adjust font size as needed */
+  font-weight: bold; /* Bold text for visibility */
+  padding: 1px 6px; /* Padding around the text */
+  /* border-radius: 5px;  */
+  z-index: 10; /* Ensure it stays on top */
+}

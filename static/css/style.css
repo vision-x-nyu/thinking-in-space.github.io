@@ -3,17 +3,15 @@ body {
 }
 
 .header-wrapper {
-    /* Update the gradient to reflect the vibrant tones in the image */
     /* background: linear-gradient(-235deg, #1E0844 10%, #23316E 45%, #FE8383 75%, #F2E6C9 100%); */
     background: linear-gradient(-210deg, #1E0844 10%, #4d3589 45%, #e406b5 75%, #ff99a2 100%);
 
 }
 
 .header-container {
-  /* Change the text color to a soft golden hue to complement the gradient */
   color: #FBC664;
-  text-align: center; /* Center content on small screens */
-  padding: 20px; /* Reduced padding for small screens */
+  text-align: center; 
+  padding: 20px; 
   opacity: 1.0;
   z-index: 1000;
   position: relative;
@@ -23,33 +21,33 @@ body {
 
 
 .icon {
-    height: 1.8em; /* Set a fixed height for all icons */
-    width: auto; /* Adjust width to maintain aspect ratio */
-    margin-bottom: 5px; /* Space between icon and text */
+    height: 1.8em; 
+    width: auto; 
+    margin-bottom: 5px; 
 }
 
 .icon-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping to the next line */
+    flex-wrap: wrap; 
     width: 100%;
-    padding: 20px; /* Padding around the images */
+    padding: 20px; 
     line-height: 1rem;
 }
 
 .icon-link {
     display: flex;
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center; /* Center the image and text */
-    text-align: center; /* Center text below the image */
-    color: inherit; /* Inherit color from parent */
-    padding: 10px; /* Add padding around the link */
-    margin: 10px; /* Add margin around each link for spacing */
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    color: inherit; 
+    padding: 10px; 
+    margin: 10px; 
     border: 3px solid #508af6;
     border-radius: 10px;
     background-color: #d6eefb;
-    flex: 1 1 100px; /* Allow flex items to grow and shrink */
+    flex: 1 1 100px; 
 }
 
 .icon-link:hover {
@@ -58,7 +56,7 @@ body {
 
 @media (max-width: 600px) {
     .icon-link {
-        flex: 1 1 45%; /* Allow each icon link to take up about half the width */
+        flex: 1 1 45%; 
     }
 }
 
@@ -84,14 +82,14 @@ body {
 .icon-item-world {
   align-items: center;
   display: flex;
-  border: 1px solid red; /* Debug */
+  border: 1px solid red;
 }
 
 .icon-item-world img {
   width: 30px;
   height: 30px;
   margin-right: 1em;
-  border: 1px solid red; /* Debug */
+  border: 1px solid red; 
   /* filter: invert(87%) sepia(11%) saturate(748%) hue-rotate(340deg) brightness(110%) contrast(100%); */
 }
 
@@ -1329,7 +1327,6 @@ div.takeaway-tags img {
   background-color: #f9f9f9; /* Optional background color */
   border-radius: 5px; /* Rounds the corners if there's a background color */
   line-height: 1.4; /* Adjusts the line height for better readability */
-  /* Additional styling like text-align, letter-spacing, etc., can be added as per your preference */
   border-radius: 0px 0px 15px 15px;
 }
 
@@ -1399,35 +1396,29 @@ div.takeaway-tags img {
   }
 }
 .highlight-box {
-  border: 2px solid #CCCCCC; /* Slightly thicker border */
-  border-radius: 12px; /* Rounded corners */
-  padding: 15px; /* Inner spacing */
-  background-color: #F9F9F9; /* Light gray background */
-  font-size: 1.2em; /* Adjust font size */
-  font-style: italic; /* Italicized text */
-  font-weight: bold; /* Bold the text */
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15); /* Box shadow */
-  margin: 20px auto; /* Centers the box horizontally */
-  width: 150%; /* Increase width by 20% */
-  max-width: 150%; /* Ensure it doesn’t overflow the container */
-  text-align: center; /* Center the text inside the box */
-  transform: translateX(-15%); /* Adjust position to stay centered */
+  border: 2px solid #CCCCCC; 
+  border-radius: 12px; 
+  padding: 15px; 
+  background-color: #F9F9F9; 
+  font-size: 1.2em; 
+  font-style: italic; 
+  font-weight: bold; 
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  margin: 20px auto; 
+  width: 150%; 
+  max-width: 150%; 
+  text-align: center; 
+  transform: translateX(-15%); 
 }
 
 
-
-
-
-
-
-/* tables */
 
 .table-container {
   width: 100%;
   overflow-x: auto;
   margin-top: 20px;
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center the table horizontally */
+  display: flex; 
+  justify-content: center; 
 }
 
 
@@ -1503,17 +1494,16 @@ iframe {
   font-size: 1em;
 }
 
-/* Tag for video label */
 .video-label {
   position: absolute;
   top: 5px;
   left: 5px;
-  background-color: rgba(128, 0, 128, 0.8); /* Clear purple background */
-  color: white; /* Text color */
-  font-family: Charter; /* Replace with your website's font */
-  font-size: 14px; /* Adjust font size as needed */
-  font-weight: bold; /* Bold text for visibility */
-  padding: 1px 6px; /* Padding around the text */
+  background-color: rgba(128, 0, 128, 0.8); 
+  color: white;
+  font-family: Charter; 
+  font-size: 14px; 
+  font-weight: bold; 
+  padding: 1px 6px; 
   /* border-radius: 5px;  */
-  z-index: 10; /* Ensure it stays on top */
+  z-index: 10;
 }

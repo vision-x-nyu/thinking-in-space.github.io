@@ -64,7 +64,8 @@
                             </div>
                             <div class="icon-item">
                                 <img src="/static/img/icons/evaluation.svg" alt="Connector Design Icon">
-                                <div><strong>Evaluation</strong>: We evaluate VSI-Bench on open- and closed-source MLLMs and find that MLLMs exhibit competitive—though subhuman—visual-spatial intelligence.</div>
+                                <div><strong>Evaluation</strong>: We evaluate VSI-Bench on open- and closed-source MLLMs and find that MLLMs ex-
+                                    hibit competitive—though subhuman—visual-spatial intelligence.</div>
                             </div>
                             <div class="icon-item">
                                 <img src="/static/img/icons/speech.svg" alt="Speech Logo" class="icon">
@@ -72,7 +73,7 @@
                             </div>
                             <div class="icon-item">
                                 <img src="/static/img/icons/vision.svg" alt="Vision Logo" class="icon">
-                                <div><strong>Visual Analysis</strong>: We illuminate how MLLMs remember spaces via cognitive maps and show how explicitly remembering spaces improves spatial distance recall.</div>
+                                <div><strong>Visual Analysis</strong>: We illuminate how MLLMs remember spaces via cognitive maps and show how explicitly remembering spaces improves spatial capabilities.</div>
                             </div>
                         </div>
                     
@@ -228,7 +229,7 @@
             Compare your spatial intelligence abilities with Gemini!
         </p>
 
-         <div class="l-body">
+        <div class="l-body">
             <!-- Preview Images in a Flex Container - placed below the Q&A sections -->
             <div class="preview-container">
                 <img id="Touristvideo1Preview" class="preview" src="static/img/video-preview/41069025-thumbnail.jpg" alt="video-thumbnail0" onclick="switchVideo('Tourist', 'video1Container', 'video1Preview')">
@@ -242,7 +243,7 @@
             </div>
             <!-- Video 1; ID: 0 -->
             <div id="Touristvideo1Container" class="video-container">
-                <div class="video-label">Object Count, 1/3</div>
+                <div class="video-label">Object Count</div>
                 <video class="video-music" controls preload="metadata" playsinline>
                     <source src="static/videos/41069025.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -262,14 +263,27 @@
                     
             
                     <div id="answer-1" style="display:none; text-align: center;">
-                        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-                            <!-- GT aligned with A and C -->
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+
+
                             <p>
-                                <strong style="color: green;">Ground Truth:</strong> B. 4
+                                <strong style="color: green;">Ground Truth:</strong> 4
                             </p>
-                            <!-- Gemini aligned with B and D -->
+                            
                             <p>
                                 <strong style="color: red;">Gemini:</strong> 2
+                            </p>
+                            <p>
+                                <strong style="color: red;">LLaVA-OneVision:</strong> 2
+                            </p>
+                            <p>
+                                <strong style="color: red;">InternVL2:</strong> 1
+                            </p>
+                            <p>
+                                <strong style="color: red;">LLaVA-NeXT-Video:</strong> 2
+                            </p>
+                            <p>
+                                <strong style="color: red;">GPT-4o</strong> 2
                             </p>
                         </div>
                     </div>
@@ -287,7 +301,7 @@
         
             <!-- Video 2; ID: 3 -->
             <div id="Touristvideo2Container" class="video-container" style="display:none;">
-                <div class="video-label">Object Count, 2/3</div>
+                <div class="video-label">Object Count</div>
                 <video class="video-music" controls preload="metadata" playsinline>
                     <source src="static/videos/41125700.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -305,21 +319,34 @@
                                 </ul>  
                         
                                 <div id="answer-2" style="display:none; text-align: center; margin-top: 20px;">
-                                    <div style="display: flex; justify-content: center; gap: 20px;">
-                                        <!-- GT aligned with A and C -->
+                                    <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+
+                                        
                                         <p>
-                                            <strong style="color: green;">Ground Truth:</strong> C. 2
+                                            <strong style="color: green;">Ground Truth:</strong> 2
                                         </p>
-                                        <!-- Gemini aligned with B and D -->
+                                        
                                         <p>
-                                            <strong style="color: red;">Gemini:</strong> D. 1
+                                            <strong style="color: red;">Gemini:</strong> 1
                                         </p>
+                                        <p>
+                                            <strong style="color: green;">LLaVA-OneVision:</strong> 2
+                                        </p>
+                                        <p>
+                                            <strong style="color: red;">InternVL2:</strong> 1
+                                        </p>
+                                        <p>
+                                            <strong style="color: red;">LLaVA-NeXT-Video:</strong> 1
+                                        </p>
+                                        <p>
+                                            <strong style="color: red;">GPT-4o</strong> 1
+                                        </p>  
                                     </div>
                                 </div>
                         
                                 <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-2', this)">
                                     <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                                    <strong>Click to view Ground Truth and the answer from Gemini!</strong>
+                                    <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
                                 </p>
                             </div>
                         </div>
@@ -327,7 +354,7 @@
 
             <!-- Video 3; ID: 18 -->
             <div id="Touristvideo3Container" class="video-container" style="display:none;">
-                <div class="video-label">Object Count, 3/3</div>
+                <div class="video-label">Object Count</div>
                 <video class="video-music" controls preload="metadata" playsinline>
                     <source src="static/videos/42445981.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -345,18 +372,32 @@
                         </ul>  
                 
                         <div id="answer-3" style="display:none; text-align: center; margin-top: 20px;">
-                            <div style="display: flex; justify-content: center; gap: 20px;">                            <p>
-                                <strong style="color: green;">Ground Truth:</strong> A. 5
+                            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+                                <p>
+                                <strong style="color: green;">Ground Truth:</strong> 5
                             </p>
                             <p>
-                                <strong style="color: red;">Gemini:</strong> D. 3
+                                <strong style="color: red;">Gemini:</strong> 3
                             </p>
+                            <p>
+                                <strong style="color: red;">LLaVA-OneVision:</strong> 2
+                            </p>
+                            <p>
+                                <strong style="color: red;">InternVL2:</strong> 4
+                            </p>
+                            <p>
+                                <strong style="color: red;">LLaVA-NeXT-Video:</strong> 4
+                            </p>
+                            <p>
+                                <strong style="color: red;">GPT-4o</strong> 4
+                            </p>  
+                            
                         </div>
                     </div>
                 
                         <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-3', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and the answer from Gemini!</strong>
+                            <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
                         </p>
                     </div>
                 
@@ -366,7 +407,7 @@
 
             <!-- Video 4; ID: 1129 -->
             <div id="Touristvideo4Container" class="video-container" style="display:none;">
-                <div class="video-label">Relative Direction, 1/2</div>
+                <div class="video-label">Relative Direction</div>
                 <video class="video-music" controls preload="metadata" playsinline>
                     <source src="static/videos/42446049.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -385,19 +426,32 @@
                         </ul>  
                 
                         <div id="answer-4" style="display:none; text-align: center; margin-top: 20px;">
-                            <div style="display: flex; justify-content: center; gap: 20px;">    
+                            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+  
                             <p>
-                                <strong style="color: green;">Ground Truth:</strong> B. Right
+                                <strong style="color: green;">Ground Truth:</strong> Right
                             </p>
                             <p>
-                                <strong style="color: red;">Gemini:</strong> C. Left
+                                <strong style="color: red;">Gemini:</strong> Left
                             </p>
+                            <p>
+                                <strong style="color: green;">LLaVA-OneVision:</strong> Right
+                            </p>
+                            <p>
+                                <strong style="color: red;">InternVL2:</strong> Back
+                            </p>
+                            <p>
+                                <strong style="color: green;">LLaVA-NeXT-Video:</strong> Right
+                            </p>
+                            <p>
+                                <strong style="color: red;">GPT-4o</strong> Left
+                            </p>  
                         </div>
                     </div>
                 
                         <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-4', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and the answer from Gemini!</strong>
+                            <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
                         </p>
                     </div>
                 </div>
@@ -406,7 +460,7 @@
 
             <!-- Video 5; ID: 1236 -->
             <div id="Touristvideo5Container" class="video-container" style="display:none;">
-                <div class="video-label">Relative Direction, 2/2</div>
+                <div class="video-label">Relative Direction</div>
 
                 <video class="video-music" controls preload="metadata" playsinline>
                     <source src="static/videos/41069025.mp4" type="video/mp4">
@@ -424,18 +478,31 @@
                                 </ul>  
                         
                                 <div id="answer-5" style="display:none; text-align: center; margin-top: 20px;">
-                                    <div style="display: flex; justify-content: center; gap: 20px;">    
+                                    <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+ 
                                     <p>
-                                        <strong style="color: green;">Ground Truth:</strong> A. Left
+                                        <strong style="color: green;">Ground Truth:</strong> Left
                                     </p>
                                     <p>
-                                        <strong style="color: red;">Gemini:</strong> B. Right
+                                        <strong style="color: red;">Gemini:</strong> Right
                                     </p>
+                                    <p>
+                                        <strong style="color: red;">LLaVA-OneVision:</strong> Right
+                                    </p>
+                                    <p>
+                                        <strong style="color: red;">InternVL2:</strong> Right
+                                    </p>
+                                    <p>
+                                        <strong style="color: green;">LLaVA-NeXT-Video:</strong> Left
+                                    </p>
+                                    <p>
+                                        <strong style="color: green;">GPT-4o</strong> Left
+                                    </p>  
                                 </div>
                             </div>
                                 <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-5', this)">
                                     <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                                    <strong>Click to view Ground Truth and the answer from Gemini!</strong>
+                                    <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
                                 </p>
                             </div>
                         </div>
@@ -462,18 +529,31 @@
                         </ul>  
                 
                         <div id="answer-6" style="display:none; text-align: center; margin-top: 20px;">
-                            <div style="display: flex; justify-content: center; gap: 20px;">
+                            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+
                             <p>
-                                <strong style="color: green;">Ground Truth:</strong> A. Table
+                                <strong style="color: green;">Ground Truth:</strong> Table
                             </p>
                             <p>
-                                <strong style="color: red;">Gemini:</strong> C. Sofa
+                                <strong style="color: red;">Gemini:</strong> Sofa
                             </p>
+                            <p>
+                                <strong style="color: red;">LLaVA-OneVision:</strong> Sofa
+                            </p>
+                            <p>
+                                <strong style="color: red;">InternVL2:</strong> Sofa
+                            </p>
+                            <p>
+                                <strong style="color: red;">LLaVA-NeXT-Video:</strong> Sofa
+                            </p>
+                            <p>
+                                <strong style="color: red;">GPT-4o</strong> Sofa
+                            </p>  
                         </div>
                     </div>
                         <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-6', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and the answer from Gemini!</strong>
+                            <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
                         </p>
                     </div>
                 </div>
@@ -483,7 +563,7 @@
 
             <!-- Video 7; ID: 879 -->
             <div id="Touristvideo7Container" class="video-container" style="display:none;">
-                <div class="video-label">Absolute Distance, 1/1</div>
+                <div class="video-label">Absolute Distance</div>
 
                 <video class="video-music" controls preload="metadata" playsinline>
                     <source src="static/videos/47332899.mp4" type="video/mp4">
@@ -502,18 +582,31 @@
                         </ul>  
                 
                         <div id="answer-7" style="display:none; text-align: center; margin-top: 20px;">
-                            <div style="display: flex; justify-content: center; gap: 20px;">
+                            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+
                             <p>
-                                <strong style="color: green;">Ground Truth:</strong> A. 0.7
+                                <strong style="color: green;">Ground Truth:</strong> 0.7
                             </p>
                             <p>
                                 <strong style="color: red;">Gemini:</strong> 2.5
                             </p>
+                            <p>
+                                <strong style="color: red;">LLaVA-OneVision:</strong> 0.5
+                            </p>
+                            <p>
+                                <strong style="color: red;">InternVL2:</strong> 2.5
+                            </p>
+                            <p>
+                                <strong style="color: red;">LLaVA-NeXT-Video:</strong> 1.5
+                            </p>
+                            <p>
+                                <strong style="color: red;">GPT-4o</strong> N/A
+                            </p>  
                         </div>
                     </div>
                         <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-7', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and the answer from Gemini!</strong>
+                            <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
                         </p>
                     </div>
                 </div>
@@ -523,7 +616,7 @@
             
             <!-- Video 8; ID: 2871 -->
             <div id="Touristvideo8Container" class="video-container" style="display:none;">
-                <div class="video-label">Appearance Order, 1/1</div>
+                <div class="video-label">Appearance Order</div>
 
                 <video class="video-music" controls preload="metadata" playsinline>
                     <source src="static/videos/09c1414f1b.mp4" type="video/mp4">
@@ -551,6 +644,7 @@
                                 <input type="radio" id="optionD" name="appearanceOrder">
                                 <label for="optionD">D. blanket, trash can, microwave, plant</label>
                             </div>
+                            
                         </div>
                         
             </div>
@@ -560,17 +654,29 @@
         <div id="answer-8" style="display:none; text-align: center; margin-top: 20px;">
             <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
                 <p>
-                    <strong style="color: green;">Ground Truth:</strong> C. plant, blanket, trash can, microwave.
+                    <strong style="color: green;">Ground Truth:</strong> C.
                 </p>
                 <p>
-                    <strong style="color: red;">Gemini:</strong> B. plant, blanket, microwave, trash can.
+                    <strong style="color: red;">Gemini:</strong> B.
                 </p>
+                <p>
+                    <strong style="color: green;">LLaVA-OneVision:</strong> C.
+                </p>
+                <p>
+                    <strong style="color: green;">InternVL2:</strong> C.
+                </p>
+                <p>
+                    <strong style="color: red;">LLaVA-NeXT-Video:</strong> B.
+                </p>
+                <p>
+                    <strong style="color: red;">GPT-4o</strong> B.
+                </p>  
             </div>
         </div>
         
                         <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-8', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and the answer from Gemini!</strong>
+                            <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
                         </p>
                     </div>
                 </div>                
@@ -587,7 +693,7 @@
                 } else {
                     // Hide the answer
                     answerElement.style.display = "none";
-                    element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and the answer from Gemini!</strong>';
+                    element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and the answers from MLLMs!</strong>';
                 }
             }
             </script>

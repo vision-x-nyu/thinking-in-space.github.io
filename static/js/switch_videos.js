@@ -1,41 +1,48 @@
 function switchVideo(prefix, videoContainerId, preview_id) {
-    var totalVideos = 8;
+    const totalVideos = 10;
 
-    // Hide all video containers and pause their videos
-    for (var i = 1; i <= totalVideos; i++) {
-        var container = document.getElementById(prefix + 'video' + i + 'Container');
+    // Hide all video containers and pause/reset their videos
+    for (let i = 1; i <= totalVideos; i++) {
+        const container = document.getElementById(`${prefix}video${i}Container`);
         if (container) {
-            container.style.display = 'none';
-            var vids = container.getElementsByTagName('video');
-            for (var j = 0; j < vids.length; j++) {
-                vids[j].pause();
-            }
+            container.style.display = 'none'; // Hide the video container
+            
+            // Pause all videos and reset to start
+            const videos = container.getElementsByTagName('video');
+            Array.from(videos).forEach(video => {
+                video.pause();
+                video.currentTime = 0;
+            });
         }
     }
 
     // Show the selected video container
-    var selectedVideoContainer = document.getElementById(prefix + videoContainerId);
-    if (selectedVideoContainer) {
-        selectedVideoContainer.style.display = 'block';
+    const selectedContainer = document.getElementById(`${prefix}${videoContainerId}`);
+    if (selectedContainer) {
+        selectedContainer.style.display = 'block'; // Show the selected video
+        const selectedVideo = selectedContainer.querySelector('video');
+        if (selectedVideo) {
+            selectedVideo.play(); // Autoplay the selected video
+        }
     }
 
     // Update preview images: remove active class from all previews
-    for (var i = 1; i <= totalVideos; i++) {
-        var preview = document.getElementById(prefix + 'video' + i + 'Preview');
+    for (let i = 1; i <= totalVideos; i++) {
+        const preview = document.getElementById(`${prefix}video${i}Preview`);
         if (preview) {
-            preview.className = preview.className.replace(" preview-video-active", "");
+            preview.classList.remove("preview-video-active");
         }
     }
 
     // Add active class to the selected preview
-    var selectedPreview = document.getElementById(prefix + preview_id);
+    const selectedPreview = document.getElementById(`${prefix}${preview_id}`);
     if (selectedPreview) {
-        selectedPreview.className += " preview-video-active";
+        selectedPreview.classList.add("preview-video-active");
     }
 }
 
 function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
+    const rect = el.getBoundingClientRect();
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
@@ -45,9 +52,8 @@ function isElementInViewport(el) {
 }
 
 function checkVideoVisibility() {
-    var videos = document.querySelectorAll('.auto-video');
-    videos.forEach(function(video) {
-        // Check if the video is in the viewport
+    const videos = document.querySelectorAll('.auto-video');
+    videos.forEach(video => {
         if (isElementInViewport(video)) {
             if (video.paused) {
                 video.currentTime = 0; // Reset to start
@@ -62,11 +68,24 @@ function checkVideoVisibility() {
 window.addEventListener('scroll', checkVideoVisibility);
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Get all video elements with class 'video-music'
-    var videos = document.querySelectorAll('.video-music');
-
-    // Loop through each video and set the volume
-    videos.forEach(function(video) {
-        video.volume = 0.25; // 25% volume
+    // Set default video volume for all '.video-music' videos
+    const videos = document.querySelectorAll('.video-music');
+    videos.forEach(video => {
+        video.volume = 0.25; // Set volume to 25%
     });
+
+    // Set the first video container as active on load
+    const firstVideoContainer = document.getElementById("Touristvideo1Container");
+    if (firstVideoContainer) {
+        firstVideoContainer.style.display = "block"; // Display the first video
+        const firstVideo = firstVideoContainer.querySelector('video');
+        if (firstVideo) {
+            firstVideo.play();
+        }
+    }
+
+    const firstPreview = document.getElementById("Touristvideo1Preview");
+    if (firstPreview) {
+        firstPreview.classList.add("preview-video-active"); // Highlight first preview
+    }
 });

@@ -1,7 +1,5 @@
 from flask import Flask, send_from_directory, send_file
 import os
-
-# Initialize Flask with explicit static folder configuration
 app = Flask(__name__, 
     static_url_path='/static',
     static_folder='static'
@@ -10,8 +8,6 @@ app = Flask(__name__,
 @app.route('/')
 def serve_index():
     return send_file('index.html')
-
-# Fallback route for any static files not caught by Flask's static handler
 @app.route('/static/<path:path>')
 def serve_static(path):
     try:

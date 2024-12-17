@@ -3,7 +3,7 @@
 @String(CVPR= {IEEE Conf. Comput. Vis. Pattern Recog.})
 @String(ICCV= {Int. Conf. Comput. Vis.})
 @String(ECCV= {Eur. Conf. Comput. Vis.})
-@String(NIPS= {Adv. Neural Inform. Process. Syst.})
+@String(NeurIPS= {Adv. Neural Inform. Process. Syst.})
 @String(ICPR = {Int. Conf. Pattern Recog.})
 @String(BMVC= {Brit. Mach. Vis. Conf.})
 @String(TOG= {ACM Trans. Graph.})
@@ -36,7 +36,7 @@
 @String(CVPR  = {CVPR})
 @String(ICCV  = {ICCV})
 @String(ECCV  = {ECCV})
-@String(NIPS  = {NeurIPS})
+@String(NeurIPS  = {NeurIPS})
 @String(ICPR  = {ICPR})
 @String(BMVC  =	{BMVC})
 @String(TOG   = {ACM TOG})
@@ -56,57 +56,49 @@
 @String(CVPRW= {CVPRW})
 @String(CSVT = {IEEE TCSVT})
 
-@misc{lei2022revealingsingleframebias,
-      title={Revealing Single Frame Bias for Video-and-Language Learning}, 
-      author={Jie Lei and Tamara L. Berg and Mohit Bansal},
-      year={2022},
-      eprint={2206.03428},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2206.03428}, 
+@inproceedings{lei-etal-2023-revealing,
+    title = "Revealing Single Frame Bias for Video-and-Language Learning",
+    author = "Lei, Jie  and
+      Berg, Tamara  and
+      Bansal, Mohit",
+    editor = "Rogers, Anna  and
+      Boyd-Graber, Jordan  and
+      Okazaki, Naoaki",
+    booktitle = "ACL",
+    year = "2023",
+    url = "https://aclanthology.org/2023.acl-long.29",
+    doi = "10.18653/v1/2023.acl-long.29",
+    abstract = "Training an effective video-and-language model intuitively requires multiple frames as model inputs. However, it is unclear whether using multiple frames is beneficial to downstream tasks, and if yes, whether the performance gain is worth the drastically-increased computation and memory costs resulting from using more frames. In this work, we explore single-frame models for video-and-language learning. On a diverse set of video-and-language tasks (including text-to-video retrieval and video question answering), we show the surprising result that, with large-scale pre-training and a proper frame ensemble strategy at inference time, a single-frame trained model that does not consider temporal information can achieve better performance than existing methods that use multiple frames for training. This result reveals the existence of a strong {``}static appearance bias{''} in popular video-and-language datasets. Therefore, to allow for a more comprehensive evaluation of video-and-language models, we propose two new retrieval tasks based on existing fine-grained action recognition datasets that encourage temporal modeling. Our code is available at \url{https://github.com/jayleicn/singularity}.",
 }
 
-@misc{ramakrishnan2024doesspatialcognitionemerge,
-      title={Does Spatial Cognition Emerge in Frontier Models?}, 
-      author={Santhosh Kumar Ramakrishnan and Erik Wijmans and Philipp Kraehenbuehl and Vladlen Koltun},
-      year={2024},
-      eprint={2410.06468},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2410.06468}, 
-}
-
-@misc{xu2024mcbenchbenchmarkmulticontextvisual,
-      title={MC-Bench: A Benchmark for Multi-Context Visual Grounding in the Era of MLLMs}, 
-      author={Yunqiu Xu and Linchao Zhu and Yi Yang},
-      year={2024},
-      eprint={2410.12332},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2410.12332}, 
+@article{xu2024mcbenchbenchmarkmulticontextvisual,
+  title={MC-Bench: A Benchmark for Multi-Context Visual Grounding in the Era of MLLMs},
+  author={Xu, Yunqiu and Zhu, Linchao and Yang, Yi},
+  journal={arXiv preprint arXiv:2410.12332},
+  year={2024}
 }
 
 @inproceedings{dai2017scannet,
   title={Scannet: Richly-annotated 3d reconstructions of indoor scenes},
   author={Dai, Angela and Chang, Angel X and Savva, Manolis and Halber, Maciej and Funkhouser, Thomas and Nie{\ss}ner, Matthias},
-  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
-  pages={5828--5839},
+  booktitle={CVPR},
   year={2017}
 }
 
 @inproceedings{yeshwanth2023scannet++,
   title={Scannet++: A high-fidelity dataset of 3d indoor scenes},
   author={Yeshwanth, Chandan and Liu, Yueh-Cheng and Nie{\ss}ner, Matthias and Dai, Angela},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={12--22},
+  booktitle={ICCV},
   year={2023}
 }
 
-@article{baruch2021arkitscenes,
-  title={Arkitscenes: A diverse real-world dataset for 3d indoor scene understanding using mobile rgb-d data},
-  author={Baruch, Gilad and Chen, Zhuoyuan and Dehghan, Afshin and Dimry, Tal and Feigin, Yuri and Fu, Peter and Gebauer, Thomas and Joffe, Brandon and Kurz, Daniel and Schwartz, Arik and others},
-  journal={arXiv preprint arXiv:2111.08897},
-  year={2021}
+@inproceedings{
+dehghan2021arkitscenes,
+title={{ARK}itScenes - A Diverse Real-World Dataset for 3D Indoor Scene Understanding Using Mobile {RGB}-D Data},
+author={Gilad Baruch and Zhuoyuan Chen and Afshin Dehghan and Tal Dimry and Yuri Feigin and Peter Fu and Thomas Gebauer and Brandon Joffe and Daniel Kurz and Arik Schwartz and Elad Shulman},
+booktitle={NeurIPS},
+year={2021},
+url={https://openreview.net/forum?id=tjZjv_qh_CE}
 }
 
 @article{team2024gemini,
@@ -126,20 +118,15 @@
 @article{everingham2010pascal,
   title={The pascal visual object classes (voc) challenge},
   author={Everingham, Mark and Van Gool, Luc and Williams, Christopher KI and Winn, John and Zisserman, Andrew},
-  journal={International journal of computer vision},
-  volume={88},
-  pages={303--338},
-  year={2010},
-  publisher={Springer}
+  journal={IJCV},
+  year={2010}
 }
 
 @inproceedings{lin2014microsoft,
   title={Microsoft coco: Common objects in context},
   author={Lin, Tsung-Yi and Maire, Michael and Belongie, Serge and Hays, James and Perona, Pietro and Ramanan, Deva and Doll{\'a}r, Piotr and Zitnick, C Lawrence},
-  booktitle={Computer Vision--ECCV 2014: 13th European Conference, Zurich, Switzerland, September 6-12, 2014, Proceedings, Part V 13},
-  pages={740--755},
-  year={2014},
-  organization={Springer}
+  booktitle={ECCV},
+  year={2014}
 }
 
 @book{salton1986introduction,
@@ -154,17 +141,14 @@ address = {USA}
 @article{liu2024visual,
   title={Visual instruction tuning},
   author={Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
-  journal={Advances in neural information processing systems},
-  volume={36},
+  journal={NeurIPS},
   year={2024}
 }
 
 @article{wei2022chain,
   title={Chain-of-thought prompting elicits reasoning in large language models},
   author={Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Xia, Fei and Chi, Ed and Le, Quoc V and Zhou, Denny and others},
-  journal={Advances in neural information processing systems},
-  volume={35},
-  pages={24824--24837},
+  journal={NeurIPS},
   year={2022}
 }
 
@@ -176,15 +160,13 @@ address = {USA}
   publisher    = {Basic Books}
 }
 
-@misc{naveed2024comprehensiveoverviewlargelanguage,
-      title={A Comprehensive Overview of Large Language Models}, 
-      author={Humza Naveed and Asad Ullah Khan and Shi Qiu and Muhammad Saqib and Saeed Anwar and Muhammad Usman and Naveed Akhtar and Nick Barnes and Ajmal Mian},
-      year={2024},
-      eprint={2307.06435},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2307.06435}, 
+@article{naveed2024comprehensiveoverviewlargelanguage,
+  title={A comprehensive overview of large language models},
+  author={Naveed, Humza and Khan, Asad Ullah and Qiu, Shi and Saqib, Muhammad and Anwar, Saeed and Usman, Muhammad and Akhtar, Naveed and Barnes, Nick and Mian, Ajmal},
+  journal={arXiv preprint arXiv:2307.06435},
+  year={2023}
 }
+
 
 @article{beguvs2023large,
   title={Large linguistic models: Analyzing theoretical linguistic abilities of LLMs},
@@ -193,36 +175,29 @@ address = {USA}
   year={2023}
 }
 
-@misc{zhao2023unveilingcorelinguisticregion,
-      title={Unveiling A Core Linguistic Region in Large Language Models}, 
-      author={Jun Zhao and Zhihao Zhang and Yide Ma and Qi Zhang and Tao Gui and Luhui Gao and Xuanjing Huang},
-      year={2023},
-      eprint={2310.14928},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2310.14928}, 
+@inproceedings{zhang-etal-2024-unveiling-linguistic,
+    title = "Unveiling Linguistic Regions in Large Language Models",
+    author = "Zhang, Zhihao  and
+      Zhao, Jun  and
+      Zhang, Qi  and
+      Gui, Tao  and
+      Huang, Xuanjing",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "ACL",
+    year = "2024"
 }
 
-@misc{wei2022emergentabilitieslargelanguage,
-      title={Emergent Abilities of Large Language Models}, 
-      author={Jason Wei and Yi Tay and Rishi Bommasani and Colin Raffel and Barret Zoph and Sebastian Borgeaud and Dani Yogatama and Maarten Bosma and Denny Zhou and Donald Metzler and Ed H. Chi and Tatsunori Hashimoto and Oriol Vinyals and Percy Liang and Jeff Dean and William Fedus},
-      year={2022},
-      eprint={2206.07682},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2206.07682}, 
-}
 
-@misc{kassner2023languagemodelsrationality,
-      title={Language Models with Rationality}, 
-      author={Nora Kassner and Oyvind Tafjord and Ashish Sabharwal and Kyle Richardson and Hinrich Schuetze and Peter Clark},
-      year={2023},
-      eprint={2305.14250},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2305.14250}, 
-}
+@article{52065,title	= {Emergent abilities of large language models},author	= {Barret Zoph and Colin Raffel and Dale Schuurmans and Dani Yogatama and Denny Zhou and Don Metzler and Ed H. Chi and Jason Wei and Jeff Dean and Liam B. Fedus and Maarten Paul Bosma and Oriol Vinyals and Percy Liang and Sebastian Borgeaud and Tatsunori B. Hashimoto and Yi Tay},year	= {2022},journal	= {TMLR}}
 
+@inproceedings{Kassner2023LanguageMW,
+  title={Language Models with Rationality},
+  author={Nora Kassner and Oyvind Tafjord and Ashish Sabharwal and Kyle Richardson and Hinrich Sch{\"u}tze and Peter Clark},
+  booktitle={EMNLP},
+  year={2023}
+}
 @article{clark1991dual,
   author    = {Clark, James M. and Paivio, Allan},
   title     = {Dual Coding Theory and Education},
@@ -231,8 +206,7 @@ address = {USA}
   number    = {3},
   pages     = {149--210},
   year      = {1991},
-  doi       = {10.1007/BF01320076},
-  publisher = {Springer}
+  doi       = {10.1007/BF01320076}
 }
 
 @incollection{meneghetti2022individual,
@@ -257,14 +231,11 @@ address = {USA}
 	title = {Spatial {Cognition}},
 }
 
-@misc{chabris_jerde_woolley_gerbasi_schuldt_wai_bennett_hackman_kosslyn_2023,
- title={Spatial and Object Visualization Cognitive Styles: Validation Studies in 3839 Individuals},
- url={osf.io/preprints/psyarxiv/98hw3},
- DOI={10.31234/osf.io/98hw3},
- publisher={PsyArXiv},
- author={Chabris, Christopher F and Jerde, Thomas and Woolley, Anita W and Gerbasi, Margaret E and Schuldt, Jonathon P and Wai, Jonathan and Bennett, Sean L and Hackman, J. R and Kosslyn, Stephen M},
- year={2023},
- month={Sep}
+@article{chabris_jerde_woolley_gerbasi_schuldt_wai_bennett_hackman_kosslyn_2023,
+  title={Spatial and Object Visualization Cognitive Styles: Validation Studies in 3839 Individuals},
+  author={Chabris, Christopher F and Jerde, Thomas and Woolley, Anita Williams and Gerbasi, Margaret E and Schuldt, Jonathon P and Wai, Jonathan and Bennett, Sean L and Hackman, J Richard and Kosslyn, Stephen M},
+  year={2023},
+  publisher={PsyArXiv}
 }
 
 @article{tolman1948cognitive,
@@ -283,11 +254,6 @@ address = {USA}
   title     = {Exploring Visual–Spatial Working Memory: A Critical Review of Concepts and Models},
   journal   = {Neuropsychology Review},
   year      = {2009},
-  volume    = {19},
-  number    = {2},
-  pages     = {130--142},
-  doi       = {10.1007/s11065-008-9063-0},
-  month     = {March}
 }
 
 @book{dehn2011working,
@@ -300,8 +266,8 @@ address = {USA}
 }
 
 @article{tong2024cambrian,
-  title={Cambrian-1: A fully open, vision-centric exploration of multimodal llms},
-  author={Tong, Shengbang and Brown, Ellis and Wu, Penghao and Woo, Sanghyun and Middepogu, Manoj and Akula, Sai Charitha and Yang, Jihan and Yang, Shusheng and Iyer, Adithya and Pan, Xichen and others},
+  title={{Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs}},
+  author={Tong, Shengbang and Brown, Ellis and Wu, Penghao and Woo, Sanghyun and Middepogu, Manoj and Akula, Sai Charitha and Yang, Jihan and Yang, Shusheng, and Iyer, Adithya and Pan, Xichen and Wang, Austin and Fergus, Rob and LeCun, Yann and Xie, Saining},
   journal={arXiv preprint arXiv:2406.16860},
   year={2024}
 }
@@ -316,8 +282,7 @@ address = {USA}
 @inproceedings{lin2024vila,
   title={Vila: On pre-training for visual language models},
   author={Lin, Ji and Yin, Hongxu and Ping, Wei and Molchanov, Pavlo and Shoeybi, Mohammad and Han, Song},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={26689--26699},
+  booktitle={CVPR},
   year={2024}
 }
 
@@ -339,38 +304,31 @@ address = {USA}
   title={LLaVA-NeXT: A Strong Zero-shot Video Understanding Model},
   url={https://llava-vl.github.io/blog/2024-04-30-llava-next-video/},
   author={Zhang, Yuanhan and Li, Bo and Liu, haotian and Lee, Yong jae and Gui, Liangke and Fu, Di and Feng, Jiashi and Liu, Ziwei and Li, Chunyuan},
-  month={April},
   year={2024}
 }
 
-@article{jimenez2023swe,
-  title={Swe-bench: Can language models resolve real-world github issues?},
-  author={Jimenez, Carlos E and Yang, John and Wettig, Alexander and Yao, Shunyu and Pei, Kexin and Press, Ofir and Narasimhan, Karthik},
-  journal={arXiv preprint arXiv:2310.06770},
-  year={2023}
+@inproceedings{
+    jimenez2024swebench,
+    title={{SWE}-bench: Can Language Models Resolve Real-world Github Issues?},
+    author={Carlos E Jimenez and John Yang and Alexander Wettig and Shunyu Yao and Kexin Pei and Ofir Press and Karthik R Narasimhan},
+    booktitle={ICLR},
+    year={2024},
+    url={https://openreview.net/forum?id=VTF8yNQM66}
 }
 
-@article{kojima2022large,
+@inproceedings{kojima2022large,
   title={Large language models are zero-shot reasoners},
   author={Kojima, Takeshi and Gu, Shixiang Shane and Reid, Machel and Matsuo, Yutaka and Iwasawa, Yusuke},
-  journal={Advances in neural information processing systems},
-  volume={35},
-  pages={22199--22213},
+  booktitle={NeurIPS},
   year={2022}
 }
 
-@article{wang2022self,
-  title={Self-consistency improves chain of thought reasoning in language models},
-  author={Wang, Xuezhi and Wei, Jason and Schuurmans, Dale and Le, Quoc and Chi, Ed and Narang, Sharan and Chowdhery, Aakanksha and Zhou, Denny},
-  journal={arXiv preprint arXiv:2203.11171},
-  year={2022}
-}
+@inproceedings{52081,title	= {Self-Consistency Improves Chain of Thought Reasoning in Language Models},author	= {Xuezhi Wang and Jason Wei and Dale Schuurmans and Quoc V. Le and Ed H. Chi and Sharan Narang and Aakanksha Chowdhery and Denny Zhou}, URL	= {https://arxiv.org/abs/2203.11171},booktitle	= {ICLR 2023}}
 
-@article{yao2024tree,
+@inproceedings{yao2024tree,
   title={Tree of thoughts: Deliberate problem solving with large language models},
   author={Yao, Shunyu and Yu, Dian and Zhao, Jeffrey and Shafran, Izhak and Griffiths, Tom and Cao, Yuan and Narasimhan, Karthik},
-  journal={Advances in Neural Information Processing Systems},
-  volume={36},
+  booktitle={NeurIPS},
   year={2024}
 }
 
@@ -381,33 +339,33 @@ address = {USA}
   year={2022}
 }
 
-@article{tian2024drivevlm,
+@inproceedings{tian2024drivevlm,
   title={Drivevlm: The convergence of autonomous driving and large vision-language models},
   author={Tian, Xiaoyu and Gu, Junru and Li, Bailin and Liu, Yicheng and Wang, Yang and Zhao, Zhiyong and Zhan, Kun and Jia, Peng and Lang, Xianpeng and Zhao, Hang},
-  journal={arXiv preprint arXiv:2402.12289},
+  booktitle={CoRL},
   year={2024}
 }
 
 @inproceedings{shao2024lmdrive,
   title={Lmdrive: Closed-loop end-to-end driving with large language models},
   author={Shao, Hao and Hu, Yuxuan and Wang, Letian and Song, Guanglu and Waslander, Steven L and Liu, Yu and Li, Hongsheng},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  booktitle={CVPR},
   pages={15120--15130},
   year={2024}
 }
 
-@article{brohan2023rt,
+@inproceedings{brohan2023rt,
   title={Rt-2: Vision-language-action models transfer web knowledge to robotic control},
   author={Brohan, Anthony and Brown, Noah and Carbajal, Justice and Chebotar, Yevgen and Chen, Xi and Choromanski, Krzysztof and Ding, Tianli and Driess, Danny and Dubey, Avinava and Finn, Chelsea and others},
-  journal={arXiv preprint arXiv:2307.15818},
+  booktitle={CoRL},
   year={2023}
 }
 
-@article{brohan2022rt,
+@inproceedings{brohan2022rt,
   title={Rt-1: Robotics transformer for real-world control at scale},
   author={Brohan, Anthony and Brown, Noah and Carbajal, Justice and Chebotar, Yevgen and Dabis, Joseph and Finn, Chelsea and Gopalakrishnan, Keerthana and Hausman, Karol and Herzog, Alex and Hsu, Jasmine and others},
-  journal={arXiv preprint arXiv:2212.06817},
-  year={2022}
+  booktitle={RSS},
+  year={2023}
 }
 
 @article{o2023open,
@@ -420,7 +378,7 @@ address = {USA}
 @article{wang2023voyager,
   title={Voyager: An open-ended embodied agent with large language models},
   author={Wang, Guanzhi and Xie, Yuqi and Jiang, Yunfan and Mandlekar, Ajay and Xiao, Chaowei and Zhu, Yuke and Fan, Linxi and Anandkumar, Anima},
-  journal={arXiv preprint arXiv:2305.16291},
+  journal={TMLR},
   year={2023}
 }
 
@@ -436,27 +394,31 @@ address = {USA}
 @inproceedings{suris2023vipergpt,
   title={Vipergpt: Visual inference via python execution for reasoning},
   author={Sur{\'\i}s, D{\'\i}dac and Menon, Sachit and Vondrick, Carl},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={11888--11898},
+  booktitle={ICCV},
   year={2023}
 }
 
 @inproceedings{huang2022language,
   title={Language models as zero-shot planners: Extracting actionable knowledge for embodied agents},
   author={Huang, Wenlong and Abbeel, Pieter and Pathak, Deepak and Mordatch, Igor},
-  booktitle={International conference on machine learning},
-  pages={9118--9147},
-  year={2022},
-  organization={PMLR}
+  booktitle={ICML},
+  year={2022}
 }
 
-@article{damonlpsg2023videollama,
-  author = {Zhang, Hang and Li, Xin and Bing, Lidong},
-  title = {Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding},
-  year = 2023,
-  journal = {arXiv preprint arXiv:2306.02858},
-  url = {https://arxiv.org/abs/2306.02858}
+@inproceedings{zhang-etal-2023-video,
+    title = "Video-{LL}a{MA}: An Instruction-tuned Audio-Visual Language Model for Video Understanding",
+    author = "Zhang, Hang  and
+      Li, Xin  and
+      Bing, Lidong",
+    editor = "Feng, Yansong  and
+      Lefever, Els",
+    booktitle = "EMNLP",
+    year = "2023",
+    url = "https://aclanthology.org/2023.emnlp-demo.49",
+    doi = "10.18653/v1/2023.emnlp-demo.49",
+    abstract = "We present Video-LLaMA, a multi-modal framework that empowers Large Language Models (LLMs) with the capability of understanding both visual and auditory content in the video. Video-LLaMA bootstraps cross-modal training from the frozen pre-trained visual {\&} audio encoders and the frozen LLMs. Unlike previous works that complement LLMs to process the visual or audio signals only, Video-LLaMA enables video comprehension by tackling two challenges: (1) capturing the temporal changes in visual scenes, (2) integrating audio-visual signals. To counter the first challenge, we propose a Video Q-former to assemble a pre-trained image encoder into our video encoder and introduce a video-to-text generation task to learn video-language correspondence. For the second challenge, we leverage ImageBind, a universal embedding model aligning multiple modalities, as the pre-trained audio encoder and introduce an Audio Q-former on top of ImageBind to learn reasonable auditory query embeddings for the LLM module. To align the output of both visual {\&} audio encoders with LLM{'}s embedding space, we first train Video-LLaMA on massive video/image-caption pairs and then tune our model with visual-instruction datasets of moderate amount but higher quality. We found Video-LLaMA shows the ability to perceive and comprehend video content and generate meaningful responses grounded in the visual and auditory information presented in the videos.",
 }
+
 @article{2023videochat,
   title={VideoChat: Chat-Centric Video Understanding},
   author={Li, Kunchang and He, Yinan and Wang, Yi and Li, Yizhuo and Wang, Wenhai and Luo, Ping and Wang, Yali and Wang, Limin and Qiao, Yu},
@@ -464,29 +426,23 @@ address = {USA}
   year={2023}
 }
 
-@article{Ren2023TimeChat,
-  title={TimeChat: A Time-sensitive Multimodal Large Language Model for Long Video Understanding},
-  author={Shuhuai Ren and Linli Yao and Shicheng Li and Xu Sun and Lu Hou},
-  journal={ArXiv},
-  year={2023},
-  volume={abs/2312.02051},
+@InProceedings{Ren_2024_CVPR,
+    author    = {Ren, Shuhuai and Yao, Linli and Li, Shicheng and Sun, Xu and Hou, Lu},
+    title     = {TimeChat: A Time-sensitive Multimodal Large Language Model for Long Video Understanding},
+    booktitle = {CVPR}
 }
 
 @inproceedings{huang2024vtimellm,
   title={Vtimellm: Empower llm to grasp video moments},
   author={Huang, Bin and Wang, Xin and Chen, Hong and Song, Zihan and Zhu, Wenwu},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={14271--14280},
+  booktitle={CVPR},
   year={2024}
 }
 @INPROCEEDINGS{7298698,
   author={Heilbron, Fabian Caba and Escorcia, Victor and Ghanem, Bernard and Niebles, Juan Carlos},
-  booktitle={2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, 
+  booktitle={CVPR}, 
   title={ActivityNet: A large-scale video benchmark for human activity understanding}, 
   year={2015},
-  volume={},
-  number={},
-  pages={961-970},
   keywords={Benchmark testing;Taxonomy;Cleaning;Semantics;Organizations;Complexity theory;YouTube},
   doi={10.1109/CVPR.2015.7298698}
 }
@@ -495,40 +451,24 @@ address = {USA}
 @article{Goyal2017TheS,
   title={The “Something Something” Video Database for Learning and Evaluating Visual Common Sense},
   author={Raghav Goyal and Samira Ebrahimi Kahou and Vincent Michalski and Joanna Materzynska and Susanne Westphal and Heuna Kim and Valentin Haenel and Ingo Fr{\"u}nd and Peter N. Yianilos and Moritz Mueller-Freitag and Florian Hoppe and Christian Thurau and Ingo Bax and Roland Memisevic},
-  journal={2017 IEEE International Conference on Computer Vision (ICCV)},
+  journal={ICCV},
   year={2017},
-  pages={5843-5851},
   url={https://api.semanticscholar.org/CorpusID:834612}
 }
 
-
-@misc{tang2024sparklemasteringbasicspatial,
-      title={Sparkle: Mastering Basic Spatial Capabilities in Vision Language Models Elicits Generalization to Composite Spatial Reasoning}, 
-      author={Yihong Tang and Ao Qu and Zhaokai Wang and Dingyi Zhuang and Zhaofeng Wu and Wei Ma and Shenhao Wang and Yunhan Zheng and Zhan Zhao and Jinhua Zhao},
-      year={2024},
-      eprint={2410.16162},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2410.16162}, 
+@InProceedings{Chen_2024_CVPR,
+    author    = {Chen, Boyuan and Xu, Zhuo and Kirmani, Sean and Ichter, Brain and Sadigh, Dorsa and Guibas, Leonidas and Xia, Fei},
+    title     = {SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities},
+    booktitle = {CVPR},
+    year      = {2024}
 }
-@misc{chen2024spatialvlmendowingvisionlanguagemodels,
-      title={SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities}, 
-      author={Boyuan Chen and Zhuo Xu and Sean Kirmani and Brian Ichter and Danny Driess and Pete Florence and Dorsa Sadigh and Leonidas Guibas and Fei Xia},
-      year={2024},
-      eprint={2401.12168},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2401.12168}, 
+@inproceedings{cheng2024spatialrgpt,
+      title={SpatialRGPT: Grounded Spatial Reasoning in Vision-Language Models},
+      author={Cheng, An-Chieh and Yin, Hongxu and Fu, Yang and Guo, Qiushan and Yang, Ruihan and Kautz, Jan and Wang, Xiaolong and Liu, Sifei},
+      booktitle={NeurIPS},
+      year={2024}
 }
-@misc{cheng2024spatialrgptgroundedspatialreasoning,
-      title={SpatialRGPT: Grounded Spatial Reasoning in Vision Language Models}, 
-      author={An-Chieh Cheng and Hongxu Yin and Yang Fu and Qiushan Guo and Ruihan Yang and Jan Kautz and Xiaolong Wang and Sifei Liu},
-      year={2024},
-      eprint={2406.01584},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2406.01584}, 
-}
+  
 
 @article{cai2024spatialbot,
   title={SpatialBot: Precise Spatial Understanding with Vision Language Models},
@@ -537,79 +477,60 @@ address = {USA}
   year={2024}
 }
 
-@misc{liu2024coarsecorrespondenceelicit3d,
-      title={Coarse Correspondence Elicit 3D Spacetime Understanding in Multimodal Language Model}, 
-      author={Benlin Liu and Yuhao Dong and Yiqin Wang and Yongming Rao and Yansong Tang and Wei-Chiu Ma and Ranjay Krishna},
-      year={2024},
-      eprint={2408.00754},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2408.00754}, 
-}
-
-@misc{yang2023setofmarkpromptingunleashesextraordinary,
-      title={Set-of-Mark Prompting Unleashes Extraordinary Visual Grounding in GPT-4V}, 
-      author={Jianwei Yang and Hao Zhang and Feng Li and Xueyan Zou and Chunyuan Li and Jianfeng Gao},
-      year={2023},
-      eprint={2310.11441},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2310.11441}, 
-}
-@article{zhu2024llava,
-  title={LLaVA-3D: A Simple yet Effective Pathway to Empowering LMMs with 3D-awareness},
-  author={Zhu, Chenming and Wang, Tai and Zhang, Wenwei and Pang, Jiangmiao and Liu, Xihui},
-  journal={arXiv preprint arXiv:2409.18125},
+@article{liu2024coarsecorrespondenceelicit3d,
+  title={Coarse correspondence elicit 3d spacetime understanding in multimodal language model},
+  author={Liu, Benlin and Dong, Yuhao and Wang, Yiqin and Rao, Yongming and Tang, Yansong and Ma, Wei-Chiu and Krishna, Ranjay},
+  journal={arXiv preprint arXiv:2408.00754},
   year={2024}
 }
 
-@misc{fu2024mmecomprehensiveevaluationbenchmark,
-      title={MME: A Comprehensive Evaluation Benchmark for Multimodal Large Language Models}, 
-      author={Chaoyou Fu and Peixian Chen and Yunhang Shen and Yulei Qin and Mengdan Zhang and Xu Lin and Jinrui Yang and Xiawu Zheng and Ke Li and Xing Sun and Yunsheng Wu and Rongrong Ji},
-      year={2024},
-      eprint={2306.13394},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2306.13394}, 
-}
-
-@misc{yu2023mmvetevaluatinglargemultimodal,
-      title={MM-Vet: Evaluating Large Multimodal Models for Integrated Capabilities}, 
-      author={Weihao Yu and Zhengyuan Yang and Linjie Li and Jianfeng Wang and Kevin Lin and Zicheng Liu and Xinchao Wang and Lijuan Wang},
+@article{yang2023setofmarkpromptingunleashesextraordinary,
+      title={Set-of-Mark Prompting Unleashes Extraordinary Visual Grounding in GPT-4V}, 
+      author={Jianwei Yang and Hao Zhang and Feng Li and Xueyan Zou and Chunyuan Li and Jianfeng Gao},
+      journal={arXiv preprint arXiv:2310.11441},
       year={2023},
-      eprint={2308.02490},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2308.02490}, 
-}
-@misc{liu2024mmbenchmultimodalmodelallaround,
-      title={MMBench: Is Your Multi-modal Model an All-around Player?}, 
-      author={Yuan Liu and Haodong Duan and Yuanhan Zhang and Bo Li and Songyang Zhang and Wangbo Zhao and Yike Yuan and Jiaqi Wang and Conghui He and Ziwei Liu and Kai Chen and Dahua Lin},
-      year={2024},
-      eprint={2307.06281},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2307.06281}, 
 }
 
-@misc{yue2024mmmumassivemultidisciplinemultimodal,
-      title={MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI}, 
-      author={Xiang Yue and Yuansheng Ni and Kai Zhang and Tianyu Zheng and Ruoqi Liu and Ge Zhang and Samuel Stevens and Dongfu Jiang and Weiming Ren and Yuxuan Sun and Cong Wei and Botao Yu and Ruibin Yuan and Renliang Sun and Ming Yin and Boyuan Zheng and Zhenzhu Yang and Yibo Liu and Wenhao Huang and Huan Sun and Yu Su and Wenhu Chen},
-      year={2024},
-      eprint={2311.16502},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2311.16502}, 
+
+@article{fu2024mmecomprehensiveevaluationbenchmark,
+  title={Video-mme: The first-ever comprehensive evaluation benchmark of multi-modal llms in video analysis},
+  author={Fu, Chaoyou and Dai, Yuhan and Luo, Yongdong and Li, Lei and Ren, Shuhuai and Zhang, Renrui and Wang, Zihan and Zhou, Chenyu and Shen, Yunhang and Zhang, Mengdan and others},
+  journal={arXiv preprint arXiv:2405.21075},
+  year={2024}
 }
 
-@misc{li2024multimodalarxivdatasetimproving,
-      title={Multimodal ArXiv: A Dataset for Improving Scientific Comprehension of Large Vision-Language Models}, 
-      author={Lei Li and Yuqi Wang and Runxin Xu and Peiyi Wang and Xiachong Feng and Lingpeng Kong and Qi Liu},
-      year={2024},
-      eprint={2403.00231},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2403.00231}, 
+
+@inproceedings{liu2024mmbenchmultimodalmodelallaround,
+  title={{MMBench: Is your multi-modal model an all-around player?}},
+  author={Liu, Yuan and Duan, Haodong and Zhang, Yuanhan and Li, Bo and Zhang, Songyang and Zhao, Wangbo and Yuan, Yike and Wang, Jiaqi and He, Conghui and Liu, Ziwei and others},
+  booktitle={ECCV},
+  year={2024},
+}
+
+
+@inproceedings{yue2023mmmu,
+    title={MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI},
+    author={Xiang Yue and Yuansheng Ni and Kai Zhang and Tianyu Zheng and Ruoqi Liu and Ge Zhang and Samuel Stevens and Dongfu Jiang and Weiming Ren and Yuxuan Sun and Cong Wei and Botao Yu and Ruibin Yuan and Renliang Sun and Ming Yin and Boyuan Zheng and Zhenzhu Yang and Yibo Liu and Wenhao Huang and Huan Sun and Yu Su and Wenhu Chen},
+    booktitle={CVPR},
+    year={2024},
+}
+
+@inproceedings{li-etal-2024-multimodal-arxiv,
+  title = "Multimodal {A}r{X}iv: A Dataset for Improving Scientific Comprehension of Large Vision-Language Models",
+  author = "Li, Lei  and
+    Wang, Yuqi  and
+    Xu, Runxin  and
+    Wang, Peiyi  and
+    Feng, Xiachong  and
+    Kong, Lingpeng  and
+    Liu, Qi",
+  editor = "Ku, Lun-Wei  and
+    Martins, Andre  and
+    Srikumar, Vivek",
+  booktitle = "ACL",
+  year = "2024",
+  url = "https://aclanthology.org/2024.acl-long.775",
+  doi = "10.18653/v1/2024.acl-long.775"
 }
 
 @article{fu2024video,
@@ -618,111 +539,109 @@ address = {USA}
   journal={arXiv preprint arXiv:2405.21075},
   year={2024}
 }
-@misc{li2024mvbenchcomprehensivemultimodalvideo,
-      title={MVBench: A Comprehensive Multi-modal Video Understanding Benchmark}, 
-      author={Kunchang Li and Yali Wang and Yinan He and Yizhuo Li and Yi Wang and Yi Liu and Zun Wang and Jilan Xu and Guo Chen and Ping Luo and Limin Wang and Yu Qiao},
-      year={2024},
-      eprint={2311.17005},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2311.17005}, 
+
+@InProceedings{Li_2024_CVPR,
+    author    = {Li, Kunchang and Wang, Yali and He, Yinan and Li, Yizhuo and Wang, Yi and Liu, Yi and Wang, Zun and Xu, Jilan and Chen, Guo and Luo, Ping and Wang, Limin and Qiao, Yu},
+    title     = {MVBench: A Comprehensive Multi-modal Video Understanding Benchmark},
+    booktitle = {CVPR},
+    month     = {June},
+    year      = {2024},
+    pages     = {22195-22206}
 }
 
-@misc{ye2024mmegobuildingegocentricmultimodal,
-      title={MM-Ego: Towards Building Egocentric Multimodal LLMs}, 
-      author={Hanrong Ye and Haotian Zhang and Erik Daxberger and Lin Chen and Zongyu Lin and Yanghao Li and Bowen Zhang and Haoxuan You and Dan Xu and Zhe Gan and Jiasen Lu and Yinfei Yang},
-      year={2024},
-      eprint={2410.07177},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2410.07177}, 
+@article{ye2024mmegobuildingegocentricmultimodal,
+  title={MM-Ego: Towards Building Egocentric Multimodal LLMs},
+  author={Ye, Hanrong and Zhang, Haotian and Daxberger, Erik and Chen, Lin and Lin, Zongyu and Li, Yanghao and Zhang, Bowen and You, Haoxuan and Xu, Dan and Gan, Zhe and others},
+  journal={arXiv preprint arXiv:2410.07177},
+  year={2024}
 }
 
-@misc{liu2024tempcompassvideollmsreally,
-      title={TempCompass: Do Video LLMs Really Understand Videos?}, 
-      author={Yuanxin Liu and Shicheng Li and Yi Liu and Yuxiang Wang and Shuhuai Ren and Lei Li and Sishuo Chen and Xu Sun and Lu Hou},
-      year={2024},
-      eprint={2403.00476},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2403.00476}, 
+
+@inproceedings{liu-etal-2024-tempcompass,
+    title = "{T}emp{C}ompass: Do Video {LLM}s Really Understand Videos?",
+    author = "Liu, Yuanxin  and
+      Li, Shicheng  and
+      Liu, Yi  and
+      Wang, Yuxiang  and
+      Ren, Shuhuai  and
+      Li, Lei  and
+      Chen, Sishuo  and
+      Sun, Xu  and
+      Hou, Lu",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Findings of ACL",
+    year = "2024",
+    url = "https://aclanthology.org/2024.findings-acl.517",
+    doi = "10.18653/v1/2024.findings-acl.517",
+    abstract = "Recently, there is a surge in interest surrounding video large language models (Video LLMs). However, existing benchmarks fail to provide a comprehensive feedback on the temporal perception ability of Video LLMs. On the one hand, most of them are unable to distinguish between different temporal aspects (e.g., speed, direction) and thus cannot reflect the nuanced performance on these specific aspects. On the other hand, they are limited in the diversity of task formats (e.g., only multi-choice QA), which hinders the understanding of how temporal perception performance may vary across different types of tasks. Motivated by these two problems, we propose the \textbf{TempCompass} benchmark, which introduces a diversity of temporal aspects and task formats. To collect high-quality test data, we devise two novel strategies: (1) In video collection, we construct conflicting videos that share the same static content but differ in a specific temporal aspect, which prevents Video LLMs from leveraging single-frame bias or language priors. (2) To collect the task instructions, we propose a paradigm where humans first annotate meta-information for a video and then an LLM generates the instruction. We also design an LLM-based approach to automatically and accurately evaluate the responses from Video LLMs. Based on TempCompass, we comprehensively evaluate 9 state-of-the-art (SOTA) Video LLMs and 3 Image LLMs, and reveal the discerning fact that these models exhibit notably poor temporal perception ability.",
 }
 
-@misc{li2024vitatecsdiagnosticdatasettemporal,
-      title={VITATECS: A Diagnostic Dataset for Temporal Concept Understanding of Video-Language Models}, 
-      author={Shicheng Li and Lei Li and Shuhuai Ren and Yuanxin Liu and Yi Liu and Rundong Gao and Xu Sun and Lu Hou},
-      year={2024},
-      eprint={2311.17404},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2311.17404}, 
+@inproceedings{li2024vitatecsdiagnosticdatasettemporal,
+  title={Vitatecs: A diagnostic dataset for temporal concept understanding of video-language models},
+  author={Li, Shicheng and Li, Lei and Ren, Shuhuai and Liu, Yuanxin and Liu, Yi and Gao, Rundong and Sun, Xu and Hou, Lu},
+  booktitle={ECCV},
+  year={2024}
 }
 
-@misc{chen2024rextimebenchmarksuitereasoningacrosstime,
-      title={ReXTime: A Benchmark Suite for Reasoning-Across-Time in Videos}, 
-      author={Jr-Jen Chen and Yu-Chien Liao and Hsi-Che Lin and Yu-Chu Yu and Yen-Chun Chen and Yu-Chiang Frank Wang},
-      year={2024},
-      eprint={2406.19392},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2406.19392}, 
+@inproceedings{chen2024rextimebenchmarksuitereasoningacrosstime,
+  title={ReXTime: A Benchmark Suite for Reasoning-Across-Time in Videos},
+  author={Chen, Jr-Jen and Liao, Yu-Chien and Lin, Hsi-Che and Yu, Yu-Chu and Chen, Yen-Chun and Wang, Yu-Chiang Frank},
+  booktitle={NeurIPS},
+  year={2024}
 }
 
-@misc{shangguan2024tomatoassessingvisualtemporal,
-      title={TOMATO: Assessing Visual Temporal Reasoning Capabilities in Multimodal Foundation Models}, 
-      author={Ziyao Shangguan and Chuhan Li and Yuxuan Ding and Yanan Zheng and Yilun Zhao and Tesca Fitzgerald and Arman Cohan},
-      year={2024},
-      eprint={2410.23266},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2410.23266}, 
+@article{shangguan2024tomatoassessingvisualtemporal,
+  title={{TOMATO: Assessing Visual Temporal Reasoning Capabilities in Multimodal Foundation Models}},
+  author={Shangguan, Ziyao and Li, Chuhan and Ding, Yuxuan and Zheng, Yanan and Zhao, Yilun and Fitzgerald, Tesca and Cohan, Arman},
+  journal={arXiv preprint arXiv:2410.23266},
+  year={2024}
 }
 
 @inproceedings{ribeiro2016should,
   title={" Why should i trust you?" Explaining the predictions of any classifier},
   author={Ribeiro, Marco Tulio and Singh, Sameer and Guestrin, Carlos},
-  booktitle={Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining},
-  pages={1135--1144},
+  booktitle={KDD},
   year={2016}
 }
 
 @article{xu2024drivegpt4,
   title={Drivegpt4: Interpretable end-to-end autonomous driving via large language model},
   author={Xu, Zhenhua and Zhang, Yujia and Xie, Enze and Zhao, Zhen and Guo, Yong and Wong, Kwan-Yee K and Li, Zhenguo and Zhao, Hengshuang},
-  journal={IEEE Robotics and Automation Letters},
+  journal={RA-L},
   year={2024},
   publisher={IEEE}
 }
 
-@article{chandrasegaran2024hourvideo,
-  title={HourVideo: 1-Hour Video-Language Understanding},
-  author={Chandrasegaran, Keshigeyan and Gupta, Agrim and Hadzic, Lea M and Kota, Taran and He, Jimming and Eyzaguirre, Crist{\'o}bal and Durante, Zane and Li, Manling and Wu, Jiajun and Fei-Fei, Li},
-  journal={arXiv preprint arXiv:2411.04998},
-  year={2024}
+@inproceedings{chandrasegaran2024hourvideo,
+      title={HourVideo: 1-Hour Video-Language Understanding},
+      author={Chandrasegaran, Keshigeyan and Gupta, Agrim and Hadzic, Lea M. and Kota, Taran and 
+      He, Jimming and Eyzaguirre, Cristobal and Durante, Zane and Li, Manling and Wu, Jiajun and Li, Fei-Fei},
+      booktitle = {NeurIPS},
+      year={2024},
+      volume = {37},
 }
 
 @article{mangalam2023egoschema,
   title={Egoschema: A diagnostic benchmark for very long-form video language understanding},
   author={Mangalam, Karttikeya and Akshulakov, Raiymbek and Malik, Jitendra},
-  journal={Advances in Neural Information Processing Systems},
-  volume={36},
-  pages={46212--46244},
+  journal={NeurIPS},
   year={2023}
 }
 
 @inproceedings{grauman2022ego4d,
   title={Ego4d: Around the world in 3,000 hours of egocentric video},
   author={Grauman, Kristen and Westbury, Andrew and Byrne, Eugene and Chavis, Zachary and Furnari, Antonino and Girdhar, Rohit and Hamburger, Jackson and Jiang, Hao and Liu, Miao and Liu, Xingyu and others},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={18995--19012},
+  booktitle={CVPR},
   year={2022}
 }
 
-@article{gur2023real,
+@inproceedings{gur2023real,
   title={A real-world webagent with planning, long context understanding, and program synthesis},
   author={Gur, Izzeddin and Furuta, Hiroki and Huang, Austin and Safdari, Mustafa and Matsuo, Yutaka and Eck, Douglas and Faust, Aleksandra},
-  journal={arXiv preprint arXiv:2307.12856},
-  year={2023}
+  booktitle={ICLR},
+  year={2024}
 }
 
 @article{shepard1988mental,
@@ -755,17 +674,11 @@ address = {USA}
 
 @article{brown2020language,
   title={Language models are few-shot learners},
-  author={Brown, Tom B},
-  journal={arXiv preprint arXiv:2005.14165},
+  author={Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and Agarwal, Sandhini and Herbert-Voss, Ariel and Krueger, Gretchen and Henighan, Tom and Child, Rewon and Ramesh, Aditya and Ziegler, Daniel and Wu, Jeffrey and Winter, Clemens and Hesse, Chris and Chen, Mark and Sigler, Eric and Litwin, Mateusz and Gray, Scott and Chess, Benjamin and Clark, Jack and Berner, Christopher and McCandlish, Sam and Radford, Alec and Sutskever, Ilya and Amodei, Dario},
+  booktitle={NeurIPS},
   year={2020}
 }
 
-@article{touvron2023llama,
-  title={Llama: Open and efficient foundation language models},
-  author={Touvron, Hugo and Lavril, Thibaut and Izacard, Gautier and Martinet, Xavier and Lachaux, Marie-Anne and Lacroix, Timoth{\'e}e and Rozi{\`e}re, Baptiste and Goyal, Naman and Hambro, Eric and Azhar, Faisal and others},
-  journal={arXiv preprint arXiv:2302.13971},
-  year={2023}
-}
 
 @article{touvron2023llama2,
   title={Llama 2: Open foundation and fine-tuned chat models},
@@ -798,26 +711,21 @@ address = {USA}
 @article{alayrac2022flamingo,
   title={Flamingo: a visual language model for few-shot learning},
   author={Alayrac, Jean-Baptiste and Donahue, Jeff and Luc, Pauline and Miech, Antoine and Barr, Iain and Hasson, Yana and Lenc, Karel and Mensch, Arthur and Millican, Katherine and Reynolds, Malcolm and others},
-  journal={Advances in neural information processing systems},
-  volume={35},
-  pages={23716--23736},
+  journal={NeurIPS},
   year={2022}
 }
 
 @inproceedings{radford2021learning,
   title={Learning transferable visual models from natural language supervision},
   author={Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and others},
-  booktitle={International conference on machine learning},
-  pages={8748--8763},
-  year={2021},
-  organization={PMLR}
+  booktitle={ICML},
+  year={2021}
 }
 
 @inproceedings{chen2024internvl,
   title={Internvl: Scaling up vision foundation models and aligning for generic visual-linguistic tasks},
   author={Chen, Zhe and Wu, Jiannan and Wang, Wenhai and Su, Weijie and Chen, Guo and Xing, Sen and Zhong, Muyan and Zhang, Qinglong and Zhu, Xizhou and Lu, Lewei and others},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={24185--24198},
+  booktitle={CVPR},
   year={2024}
 }
 
@@ -831,8 +739,7 @@ address = {USA}
 @inproceedings{he2022masked,
   title={Masked autoencoders are scalable vision learners},
   author={He, Kaiming and Chen, Xinlei and Xie, Saining and Li, Yanghao and Doll{\'a}r, Piotr and Girshick, Ross},
-  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
-  pages={16000--16009},
+  booktitle={CVPR},
   year={2022}
 }
 
@@ -840,16 +747,14 @@ address = {USA}
 @inproceedings{zhai2023sigmoid,
   title={Sigmoid loss for language image pre-training},
   author={Zhai, Xiaohua and Mustafa, Basil and Kolesnikov, Alexander and Beyer, Lucas},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={11975--11986},
+  booktitle={ICCV},
   year={2023}
 }
 
 @article{mu2024embodiedgpt,
   title={Embodiedgpt: Vision-language pre-training via embodied chain of thought},
   author={Mu, Yao and Zhang, Qinglong and Hu, Mengkang and Wang, Wenhai and Ding, Mingyu and Jin, Jun and Wang, Bin and Dai, Jifeng and Qiao, Yu and Luo, Ping},
-  journal={Advances in Neural Information Processing Systems},
-  volume={36},
+  journal={NeurIPS},
   year={2024}
 }
 
@@ -860,95 +765,68 @@ address = {USA}
   year={2024}
 }
 
-@article{kim2024openvla,
+@inproceedings{kim2024openvla,
   title={OpenVLA: An Open-Source Vision-Language-Action Model},
   author={Kim, Moo Jin and Pertsch, Karl and Karamcheti, Siddharth and Xiao, Ted and Balakrishna, Ashwin and Nair, Suraj and Rafailov, Rafael and Foster, Ethan and Lam, Grace and Sanketi, Pannag and others},
-  journal={arXiv preprint arXiv:2406.09246},
+  booktitle={CoRL},
   year={2024}
 }
 
 @inproceedings{li2023blip2,
   title={Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models},
   author={Li, Junnan and Li, Dongxu and Savarese, Silvio and Hoi, Steven},
-  booktitle={International conference on machine learning},
-  pages={19730--19742},
-  year={2023},
-  organization={PMLR}
+  booktitle={ICML},
+  year={2023}
 }
 
 @inproceedings{chen2024spatialvlm,
   title={Spatialvlm: Endowing vision-language models with spatial reasoning capabilities},
   author={Chen, Boyuan and Xu, Zhuo and Kirmani, Sean and Ichter, Brain and Sadigh, Dorsa and Guibas, Leonidas and Xia, Fei},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={14455--14465},
+  booktitle={CVPR},
   year={2024}
 }
 
-@article{cheng2024spatialrgpt,
-  title={SpatialRGPT: Grounded Spatial Reasoning in Vision Language Model},
-  author={Cheng, An-Chieh and Yin, Hongxu and Fu, Yang and Guo, Qiushan and Yang, Ruihan and Kautz, Jan and Wang, Xiaolong and Liu, Sifei},
-  journal={arXiv preprint arXiv:2406.01584},
-  year={2024}
-}
 
-@article{liu2024coarse,
-  title={Coarse correspondence elicit 3d spacetime understanding in multimodal language model},
-  author={Liu, Benlin and Dong, Yuhao and Wang, Yiqin and Rao, Yongming and Tang, Yansong and Ma, Wei-Chiu and Krishna, Ranjay},
-  journal={arXiv preprint arXiv:2408.00754},
-  year={2024}
-}
-
-@article{driess2023palm,
+@inproceedings{driess2023palm,
   title={Palm-e: An embodied multimodal language model},
   author={Driess, Danny and Xia, Fei and Sajjadi, Mehdi SM and Lynch, Corey and Chowdhery, Aakanksha and Ichter, Brian and Wahid, Ayzaan and Tompson, Jonathan and Vuong, Quan and Yu, Tianhe and others},
-  journal={arXiv preprint arXiv:2303.03378},
+  booktitle={ICML},
   year={2023}
 }
 
 @inproceedings{yue2024mmmu,
   title={Mmmu: A massive multi-discipline multimodal understanding and reasoning benchmark for expert agi},
   author={Yue, Xiang and Ni, Yuansheng and Zhang, Kai and Zheng, Tianyu and Liu, Ruoqi and Zhang, Ge and Stevens, Samuel and Jiang, Dongfu and Ren, Weiming and Sun, Yuxuan and others},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={9556--9567},
+  booktitle={CVPR},
   year={2024}
 }
 
 @inproceedings{liu2025mmbench,
   title={Mmbench: Is your multi-modal model an all-around player?},
   author={Liu, Yuan and Duan, Haodong and Zhang, Yuanhan and Li, Bo and Zhang, Songyang and Zhao, Wangbo and Yuan, Yike and Wang, Jiaqi and He, Conghui and Liu, Ziwei and others},
-  booktitle={European Conference on Computer Vision},
-  pages={216--233},
-  year={2025},
-  organization={Springer}
+  booktitle={ECCV},
+  year={2025}
 }
 
 @inproceedings{li2024seed,
   title={SEED-Bench: Benchmarking Multimodal Large Language Models},
   author={Li, Bohao and Ge, Yuying and Ge, Yixiao and Wang, Guangzhi and Wang, Rui and Zhang, Ruimao and Shan, Ying},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={13299--13308},
+  booktitle={CVPR},
   year={2024}
 }
 
 @article{yu2023mmvet,
   title={Mm-vet: Evaluating large multimodal models for integrated capabilities},
   author={Yu, Weihao and Yang, Zhengyuan and Li, Linjie and Wang, Jianfeng and Lin, Kevin and Liu, Zicheng and Wang, Xinchao and Wang, Lijuan},
-  journal={arXiv preprint arXiv:2308.02490},
-  year={2023}
-}
-
-@article{fu2024videomme,
-  title={Video-mme: The first-ever comprehensive evaluation benchmark of multi-modal llms in video analysis},
-  author={Fu, Chaoyou and Dai, Yuhan and Luo, Yongdong and Li, Lei and Ren, Shuhuai and Zhang, Renrui and Wang, Zihan and Zhou, Chenyu and Shen, Yunhang and Zhang, Mengdan and others},
-  journal={arXiv preprint arXiv:2405.21075},
+  journal={ICML},
   year={2024}
 }
+
 
 @inproceedings{li2024mvbench,
   title={Mvbench: A comprehensive multi-modal video understanding benchmark},
   author={Li, Kunchang and Wang, Yali and He, Yinan and Li, Yizhuo and Wang, Yi and Liu, Yi and Wang, Zun and Xu, Jilan and Chen, Guo and Luo, Ping and others},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={22195--22206},
+  booktitle={CVPR},
   year={2024}
 }
 
@@ -959,12 +837,6 @@ address = {USA}
   year={2023}
 }
 
-@article{liu2024tempcompass,
-  title={Tempcompass: Do video llms really understand videos?},
-  author={Liu, Yuanxin and Li, Shicheng and Liu, Yi and Wang, Yuxiang and Ren, Shuhuai and Li, Lei and Chen, Sishuo and Sun, Xu and Hou, Lu},
-  journal={arXiv preprint arXiv:2403.00476},
-  year={2024}
-}
 
 @article{li2023vitatecs,
   title={Vitatecs: A diagnostic dataset for temporal concept understanding of video-language models},
@@ -973,10 +845,10 @@ address = {USA}
   year={2023}
 }
 
-@article{fang2024mmbenchvideo,
+@inproceedings{fang2024mmbenchvideo,
   title={MMBench-Video: A Long-Form Multi-Shot Benchmark for Holistic Video Understanding},
   author={Fang, Xinyu and Mao, Kangrui and Duan, Haodong and Zhao, Xiangyu and Li, Yining and Lin, Dahua and Chen, Kai},
-  journal={arXiv preprint arXiv:2406.14515},
+  booktitle={NeurIPS},
   year={2024}
 }
 
@@ -1001,10 +873,10 @@ address = {USA}
   year={2024}
 }
 
-@article{yang2024virl,
+@inproceedings{yang2024virl,
   title={V-irl: Grounding virtual intelligence in real life},
   author={Yang, Jihan and Ding, Runyu and Brown, Ellis and Qi, Xiaojuan and Xie, Saining},
-  journal={arXiv preprint arXiv:2402.03310},
+  booktitle={ECCV},
   year={2024}
 }
 
@@ -1015,12 +887,6 @@ address = {USA}
   year={2024}
 }
 
-@article{yang2023set,
-  title={Set-of-mark prompting unleashes extraordinary visual grounding in gpt-4v},
-  author={Yang, Jianwei and Zhang, Hao and Li, Feng and Zou, Xueyan and Li, Chunyuan and Gao, Jianfeng},
-  journal={arXiv preprint arXiv:2310.11441},
-  year={2023}
-}
 
 @article{zhu2024llava3d,
   title={LLaVA-3D: A Simple yet Effective Pathway to Empowering LMMs with 3D-awareness},
@@ -1032,7 +898,7 @@ address = {USA}
 @article{wu2024visualization,
   title={Visualization-of-Thought Elicits Spatial Reasoning in Large Language Models},
   author={Wu, Wenshan and Mao, Shaoguang and Zhang, Yadong and Xia, Yan and Dong, Li and Cui, Lei and Wei, Furu},
-  journal={arXiv preprint arXiv:2404.03622},
+  journal={NeurIPS},
   year={2024}
 }
 
@@ -1092,7 +958,7 @@ address = {USA}
 @article{ren2016faster,
   title={Faster R-CNN: Towards real-time object detection with region proposal networks},
   author={Ren, Shaoqing and He, Kaiming and Girshick, Ross and Sun, Jian},
-  journal={IEEE transactions on pattern analysis and machine intelligence},
+  journal={PAMI},
   volume={39},
   number={6},
   pages={1137--1149},
@@ -1100,18 +966,21 @@ address = {USA}
   publisher={IEEE}
 }
 
-@article{yamada2023evaluating,
-  title={Evaluating spatial understanding of large language models},
-  author={Yamada, Yutaro and Bao, Yihan and Lampinen, Andrew K and Kasai, Jungo and Yildirim, Ilker},
-  journal={arXiv preprint arXiv:2310.14540},
-  year={2023}
+@article{
+yamada2024evaluating,
+title={Evaluating Spatial Understanding of Large Language Models},
+author={Yutaro Yamada and Yihan Bao and Andrew Kyle Lampinen and Jungo Kasai and Ilker Yildirim},
+journal={TMLR},
+issn={2835-8856},
+year={2024},
+url={https://openreview.net/forum?id=xkiflfKCw3},
+note={}
 }
 
 @article{momennejad2024evaluating,
   title={Evaluating cognitive maps and planning in large language models with CogEval},
   author={Momennejad, Ida and Hasanbeig, Hosein and Vieira Frujeri, Felipe and Sharma, Hiteshi and Jojic, Nebojsa and Palangi, Hamid and Ness, Robert and Larson, Jonathan},
-  journal={Advances in Neural Information Processing Systems},
-  volume={36},
+  journal={NeurIPS},
   year={2024}
 }
 
@@ -1136,31 +1005,54 @@ address = {USA}
 @article{liu2023visual,
   title={Visual spatial reasoning},
   author={Liu, Fangyu and Emerson, Guy and Collier, Nigel},
-  journal={Transactions of the Association for Computational Linguistics},
-  volume={11},
-  pages={635--651},
+  journal={TACL},
   year={2023},
   publisher={MIT Press One Broadway, 12th Floor, Cambridge, Massachusetts 02142, USA~…}
 }
 
-@article{liu2022things,
-  title={Things not written in text: Exploring spatial commonsense from visual signals},
-  author={Liu, Xiao and Yin, Da and Feng, Yansong and Zhao, Dongyan},
-  journal={arXiv preprint arXiv:2203.08075},
-  year={2022}
+@inproceedings{liu-etal-2022-things,
+    title = "Things not Written in Text: Exploring Spatial Commonsense from Visual Signals",
+    author = "Liu, Xiao  and
+      Yin, Da  and
+      Feng, Yansong  and
+      Zhao, Dongyan",
+    editor = "Muresan, Smaranda  and
+      Nakov, Preslav  and
+      Villavicencio, Aline",
+    booktitle = "ACL",
+    year = "2022",
+    url = "https://aclanthology.org/2022.acl-long.168",
+    doi = "10.18653/v1/2022.acl-long.168",
+    abstract = "Spatial commonsense, the knowledge about spatial position and relationship between objects (like the relative size of a lion and a girl, and the position of a boy relative to a bicycle when cycling), is an important part of commonsense knowledge. Although pretrained language models (PLMs) succeed in many NLP tasks, they are shown to be ineffective in spatial commonsense reasoning. Starting from the observation that images are more likely to exhibit spatial commonsense than texts, we explore whether models with visual signals learn more spatial commonsense than text-based PLMs. We propose a spatial commonsense benchmark that focuses on the relative scales of objects, and the positional relationship between people and objects under different actions. We probe PLMs and models with visual signals, including vision-language pretrained models and image synthesis models, on this benchmark, and find that image synthesis models are more capable of learning accurate and consistent spatial knowledge than other models. The spatial knowledge from image synthesis models also helps in natural language understanding tasks that require spatial commonsense.",
 }
 
-@article{mirzaee2021spartqa,
-  title={Spartqa:: A textual question answering benchmark for spatial reasoning},
-  author={Mirzaee, Roshanak and Faghihi, Hossein Rajaby and Ning, Qiang and Kordjmashidi, Parisa},
-  journal={arXiv preprint arXiv:2104.05832},
-  year={2021}
+@inproceedings{mirzaee-etal-2021-spartqa,
+    title = "{SPARTQA}: A Textual Question Answering Benchmark for Spatial Reasoning",
+    author = "Mirzaee, Roshanak  and
+      Rajaby Faghihi, Hossein  and
+      Ning, Qiang  and
+      Kordjamshidi, Parisa",
+    editor = "Toutanova, Kristina  and
+      Rumshisky, Anna  and
+      Zettlemoyer, Luke  and
+      Hakkani-Tur, Dilek  and
+      Beltagy, Iz  and
+      Bethard, Steven  and
+      Cotterell, Ryan  and
+      Chakraborty, Tanmoy  and
+      Zhou, Yichao",
+    booktitle = "NAACL",
+    year = "2021",
+    url = "https://aclanthology.org/2021.naacl-main.364",
+    doi = "10.18653/v1/2021.naacl-main.364",
+    abstract = "This paper proposes a question-answering (QA) benchmark for spatial reasoning on natural language text which contains more realistic spatial phenomena not covered by prior work and is challenging for state-of-the-art language models (LM). We propose a distant supervision method to improve on this task. Specifically, we design grammar and reasoning rules to automatically generate a spatial description of visual scenes and corresponding QA pairs. Experiments show that further pretraining LMs on these automatically generated data significantly improves LMs{'} capability on spatial understanding, which in turn helps to better solve two external datasets, bAbI, and boolQ. We hope that this work can foster investigations into more sophisticated models for spatial reasoning over text.",
 }
+
 
 @inproceedings{collell2018acquiring,
   title={Acquiring common sense spatial knowledge through implicit spatial templates},
   author={Collell, Guillem and Van Gool, Luc and Moens, Marie-Francine},
-  booktitle={Proceedings of the AAAI conference on artificial intelligence},
+  booktitle={AAAI},
   volume={32},
   number={1},
   year={2018}
@@ -1171,14 +1063,13 @@ address = {USA}
   author={Freksa, Christian},
   booktitle={Cognitive and linguistic aspects of geographic space},
   pages={361--372},
-  year={1991},
-  publisher={Springer}
+  year={1991}
 }
 
 @inproceedings{cho2023spatially,
   title={Spatially-Aware Transformers for Embodied Agents},
   author={Cho, Junmo and Yoon, Jaesik and Ahn, Sungjin},
-  booktitle={The Twelfth International Conference on Learning Representations},
+  booktitle={ICLR},
   year={2023}
 }
 
@@ -1203,18 +1094,19 @@ address = {USA}
   year={2024}
 }
 
-@article{hendrycks2020measuring,
-  title={Measuring massive multitask language understanding},
-  author={Hendrycks, Dan and Burns, Collin and Basart, Steven and Zou, Andy and Mazeika, Mantas and Song, Dawn and Steinhardt, Jacob},
-  journal={arXiv preprint arXiv:2009.03300},
-  year={2020}
+@inproceedings{
+hendrycks2021measuring,
+title={Measuring Massive Multitask Language Understanding},
+author={Dan Hendrycks and Collin Burns and Steven Basart and Andy Zou and Mantas Mazeika and Dawn Song and Jacob Steinhardt},
+booktitle={ICLR},
+year={2021},
+url={https://openreview.net/forum?id=d7KBjmI3GmQ}
 }
 
 @inproceedings{majumdar2024openeqa,
   title={Openeqa: Embodied question answering in the era of foundation models},
   author={Majumdar, Arjun and Ajay, Anurag and Zhang, Xiaohan and Putta, Pranav and Yenamandra, Sriram and Henaff, Mikael and Silwal, Sneha and Mcvay, Paul and Maksymets, Oleksandr and Arnaud, Sergio and others},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={16488--16498},
+  booktitle={CVPR},
   year={2024}
 }
 
@@ -1231,38 +1123,60 @@ address = {USA}
 @inproceedings{parcalabescu2024measuring,
   title={On measuring faithfulness or self-consistency of natural language explanations},
   author={Parcalabescu, Letitia and Frank, Anette},
-  booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
-  pages={6048--6089},
+  booktitle={ACL},
   year={2024}
 }
 
 
-@article{wu2024mindseye,
-  title={Mind’s eye of llms: Visualization-of-thought elicits spatial reasoning in large language models},
-  author={Wu, Wenshan and Mao, Shaoguang and Zhang, Yadong and Xia, Yan and Dong, Li and Cui, Lei and Wei, Furu},
-  journal={arXiv preprint arxiv:2404.03622},
-  year={2024}
+@inproceedings{lyu-etal-2023-faithful,
+    title = "Faithful Chain-of-Thought Reasoning",
+    author = "Lyu, Qing  and
+      Havaldar, Shreya  and
+      Stein, Adam  and
+      Zhang, Li  and
+      Rao, Delip  and
+      Wong, Eric  and
+      Apidianaki, Marianna  and
+      Callison-Burch, Chris",
+    editor = "Park, Jong C.  and
+      Arase, Yuki  and
+      Hu, Baotian  and
+      Lu, Wei  and
+      Wijaya, Derry  and
+      Purwarianti, Ayu  and
+      Krisnadhi, Adila Alfa",
+    booktitle = "ACL",
+    year = "2023"
 }
 
-@article{lyu2023faithful,
-  title={Faithful chain-of-thought reasoning},
-  author={Lyu, Qing and Havaldar, Shreya and Stein, Adam and Zhang, Li and Rao, Delip and Wong, Eric and Apidianaki, Marianna and Callison-Burch, Chris},
-  journal={arXiv preprint arXiv:2301.13379},
-  year={2023}
+
+@inproceedings{gao-etal-2024-self,
+    title = "Self-Explanation Prompting Improves Dialogue Understanding in Large Language Models",
+    author = "Gao, Haoyu  and
+      Lin, Ting-En  and
+      Li, Hangyu  and
+      Yang, Min  and
+      Wu, Yuchuan  and
+      Ma, Wentao  and
+      Huang, Fei  and
+      Li, Yongbin",
+    editor = "Calzolari, Nicoletta  and
+      Kan, Min-Yen  and
+      Hoste, Veronique  and
+      Lenci, Alessandro  and
+      Sakti, Sakriani  and
+      Xue, Nianwen",
+    booktitle = "COLING",
+    year = "2024",
 }
 
-@article{gao2023self,
-  title={Self-explanation prompting improves dialogue understanding in large language models},
-  author={Gao, Haoyu and Lin, Ting-En and Li, Hangyu and Yang, Min and Wu, Yuchuan and Ma, Wentao and Li, Yongbin},
-  journal={arXiv preprint arXiv:2309.12940},
-  year={2023}
-}
 
-@article{oquab2023dinov2,
-  title={Dinov2: Learning robust visual features without supervision},
-  author={Oquab, Maxime and Darcet, Timoth{\'e}e and Moutakanni, Th{\'e}o and Vo, Huy and Szafraniec, Marc and Khalidov, Vasil and Fernandez, Pierre and Haziza, Daniel and Massa, Francisco and El-Nouby, Alaaeldin and others},
-  journal={arXiv preprint arXiv:2304.07193},
-  year={2023}
+@article{
+oquab2024dinov,
+title={{DINO}v2: Learning Robust Visual Features without Supervision},
+author={Maxime Oquab and Timoth{\'e}e Darcet and Th{\'e}o Moutakanni and Huy V. Vo and Marc Szafraniec and Vasil Khalidov and Pierre Fernandez and Daniel HAZIZA and Francisco Massa and Alaaeldin El-Nouby and Mido Assran and Nicolas Ballas and Wojciech Galuba and Russell Howes and Po-Yao Huang and Shang-Wen Li and Ishan Misra and Michael Rabbat and Vasu Sharma and Gabriel Synnaeve and Hu Xu and Herve Jegou and Julien Mairal and Patrick Labatut and Armand Joulin and Piotr Bojanowski},
+journal={TMLR},
+year={2024},
 }
 
 @article{Zhou2018open3d,
@@ -1277,4 +1191,11 @@ address = {USA}
   author={Zhang, Kaichen and Li, Bo and Zhang, Peiyuan and Pu, Fanyi and Cahyono, Joshua Adrian and Hu, Kairui and Liu, Shuai and Zhang, Yuanhan and Yang, Jingkang and Li, Chunyuan and others},
   journal={arXiv preprint arXiv:2407.12772},
   year={2024}
+}
+
+@article{touvron2023llama,
+  title={Llama: Open and efficient foundation language models},
+  author={Touvron, Hugo and Lavril, Thibaut and Izacard, Gautier and Martinet, Xavier and Lachaux, Marie-Anne and Lacroix, Timoth{\'e}e and Rozi{\`e}re, Baptiste and Goyal, Naman and Hambro, Eric and Azhar, Faisal and others},
+  journal={arXiv preprint arXiv:2302.13971},
+  year={2023}
 }

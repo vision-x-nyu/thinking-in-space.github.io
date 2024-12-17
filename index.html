@@ -8,12 +8,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Open Graph -->
-        <meta property="og:url" content="https://spatial-intelligence-benchmark.github.io" />
+        <meta property="og:url" content="https://thinking-in-space.github.io" />
         <meta property="og:image" content="static/img/preview.png" />
         <meta property="og:title" content="Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces" />
         
         <!-- Twitter -->
-        <meta name="twitter:url" content="https://spatial-intelligence-benchmark.github.io" />
+        <meta name="twitter:url" content="https://thinking-in-space.github.io" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="static/img/preview.png" />
         <meta name="twitter:title" content="Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces" />
@@ -78,28 +78,25 @@
                     
 
                     <div class="button-container">
-                        <!-- replace arxiv -->
                         <a href="" class="button paper-link" target="_blank">
                             <span class="icon is-small">
                                 <i class="ai ai-arxiv"></i>
                             </span>
                             arXiv
                         </a>
-                        <!-- replace pdf -->
                         <a href="" class="button paper-link" target="_blank">
                             <span class="icon is-small">
                                 <i class="fas fa-file-pdf"></i>
                             </span>
                             <span>PDF</span>
                         </a>
-                        <!-- replace image -->
-                        <a href="" class="button" target="_blank">
+                        <a href="https://github.com/vision-x-nyu/thinking-in-space" class="button" target="_blank">
                             <span class="icon is-small">
                                 <i class="fab fa-github"></i>
                             </span>
                             <span>Code</span>
                         </a>                      
-                        <a href="" class="button" target="_blank">
+                        <a href="https://huggingface.co/datasets/nyu-visionx/VSI-Bench" class="button" target="_blank">
                             <span class="icon is-small">
                                 <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="height: 1em;">
                             </span>
@@ -231,7 +228,7 @@
          <div class="l-body">
             <!-- Preview Images in a Flex Container - placed below the Q&A sections -->
             <div class="preview-container">
-                <img id="Touristvideo1Preview" class="preview" src="static/img/video-preview/41069025-thumbnail.jpg" alt="video-thumbnail0" onclick="switchVideo('Tourist', 'video1Container', 'video1Preview')">
+                <img id="Touristvideo1Preview" class="preview" src="static/img/video-preview/3e8bba0176-thumbnail.jpg" alt="video-thumbnail2233" onclick="switchVideo('Tourist', 'video1Container', 'video1Preview')">
                 <img id="Touristvideo2Preview" class="preview" src="static/img/video-preview/41125700-thumbnail.jpg" alt="video-thumbnail3" onclick="switchVideo('Tourist','video2Container', 'video2Preview')">
                 <img id="Touristvideo3Preview" class="preview" src="static/img/video-preview/42445981-thumbnail.jpg" alt="video-thumbnail18" onclick="switchVideo('Tourist', 'video3Container', 'video3Preview')">
                 <img id="Touristvideo4Preview" class="preview" src="static/img/video-preview/42446049-thumbnail.jpg" alt="video-thumbnail1129" onclick="switchVideo('Tourist','video4Container', 'video4Preview')">
@@ -239,24 +236,27 @@
                 <img id="Touristvideo6Preview" class="preview" src="static/img/video-preview/47334096-thumbnail.jpg" alt="video-thumbnail1462" onclick="switchVideo('Tourist','video6Container', 'video6Preview')">
                 <img id="Touristvideo7Preview" class="preview" src="static/img/video-preview/47332899-thumbnail.jpg" alt="video-thumbnail879" onclick="switchVideo('Tourist', 'video7Container', 'video7Preview')">
                 <img id="Touristvideo8Preview" class="preview" src="static/img/video-preview/09c1414f1b-thumbnail.jpg" alt="video-thumbnail2871" onclick="switchVideo('Tourist','video8Container', 'video8Preview')">
+                <img id="Touristvideo9Preview" class="preview" src="static/img/video-preview/45261182-thumbnail.jpg" alt="video-thumbnail608" onclick="switchVideo('Tourist','video9Container', 'video9Preview')">
+                <img id="Touristvideo10Preview" class="preview" src="static/img/video-preview/47331990-thumbnail.jpg" alt="video-thumbnail4983" onclick="switchVideo('Tourist','video10Container', 'video10Preview')">
+
             </div>
-            <!-- Video 1; ID: 0 -->
+            <!-- Video 1; ID: 2233 -->
             <div id="Touristvideo1Container" class="video-container">
-                <div class="video-label">Object Count</div>
+                <div class="video-label">Object Size</div>
                 <video class="video-music" controls preload="metadata" playsinline>
-                    <source src="static/videos/41069025.mp4" type="video/mp4">
+                    <source src="static/videos/3e8bba0176.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 
                 <div class="video-qa">
                     <div class="qa-item">
-                        <p><strong>Question:</strong> How many table(s) are in this room?</p>
+                        <p><strong>Question:</strong> What is the length of the longest dimension (length, width, or height) of the coat hanger, measured in centimeters?</p>
                         <p><strong>Options:</strong></p>
                         <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: space-between; text-align: left; max-width: 60%; margin: 0 auto;">
-                            <li><input type="radio" name="tables"> A. 7</li>
-                            <li><input type="radio" name="tables"> B. 4</li>
-                            <li><input type="radio" name="tables"> C. 1</li>
-                            <li><input type="radio" name="tables"> D. 6</li>
+                            <li><input type="radio" name="tables"> A. 291</li>
+                            <li><input type="radio" name="tables"> B. 115</li>
+                            <li><input type="radio" name="tables"> C. 183</li>
+                            <li><input type="radio" name="tables"> D. 221</li>
                         </ul>  
                                            
                     
@@ -266,37 +266,27 @@
 
 
                             <p>
-                                <strong style="color: green;">Ground Truth:</strong> 4
+                                <strong style="color: green;">Ground Truth:</strong> 183
                             </p>
                             
                             <p>
-                                <strong style="color: red;">Gemini:</strong> 2
+                                <strong style="color: red;">Gemini:</strong> 40
                             </p>
-                            <p>
-                                <strong style="color: red;">LLaVA-OneVision:</strong> 2
-                            </p>
-                            <p>
-                                <strong style="color: red;">InternVL2:</strong> 1
-                            </p>
-                            <p>
-                                <strong style="color: red;">LLaVA-NeXT-Video:</strong> 2
-                            </p>
-                            <p>
-                                <strong style="color: red;">GPT-4o</strong> 2
-                            </p>
+     
                         </div>
                     </div>
                     
             
-                    <div style="margin-top: 20px; text-align: center;"> <!-- Increased margin-top -->
+                    <div style="margin-top: 20px; text-align: center;"> 
                         <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-1', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
+                            <strong>Click to view Ground Truth and MLLM's answer!</strong>
                         </p>
                     </div>
                 </div>
-                </div>
             </div>
+        </div>
+
         
             <!-- Video 2; ID: 3 -->
             <div id="Touristvideo2Container" class="video-container" style="display:none;">
@@ -327,25 +317,13 @@
                                         
                                         <p>
                                             <strong style="color: red;">Gemini:</strong> 1
-                                        </p>
-                                        <p>
-                                            <strong style="color: green;">LLaVA-OneVision:</strong> 2
-                                        </p>
-                                        <p>
-                                            <strong style="color: red;">InternVL2:</strong> 1
-                                        </p>
-                                        <p>
-                                            <strong style="color: red;">LLaVA-NeXT-Video:</strong> 1
-                                        </p>
-                                        <p>
-                                            <strong style="color: red;">GPT-4o:</strong> 1
-                                        </p>  
+                                        </p> 
                                     </div>
                                 </div>
                         
                                 <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-2', this)">
                                     <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                                    <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
+                                    <strong>Click to view Ground Truth and MLLM's answer!</strong>
                                 </p>
                             </div>
                         </div>
@@ -372,31 +350,19 @@
                 
                         <div id="answer-3" style="display:none; text-align: center; margin-top: 20px;">
                             <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
-                                <p>
+                            <p>
                                 <strong style="color: green;">Ground Truth:</strong> 5
                             </p>
                             <p>
                                 <strong style="color: red;">Gemini:</strong> 3
                             </p>
-                            <p>
-                                <strong style="color: red;">LLaVA-OneVision:</strong> 2
-                            </p>
-                            <p>
-                                <strong style="color: red;">InternVL2:</strong> 4
-                            </p>
-                            <p>
-                                <strong style="color: red;">LLaVA-NeXT-Video:</strong> 4
-                            </p>
-                            <p>
-                                <strong style="color: red;">GPT-4o:</strong> 4
-                            </p>  
                             
                         </div>
                     </div>
                 
                         <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-3', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
+                            <strong>Click to view Ground Truth and MLLM's answer!</strong>
                         </p>
                     </div>
                 
@@ -432,25 +398,13 @@
                             </p>
                             <p>
                                 <strong style="color: red;">Gemini:</strong> Left
-                            </p>
-                            <p>
-                                <strong style="color: green;">LLaVA-OneVision:</strong> Right
-                            </p>
-                            <p>
-                                <strong style="color: red;">InternVL2:</strong> Back
-                            </p>
-                            <p>
-                                <strong style="color: green;">LLaVA-NeXT-Video:</strong> Right
-                            </p>
-                            <p>
-                                <strong style="color: red;">GPT-4o:</strong> Left
-                            </p>  
+                            </p> 
                         </div>
                     </div>
                 
                         <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-4', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
+                            <strong>Click to view Ground Truth and MLLM's answer!</strong>
                         </p>
                     </div>
                 </div>
@@ -485,23 +439,11 @@
                                     <p>
                                         <strong style="color: red;">Gemini:</strong> Right
                                     </p>
-                                    <p>
-                                        <strong style="color: red;">LLaVA-OneVision:</strong> Right
-                                    </p>
-                                    <p>
-                                        <strong style="color: red;">InternVL2:</strong> Right
-                                    </p>
-                                    <p>
-                                        <strong style="color: green;">LLaVA-NeXT-Video:</strong> Left
-                                    </p>
-                                    <p>
-                                        <strong style="color: green;">GPT-4o:</strong> Left
-                                    </p>  
                                 </div>
                             </div>
                                 <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-5', this)">
                                     <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                                    <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
+                                    <strong>Click to view Ground Truth and MLLM's answer!</strong>
                                 </p>
                             </div>
                         </div>
@@ -536,23 +478,11 @@
                             <p>
                                 <strong style="color: red;">Gemini:</strong> Sofa
                             </p>
-                            <p>
-                                <strong style="color: red;">LLaVA-OneVision:</strong> Sofa
-                            </p>
-                            <p>
-                                <strong style="color: red;">InternVL2:</strong> Sofa
-                            </p>
-                            <p>
-                                <strong style="color: red;">LLaVA-NeXT-Video:</strong> Sofa
-                            </p>
-                            <p>
-                                <strong style="color: red;">GPT-4o:</strong> Sofa
-                            </p>  
                         </div>
                     </div>
                         <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-6', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
+                            <strong>Click to view Ground Truth and MLLM's answer!</strong>
                         </p>
                     </div>
                 </div>
@@ -589,27 +519,14 @@
                             <p>
                                 <strong style="color: red;">Gemini:</strong> 2.5
                             </p>
-                            <p>
-                                <strong style="color: red;">LLaVA-OneVision:</strong> 0.5
-                            </p>
-                            <p>
-                                <strong style="color: red;">InternVL2:</strong> 2.5
-                            </p>
-                            <p>
-                                <strong style="color: red;">LLaVA-NeXT-Video:</strong> 1.5
-                            </p>
-                            <p>
-                                <strong style="color: red;">GPT-4o:</strong> N/A
-                            </p>  
                         </div>
                     </div>
                         <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-7', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
+                            <strong>Click to view Ground Truth and MLLM's answer!</strong>
                         </p>
                     </div>
-                </div>
-                
+                </div>              
             </div>     
             
             
@@ -622,64 +539,136 @@
                     Your browser does not support the video tag.
                 </video>
                 
-                <div class="video-qa">
-                    <div class="qa-item">
-                        <p><strong>Question:</strong> What will be the first-time appearance order of the following categories in the video: blanket, trash can, microwave, plant?</p>
-                        <p><strong>Options:</strong></p>
-                        <div style="display: flex; justify-content: center; flex-wrap: wrap; max-width: 800px; margin: 0 auto; gap: 20px;">
-                            <div style="flex: 1; min-width: 300px; text-align: left;">
-                                <input type="radio" id="optionA" name="appearanceOrder"> 
-                                <label for="optionA">A. microwave, blanket, plant, trash can</label>
-                            </div>
-                            <div style="flex: 1; min-width: 300px; text-align: left;">
-                                <input type="radio" id="optionB" name="appearanceOrder">
-                                <label for="optionB">B. plant, blanket, microwave, trash can</label>
-                            </div>
-                            <div style="flex: 1; min-width: 300px; text-align: left;">
-                                <input type="radio" id="optionC" name="appearanceOrder">
-                                <label for="optionC">C. plant, blanket, trash can, microwave</label>
-                            </div>
-                            <div style="flex: 1; min-width: 300px; text-align: left;">
-                                <input type="radio" id="optionD" name="appearanceOrder">
-                                <label for="optionD">D. blanket, trash can, microwave, plant</label>
-                            </div>
-                            
-                        </div>
-                        
-            </div>
+                        <div class="video-qa">
+                            <div class="qa-item">
+                                <p><strong>Question:</strong> What will be the first-time appearance order of the following categories in the video: blanket, trash can, microwave, plant?</p>
+                                <p><strong>Options:</strong></p>
+                                <div style="display: flex; justify-content: center; flex-wrap: wrap; max-width: 800px; margin: 0 auto; gap: 20px;">
+                                    <div style="flex: 1; min-width: 300px; text-align: left;">
+                                        <input type="radio" id="optionA" name="appearanceOrder"> 
+                                        <label for="optionA">A. microwave, blanket, plant, trash can</label>
+                                    </div>
+                                    <div style="flex: 1; min-width: 300px; text-align: left;">
+                                        <input type="radio" id="optionB" name="appearanceOrder">
+                                        <label for="optionB">B. plant, blanket, microwave, trash can</label>
+                                    </div>
+                                    <div style="flex: 1; min-width: 300px; text-align: left;">
+                                        <input type="radio" id="optionC" name="appearanceOrder">
+                                        <label for="optionC">C. plant, blanket, trash can, microwave</label>
+                                    </div>
+                                    <div style="flex: 1; min-width: 300px; text-align: left;">
+                                        <input type="radio" id="optionD" name="appearanceOrder">
+                                        <label for="optionD">D. blanket, trash can, microwave, plant</label>
+                                    </div>
+                                    
+                                </div>
+                                
+                    </div>
+                    
 
-        </div>
+                </div>
                 
-        <div id="answer-8" style="display:none; text-align: center; margin-top: 20px;">
-            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
-                <p>
-                    <strong style="color: green;">Ground Truth:</strong> C.
-                </p>
-                <p>
-                    <strong style="color: red;">Gemini:</strong> B.
-                </p>
-                <p>
-                    <strong style="color: green;">LLaVA-OneVision:</strong> C.
-                </p>
-                <p>
-                    <strong style="color: green;">InternVL2:</strong> C.
-                </p>
-                <p>
-                    <strong style="color: red;">LLaVA-NeXT-Video:</strong> B.
-                </p>
-                <p>
-                    <strong style="color: red;">GPT-4o:</strong> B.
-                </p>  
-            </div>
-        </div>
+                    <div id="answer-8" style="display:none; text-align: center; margin-top: 20px;">
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+                            <p>
+                                <strong style="color: green;">Ground Truth:</strong> C.
+                            </p>
+                            <p>
+                                <strong style="color: red;">Gemini:</strong> B.
+                            </p>
+                        </div>
+                    </div>
         
                         <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-8', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and the answers from MLLMs!</strong>
+                            <strong>Click to view Ground Truth and MLLM's answer!</strong>
                         </p>
                     </div>
                 </div>                
-            </div>              
+            </div> 
+            
+
+            <!-- Video 9; ID: 608 -->
+<div id="Touristvideo9Container" class="video-container" style="display:none;">
+    <div class="video-label">Room Size</div>
+
+    <video class="video-music" controls preload="metadata" playsinline>
+        <source src="static/videos/45261182.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="video-qa">
+        <div class="qa-item">
+            <p><strong>Question:</strong> What is the size of this room (in square meters)? If multiple rooms are shown, estimate the size of the combined space.</p>
+            <p><strong>Options:</strong></p>
+            <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: space-between; text-align: left; max-width: 60%; margin: 0 auto;">
+                <li><input type="radio" name="roomSize"> A. 10.6</li>
+                <li><input type="radio" name="roomSize"> B. 13.2</li>
+                <li><input type="radio" name="roomSize"> C. 15.7</li>
+                <li><input type="radio" name="roomSize"> D. 7.4</li>
+            </ul>  
+
+            <div id="answer-9" style="display:none; text-align: center; margin-top: 20px;">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+                    <p><strong style="color: green;">Ground Truth:</strong> 10.6</p>
+                    <p><strong style="color: red;">Gemini:</strong> 4</p>
+                </div>
+            </div>
+            <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-9', this)">
+                <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                <strong>Click to view Ground Truth and MLLM's answer!</strong>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Video 10; ID: 4983 -->
+<div id="Touristvideo10Container" class="video-container" style="display:none;">
+    <div class="video-label">Route Plan</div>
+
+    <video class="video-music" controls preload="metadata" playsinline>
+        <source src="static/videos/47331990.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+        <div class="video-qa">
+            <div class="qa-item">
+                <p><strong>Question:</strong> What will be the first-time appearance order of the following categories in the video: blanket, trash can, microwave, plant?</p>
+                <p><strong>Options:</strong></p>
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; max-width: 800px; margin: 0 auto; gap: 20px;">
+                    <div style="flex: 1; min-width: 300px; text-align: left;">
+                        <input type="radio" id="optionA" name="appearanceOrder"> 
+                        <label for="optionA">A. Turn Back, Turn Left</label>
+                    </div>
+                    <div style="flex: 1; min-width: 300px; text-align: left;">
+                        <input type="radio" id="optionB" name="appearanceOrder">
+                        <label for="optionB">B. Turn Left, Turn Right</label>
+                    </div>
+                    <div style="flex: 1; min-width: 300px; text-align: left;">
+                        <input type="radio" id="optionC" name="appearanceOrder">
+                        <label for="optionC">C. Turn Right, Turn Left</label>
+                    </div>
+                    <div style="flex: 1; min-width: 300px; text-align: left;">
+                        <input type="radio" id="optionD" name="appearanceOrder">
+                        <label for="optionD">D. Turn Left, Turn Left</label>
+                    </div>
+                    
+                </div>
+
+            <div id="answer-10" style="display:none; text-align: center; margin-top: 20px;">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+                    <p><strong style="color: green;">Ground Truth:</strong> Turn Left, Turn Right</p>
+                    <p><strong style="color: red;">Gemini:</strong> Turn Right, Turn Left</p>
+                </div>
+            </div>
+            <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-10', this)">
+                <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                <strong>Click to view Ground Truth and MLLM's answer!</strong>
+            </p>
+        </div>
+    </div>
+</div>
+
             <script>
             function toggleAnswer(answerId, element) {
                 const answerElement = document.getElementById(answerId);
@@ -692,17 +681,13 @@
                 } else {
                     // Hide the answer
                     answerElement.style.display = "none";
-                    element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and the answers from MLLMs!</strong>';
+                    element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and MLLMs answer!</strong>';
                 }
             }
             </script>
-        
+            
 
         </div>
-        
-        
-
-
         
         
         

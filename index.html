@@ -2,38 +2,39 @@
 <html lang="en">
     <head>
         <title>Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces</title>
-        <link rel="icon" type="image/x-icon" href="/thinking-in-space.github.io/static/img/icons/brain.ico">
+        <link rel="icon" type="image/x-icon" href="./static/img/icons/brain.ico">
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Open Graph -->
         <meta property="og:url" content="https://vision-x-nyu.github.io/thinking-in-space.github.io/" />
-        <meta property="og:image" content="/thinking-in-space.github.io/static/img/preview.png" />
+        <meta property="og:image" content="./static/img/preview.png" />
         <meta property="og:title" content="Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces" />
         
         <!-- Twitter -->
         <meta name="twitter:url" content="https://vision-x-nyu.github.io/thinking-in-space.github.io/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="/thinking-in-space.github.io/static/img/preview.png" />
+        <meta name="twitter:image" content="./static/img/preview.png" />
         <meta name="twitter:title" content="Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces" />
         <meta name="twitter:description" content="We introduce VSI-Bench, a novel benchmark of over 5,000 video-based visual-spatial intelligence questions, to evaluate and probe MLLMs, which revealed that their emerging spatial reasoning and local world modeling capabilities remain subhuman but promising." />
 
         <!-- JS Libraries -->
-        <script src="/thinking-in-space.github.io/static/js/distill_template.v2.js"></script>
+        <script src="./static/js/distill_template.v2.js"></script>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="https://d3js.org/d3-collection.v1.min.js"></script>
         <script src="https://rawgit.com/nstrayer/slid3r/master/dist/slid3r.js"></script>
 
-        <script defer="" src="/thinking-in-space.github.io/static/js/hider.js"></script>
-        <script defer src="/thinking-in-space.github.io/static/js/image_interact.js"></script>
-        <script defer src="/thinking-in-space.github.io/static/js/switch_videos.js"></script>
+        <script defer="" src="./static/js/hider.js"></script>
+        <script defer src="./static/js/image_interact.js"></script>
+        <script defer src="./static/js/switch_videos.js"></script>
+        <script defer src="./static/js/video-speed.js"></script>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="/thinking-in-space.github.io/static/css/style.css">
-        <link rel="stylesheet" href="/thinking-in-space.github.io/static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="./static/css/style.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         
         <!-- KaTeX -->
@@ -42,12 +43,12 @@
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
         <!-- FontAwesome -->
-        <script defer src="/thinking-in-space.github.io/static/js/fontawesome.all.min.js"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
 
         <!-- Medium Zoom -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-        <script defer src="/thinking-in-space.github.io/static/js/medium-zoom.min.js"></script>
-        <script defer src="/thinking-in-space.github.io/static/js/zoom.js"></script>
+        <script defer src="./static/js/medium-zoom.min.js"></script>
+        <script defer src="./static/js/zoom.js"></script>
     </head>
 
     <body>
@@ -61,20 +62,20 @@
                         <div class="icon-container">
                             <div class="icon-item">
                                 
-                                <img src="/thinking-in-space.github.io/static/img/icons/bench.svg" alt="Visual Representation Icon">
+                                <img src="./static/img/icons/bench.svg" alt="Visual Representation Icon">
                                 <div><strong>VSI-Bench</strong>: We introduce a high-quality benchmark for the evaluation of 3D, video-based, visual-spatial intelligence of MLLMs.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="/thinking-in-space.github.io/static/img/icons/evaluation.svg" alt="Connector Design Icon">
+                                <img src="./static/img/icons/evaluation.svg" alt="Connector Design Icon">
                                 <div><strong>Evaluation</strong>: We evaluate VSI-Bench on open- and closed-source MLLMs and find that MLLMs ex-
                                     hibit competitive—though subhuman—visual-spatial intelligence.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="/thinking-in-space.github.io/static/img/icons/speech.svg" alt="Speech Logo" class="icon">
+                                <img src="./static/img/icons/speech.svg" alt="Speech Logo" class="icon">
                                 <div><strong>Linguistic Analysis</strong>: We attribute VSI-Bench performance to spatial intelligence capabilities and show the differences between spatial and linguistic intelligence.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="/thinking-in-space.github.io/static/img/icons/vision.svg" alt="Vision Logo" class="icon">
+                                <img src="./static/img/icons/vision.svg" alt="Vision Logo" class="icon">
                                 <div><strong>Visual Analysis</strong>: We illuminate how MLLMs remember spaces via cognitive maps and show how explicitly remembering spaces improves spatial capabilities.</div>
                             </div>
                         </div>
@@ -251,6 +252,9 @@
                     <source src="static/videos/3e8bba0176.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="speed-reminder">
+                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                </div>
                 
                 <div class="video-qa">
                     <div class="qa-item">
@@ -291,6 +295,9 @@
                     <source src="static/videos/41159541.mov" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="speed-reminder">
+                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                </div>
                 
                 <div class="video-qa">
                     <div class="qa-item">
@@ -325,6 +332,9 @@
                     <source src="static/videos/3e8bba0176.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="speed-reminder">
+                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                </div>
                 
                 <div class="video-qa">
                     <div class="qa-item">
@@ -359,6 +369,9 @@
                     <source src="static/videos/42446049.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="speed-reminder">
+                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                </div>
                 
                 <div class="video-qa">
                     <div class="qa-item">
@@ -401,34 +414,37 @@
                     <source src="static/videos/41069025.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="speed-reminder">
+                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                </div>
                 
 
-                        <div class="video-qa">
-                            <div class="qa-item">
-                                <p><strong>Question:</strong> If I am standing by the stove and facing the sofa, is the TV to the left or the right of the sofa?</p>
-                                <p><strong>Options:</strong></p>
-                                <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: center; text-align: left; max-width: 60%; margin: 0 auto;">
-                                    <li style="margin-right: 30px;"><input type="radio" name="tables"> A. Left</li>
-                                    <li><input type="radio" name="tables"> B. Right</li>
-                                </ul>  
-                        
-                                <div id="answer-5" style="display:none; text-align: center; margin-top: 20px;">
-                                    <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
- 
-                                    <p>
-                                        <strong style="color: green;">Ground Truth:</strong> Left
-                                    </p>
-                                    <p>
-                                        <strong style="color: red;">Gemini-1.5 Pro:</strong> Right
-                                    </p>
-                                </div>
-                            </div>
-                                <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-5', this)">
-                                    <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                                    <strong>Click to view Ground Truth and MLLM's answer!</strong>
-                                </p>
-                            </div>
+                <div class="video-qa">
+                    <div class="qa-item">
+                        <p><strong>Question:</strong> If I am standing by the stove and facing the sofa, is the TV to the left or the right of the sofa?</p>
+                        <p><strong>Options:</strong></p>
+                        <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: center; text-align: left; max-width: 60%; margin: 0 auto;">
+                            <li style="margin-right: 30px;"><input type="radio" name="tables"> A. Left</li>
+                            <li><input type="radio" name="tables"> B. Right</li>
+                        </ul>  
+                
+                        <div id="answer-5" style="display:none; text-align: center; margin-top: 20px;">
+                            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+
+                            <p>
+                                <strong style="color: green;">Ground Truth:</strong> Left
+                            </p>
+                            <p>
+                                <strong style="color: red;">Gemini-1.5 Pro:</strong> Right
+                            </p>
                         </div>
+                    </div>
+                        <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-5', this)">
+                            <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                            <strong>Click to view Ground Truth and MLLM's answer!</strong>
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- Video 6; ID: 1462 -->
@@ -439,6 +455,9 @@
                     <source src="static/videos/47334096.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="speed-reminder">
+                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                </div>
                 
                 <div class="video-qa">
                     <div class="qa-item">
@@ -480,6 +499,9 @@
                     <source src="static/videos/47332899.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="speed-reminder">
+                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                </div>
                 
                 <div class="video-qa">
                     <div class="qa-item">
@@ -513,30 +535,33 @@
                     <source src="static/videos/09c1414f1b.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="speed-reminder">
+                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                </div>
                 
-                        <div class="video-qa">
-                            <div class="qa-item">
-                                <p><strong>Question:</strong> What will be the first-time appearance order of the following categories in the video: blanket, trash can, microwave, plant?</p>
-                                <p><strong>Options:</strong></p>
-                                <div style="display: flex; justify-content: center; flex-wrap: wrap; max-width: 800px; margin: 0 auto; gap: 20px;">
-                                    <div style="flex: 1; min-width: 300px; text-align: left;">
-                                        <input type="radio" id="optionA" name="appearanceOrder"> 
-                                        <label for="optionA">A. microwave, blanket, plant, trash can</label>
-                                    </div>
-                                    <div style="flex: 1; min-width: 300px; text-align: left;">
-                                        <input type="radio" id="optionB" name="appearanceOrder">
-                                        <label for="optionB">B. plant, blanket, microwave, trash can</label>
-                                    </div>
-                                    <div style="flex: 1; min-width: 300px; text-align: left;">
-                                        <input type="radio" id="optionC" name="appearanceOrder">
-                                        <label for="optionC">C. plant, blanket, trash can, microwave</label>
-                                    </div>
-                                    <div style="flex: 1; min-width: 300px; text-align: left;">
-                                        <input type="radio" id="optionD" name="appearanceOrder">
-                                        <label for="optionD">D. blanket, trash can, microwave, plant</label>
-                                    </div>
-                                    
-                                </div>
+                <div class="video-qa">
+                    <div class="qa-item">
+                        <p><strong>Question:</strong> What will be the first-time appearance order of the following categories in the video: blanket, trash can, microwave, plant?</p>
+                        <p><strong>Options:</strong></p>
+                        <div style="display: flex; justify-content: center; flex-wrap: wrap; max-width: 800px; margin: 0 auto; gap: 20px;">
+                            <div style="flex: 1; min-width: 300px; text-align: left;">
+                                <input type="radio" id="optionA" name="appearanceOrder"> 
+                                <label for="optionA">A. microwave, blanket, plant, trash can</label>
+                            </div>
+                            <div style="flex: 1; min-width: 300px; text-align: left;">
+                                <input type="radio" id="optionB" name="appearanceOrder">
+                                <label for="optionB">B. plant, blanket, microwave, trash can</label>
+                            </div>
+                            <div style="flex: 1; min-width: 300px; text-align: left;">
+                                <input type="radio" id="optionC" name="appearanceOrder">
+                                <label for="optionC">C. plant, blanket, trash can, microwave</label>
+                            </div>
+                            <div style="flex: 1; min-width: 300px; text-align: left;">
+                                <input type="radio" id="optionD" name="appearanceOrder">
+                                <label for="optionD">D. blanket, trash can, microwave, plant</label>
+                            </div>
+                            
+                        </div>
                                 
                     </div>
                     
@@ -571,6 +596,9 @@
         <source src="static/videos/45261182.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <div class="speed-reminder">
+        <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+    </div>
 
     <div class="video-qa">
         <div class="qa-item">
@@ -599,35 +627,38 @@
         <source src="static/videos/47331990.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <div class="speed-reminder">
+        <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+    </div>
 
-        <div class="video-qa">
-            <div class="qa-item">
-                <p><strong>Question:</strong> You are a robot beginning at the door and facing the bed. You want to navigate to the window. You will perform the following actions (Note: for each [please fill in], choose either 'turn back,' 'turn left,' or 'turn right.'): 1. Go forward until the edge of bed 2. [please fill in] 3. Go forward until the wall 4. [please fill in] 5. Go forward until the window. You have reached the final destination.</p>
-                <p><strong>Options:</strong></p>
-                <div style="display: flex; justify-content: center; flex-wrap: wrap; max-width: 800px; margin: 0 auto; gap: 20px;">
-                    <div style="flex: 1; min-width: 300px; text-align: left;">
-                        <input type="radio" id="optionA" name="appearanceOrder"> 
-                        <label for="optionA">A. Turn Back, Turn Left</label>
-                    </div>
-                    <div style="flex: 1; min-width: 300px; text-align: left;">
-                        <input type="radio" id="optionB" name="appearanceOrder">
-                        <label for="optionB">B. Turn Left, Turn Right</label>
-                    </div>
-                    <div style="flex: 1; min-width: 300px; text-align: left;">
-                        <input type="radio" id="optionC" name="appearanceOrder">
-                        <label for="optionC">C. Turn Right, Turn Left</label>
-                    </div>
-                    <div style="flex: 1; min-width: 300px; text-align: left;">
-                        <input type="radio" id="optionD" name="appearanceOrder">
-                        <label for="optionD">D. Turn Left, Turn Left</label>
-                    </div>
-                    
+    <div class="video-qa">
+        <div class="qa-item">
+            <p><strong>Question:</strong> You are a robot beginning at the door and facing the bed. You want to navigate to the window. You will perform the following actions (Note: for each [please fill in], choose either 'turn back,' 'turn left,' or 'turn right.'): 1. Go forward until the edge of bed 2. [please fill in] 3. Go forward until the wall 4. [please fill in] 5. Go forward until the window. You have reached the final destination.</p>
+            <p><strong>Options:</strong></p>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; max-width: 800px; margin: 0 auto; gap: 20px;">
+                <div style="flex: 1; min-width: 300px; text-align: left;">
+                    <input type="radio" id="optionA" name="appearanceOrder"> 
+                    <label for="optionA">A. Turn Back, Turn Left</label>
                 </div>
+                <div style="flex: 1; min-width: 300px; text-align: left;">
+                    <input type="radio" id="optionB" name="appearanceOrder">
+                    <label for="optionB">B. Turn Left, Turn Right</label>
+                </div>
+                <div style="flex: 1; min-width: 300px; text-align: left;">
+                    <input type="radio" id="optionC" name="appearanceOrder">
+                    <label for="optionC">C. Turn Right, Turn Left</label>
+                </div>
+                <div style="flex: 1; min-width: 300px; text-align: left;">
+                    <input type="radio" id="optionD" name="appearanceOrder">
+                    <label for="optionD">D. Turn Left, Turn Left</label>
+                </div>
+                
+            </div>
 
             <div id="answer-10" style="display:none; text-align: center; margin-top: 20px;">
                 <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
                     <p><strong style="color: green;">Ground Truth:</strong>B</p>
-                    <p><strong style="color: red;">Gemini:</strong>C</p>
+                    <p><strong style="color: red;">Gemini-1.5 Pro:</strong>C</p>
                 </div>
             </div>
             <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-10', this)">

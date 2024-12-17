@@ -2,51 +2,54 @@
 <html lang="en">
     <head>
         <title>Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces</title>
-        <link rel="icon" type="image/x-icon" href="/static/img/icons/brain.ico">
+        <link rel="icon" type="image/x-icon" href="/thinking-in-space.github.io/static/img/icons/brain.ico">
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Open Graph -->
-        <meta property="og:url" content="https://spatial-intelligence-benchmark.github.io" />
-        <meta property="og:image" content="static/img/preview.png" />
+        <meta property="og:url" content="https://vision-x-nyu.github.io/thinking-in-space.github.io/" />
+        <meta property="og:image" content="/thinking-in-space.github.io/static/img/preview.png" />
         <meta property="og:title" content="Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces" />
         
         <!-- Twitter -->
-        <meta name="twitter:url" content="https://spatial-intelligence-benchmark.github.io" />
+        <meta name="twitter:url" content="https://vision-x-nyu.github.io/thinking-in-space.github.io/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="static/img/preview.png" />
+        <meta name="twitter:image" content="/thinking-in-space.github.io/static/img/preview.png" />
         <meta name="twitter:title" content="Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces" />
         <meta name="twitter:description" content="We introduce VSI-Bench, a novel benchmark of over 5,000 video-based visual-spatial intelligence questions, to evaluate and probe MLLMs, which revealed that their emerging spatial reasoning and local world modeling capabilities remain subhuman but promising." />
 
-        <script src="/static/js/distill_template.v2.js"></script>
+        <!-- JS Libraries -->
+        <script src="/thinking-in-space.github.io/static/js/distill_template.v2.js"></script>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="https://d3js.org/d3-collection.v1.min.js"></script>
         <script src="https://rawgit.com/nstrayer/slid3r/master/dist/slid3r.js"></script>
 
-        <script defer="" src="/static/js/hider.js"></script>
-        <script src="/static/js/image_interact.js"></script>
-        <script src="/static/js/switch_videos.js"></script>
+        <script defer="" src="/thinking-in-space.github.io/static/js/hider.js"></script>
+        <script defer src="/thinking-in-space.github.io/static/js/image_interact.js"></script>
+        <script defer src="/thinking-in-space.github.io/static/js/switch_videos.js"></script>
 
-        <link rel="stylesheet" href="/static/css/style.css">
-        <link rel="stylesheet" href="/static/css/fontawesome.all.min.css">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="/thinking-in-space.github.io/static/css/style.css">
+        <link rel="stylesheet" href="/thinking-in-space.github.io/static/css/fontawesome.all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         
+        <!-- KaTeX -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-            onload="renderMathInElement(document.body);"></script>
-        <script defer src="/static/js/fontawesome.all.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
+        <!-- FontAwesome -->
+        <script defer src="/thinking-in-space.github.io/static/js/fontawesome.all.min.js"></script>
 
-        <!-- medium zoom https://github.com/francoischalifour/medium-zoom -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>  <!-- jquery -->
-        <script defer src="/static/js/medium-zoom.min.js"></script>
-        <script defer src="/static/js/zoom.js"></script>
+        <!-- Medium Zoom -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+        <script defer src="/thinking-in-space.github.io/static/js/medium-zoom.min.js"></script>
+        <script defer src="/thinking-in-space.github.io/static/js/zoom.js"></script>
     </head>
+
     <body>
         <div class="header-wrapper">
             <div class="header-container" id="header-container">
@@ -58,25 +61,26 @@
                         <div class="icon-container">
                             <div class="icon-item">
                                 
-                                <img src="/static/img/icons/bench.svg" alt="Visual Representation Icon">
+                                <img src="/thinking-in-space.github.io/static/img/icons/bench.svg" alt="Visual Representation Icon">
                                 <div><strong>VSI-Bench</strong>: We introduce a high-quality benchmark for the evaluation of 3D, video-based, visual-spatial intelligence of MLLMs.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="/static/img/icons/evaluation.svg" alt="Connector Design Icon">
+                                <img src="/thinking-in-space.github.io/static/img/icons/evaluation.svg" alt="Connector Design Icon">
                                 <div><strong>Evaluation</strong>: We evaluate VSI-Bench on open- and closed-source MLLMs and find that MLLMs ex-
                                     hibit competitive—though subhuman—visual-spatial intelligence.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="/static/img/icons/speech.svg" alt="Speech Logo" class="icon">
+                                <img src="/thinking-in-space.github.io/static/img/icons/speech.svg" alt="Speech Logo" class="icon">
                                 <div><strong>Linguistic Analysis</strong>: We attribute VSI-Bench performance to spatial intelligence capabilities and show the differences between spatial and linguistic intelligence.</div>
                             </div>
                             <div class="icon-item">
-                                <img src="/static/img/icons/vision.svg" alt="Vision Logo" class="icon">
+                                <img src="/thinking-in-space.github.io/static/img/icons/vision.svg" alt="Vision Logo" class="icon">
                                 <div><strong>Visual Analysis</strong>: We illuminate how MLLMs remember spaces via cognitive maps and show how explicitly remembering spaces improves spatial capabilities.</div>
                             </div>
                         </div>
                     
 
+                    
                     <div class="button-container">
                         <a href="" class="button paper-link" target="_blank">
                             <span class="icon is-small">
@@ -674,26 +678,26 @@
             <br>
         </p>
 
+    
+    <div class="icon-row">
+        <a href="#vsi-benchmark" class="icon-link">
+            <img src="/thinking-in-space.github.io/static/img/icons/bench.svg" alt="Visual Representation Logo" class="icon">
+            VSI-Bench<br>Construction
+        </a>
+        <a href="#vsi-evaluation" class="icon-link">
+            <img src="/thinking-in-space.github.io/static/img/icons/evaluation.svg" alt="Evaluation Logo" class="icon">
+            Evaluation<br>Protocol
+        </a>
+        <a href="#visual-representation" class="icon-link">
+            <img src="/thinking-in-space.github.io/static/img/icons/speech.svg" alt="Speech Logo" class="icon">
+            Linguistic<br>Analysis
+        </a>
+        <a href="#vsi-improvements" class="icon-link">
+            <img src="/thinking-in-space.github.io/static/img/icons/vision.svg" alt="Vision Logo" class="icon">
+            Visual<br>Analysis
+        </a>
+    </div>
 
-        <div class="icon-row">
-            <a href="#vsi-benchmark" class="icon-link">
-                <img src="/static/img/icons/bench.svg" alt="Visual Representation Logo" class="icon">
-                VSI-Bench<br>Construction
-            </a>
-            <a href="#vsi-evaluation" class="icon-link">
-                <img src="/static/img/icons/evaluation.svg" alt="Evaluation Logo" class="icon">
-                Evaluation<br>Protocol
-            </a>
-            <a href="#visual-representation" class="icon-link">
-                <img src="/static/img/icons/speech.svg" alt="Speech Logo" class="icon">
-                Linguistic<br>Analysis
-            </a>
-            <a href="#vsi-improvements" class="icon-link">
-                <img src="/static/img/icons/vision.svg" alt="Vision Logo" class="icon">
-                Visual<br>Analysis
-            </a>
-
-        </div>
 
         <p class="click-hint2" style="width: 85%;">
             <img src="static/img/icons/click.gif" style="width: 1.5rem">

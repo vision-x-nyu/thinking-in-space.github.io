@@ -1525,3 +1525,11 @@ iframe {
 }
 
 
+
+figcaption {
+  text-align: justify;
+}
+body {
+  text-align: justify;
+}
+

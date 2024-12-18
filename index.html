@@ -67,8 +67,7 @@
                             </div>
                             <div class="icon-item">
                                 <img src="./static/img/icons/evaluation.svg" alt="Connector Design Icon">
-                                <div><strong>Evaluation</strong>: We evaluate VSI-Bench on open- and closed-source MLLMs and find that MLLMs ex-
-                                    hibit competitive—though subhuman—visual-spatial intelligence.</div>
+                                <div><strong>Evaluation</strong>: We evaluate VSI-Bench on open- and closed-source MLLMs and find that MLLMs exhibit competitive—though subhuman—visual-spatial intelligence.</div>
                             </div>
                             <div class="icon-item">
                                 <img src="./static/img/icons/speech.svg" alt="Speech Logo" class="icon">
@@ -583,11 +582,11 @@
         <source src="static/videos/47331990.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <div class="speed-reminder">
+    <div class="speed-reminder"  style="margin-bottom: -10px;">
         <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
     </div>
 
-    <div class="video-qa">
+    <div class="video-qa" style="margin-top: 0px;">
         <div class="qa-item">
             <p><strong>Question:</strong> You are a robot beginning at the door and facing the bed. You want to navigate to the window. You will perform the following actions (Note: for each [please fill in], choose either 'turn back,' 'turn left,' or 'turn right.'): 1. Go forward until the edge of bed 2. [please fill in] 3. Go forward until the wall 4. [please fill in] 5. Go forward until the window. You have reached the final destination.</p>
             <p><strong>Options:</strong></p>
@@ -608,16 +607,15 @@
                     <input type="radio" id="optionD" name="appearanceOrder">
                     <label for="optionD">D. Turn Left, Turn Left</label>
                 </div>
-                
             </div>
 
-            <div id="answer-10" style="display:none; text-align: center; margin-top: 20px;">
+            <div id="answer-10" style="visibility: hidden; opacity: 0; max-height: 0; transition: visibility 0s, opacity 0.5s ease-in-out, max-height 0.5s;">
                 <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
                     <p><strong style="color: green;">Ground Truth:</strong>B</p>
                     <p><strong style="color: red;">Gemini-1.5 Pro:</strong>C</p>
                 </div>
             </div>
-            <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-10', this)">
+            <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 0px;" onclick="toggleAnswer('answer-10', this)">
                 <img src="static/img/icons/teaser.gif" style="width:1.5rem">
                 <strong>Click to view Ground Truth and MLLM's answer!</strong>
             </p>
@@ -625,23 +623,24 @@
     </div>
 </div>
 
-            <script>
-            function toggleAnswer(answerId, element) {
-                const answerElement = document.getElementById(answerId);
-                const currentlyHidden = answerElement.style.display === "none";
-            
-                if (currentlyHidden) {
-                    // Show the answer
-                    answerElement.style.display = "block";
-                    element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Hide answer</strong>';
-                } else {
-                    // Hide the answer
-                    answerElement.style.display = "none";
-                    element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and MLLMs answer!</strong>';
-                }
-            }
-            </script>
-            
+
+<script>
+    function toggleAnswer(answerId, element) {
+        const answerElement = document.getElementById(answerId);
+        const currentlyHidden = answerElement.style.display === "none";
+    
+        if (currentlyHidden) {
+            // Show the answer
+            answerElement.style.display = "block";
+            element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Hide answer</strong>';
+        } else {
+            // Hide the answer
+            answerElement.style.display = "none";
+            element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and MLLMs answer!</strong>';
+        }
+    }
+    </script>
+
 
         </div>
         

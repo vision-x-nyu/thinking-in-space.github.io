@@ -643,23 +643,24 @@
 <script>
     function toggleAnswer2(answerId, element) {
         const answerElement = document.getElementById(answerId);
-        const isHidden = answerElement.style.visibility === "hidden";
     
-        if (isHidden) {
-            // Show the answer
+        if (answerElement.style.visibility === "hidden" || answerElement.style.visibility === "") {
+            answerElement.style.transition = "none";
             answerElement.style.visibility = "visible";
             answerElement.style.opacity = "1";
-            answerElement.style.maxHeight = "500px"; // Adjust this as needed
+            answerElement.style.maxHeight = "500px";
             element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Hide answer</strong>';
         } else {
-            // Hide the answer
-            answerElement.style.visibility = "hidden";
+            // Hide the answer instantly
+            answerElement.style.transition = "none";
             answerElement.style.opacity = "0";
             answerElement.style.maxHeight = "0";
+            answerElement.style.visibility = "hidden";
             element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and MLLM\'s answer!</strong>';
         }
     }
     </script>
+    
 
         </div>
         

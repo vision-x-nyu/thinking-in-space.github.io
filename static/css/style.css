@@ -126,6 +126,16 @@ body {
     font-size: 1.2rem;
 }
 
+@media (max-width: 768px) {
+  .header-content h2 {
+    font-size: 1.2em !important;
+    line-height: 1.4 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+}
+
 
 
 @media (max-width: 768px) {
@@ -1399,18 +1409,29 @@ div.takeaway-tags img {
 .highlight-box {
   border: 2px solid #CCCCCC; 
   border-radius: 12px; 
-  padding: 15px; 
   background-color: #F9F9F9; 
   font-size: 1.2em; 
   font-style: italic; 
   font-weight: bold; 
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
-  margin: 20px auto; 
-  width: 150%; 
-  max-width: 150%; 
   text-align: center; 
-  transform: translateX(-15%); 
+  margin: 2% auto; /* Dynamic margin based on screen size */
+  padding: 2vw; /* Padding scales with viewport width */
+
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;          /* Dynamic width; adjusts to screen */
+  margin: 20px auto;   /* Center the box horizontally */
+  padding: 15px;       /* Padding for content */
+  border: 2px solid #CCCCCC;
+  border-radius: 12px;
+  background-color: #F9F9F9;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 
 

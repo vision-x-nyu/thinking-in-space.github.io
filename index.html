@@ -196,59 +196,59 @@
          <div class="l-body">
             <!-- Preview Images in a Flex Container - placed below the Q&A sections -->
             <div class="preview-container">
-                <img id="Touristvideo1Preview" class="preview" src="static/img/cropped_thumbnails/42445026_thumbnail_cropped.png" alt="video-thumbnail2233" onclick="switchVideo('Tourist', 'video1Container', 'video1Preview')">
-                <img id="Touristvideo2Preview" class="preview" src="static/img/cropped_thumbnails/scene0663_00_thumbnail_cropped.png" alt="video-thumbnail3" onclick="switchVideo('Tourist','video2Container', 'video2Preview')">
-                <img id="Touristvideo3Preview" class="preview" src="static/img/cropped_thumbnails/45662987_thumbnail_cropped.png" alt="video-thumbnail18" onclick="switchVideo('Tourist', 'video3Container', 'video3Preview')">
-                <img id="Touristvideo4Preview" class="preview" src="static/img/cropped_thumbnails/42446049_thumbnail_cropped.png" alt="video-thumbnail1129" onclick="switchVideo('Tourist','video4Container', 'video4Preview')">
-                <img id="Touristvideo5Preview" class="preview" src="static/img/cropped_thumbnails/41069025_thumbnail_cropped.png" alt="video-thumbnail1236" onclick="switchVideo('Tourist', 'video5Container', 'video5Preview')">
-                <img id="Touristvideo6Preview" class="preview" src="static/img/cropped_thumbnails/47334096_thumbnail_cropped.png" alt="video-thumbnail1462" onclick="switchVideo('Tourist','video6Container', 'video6Preview')">
-                <img id="Touristvideo7Preview" class="preview" src="static/img/cropped_thumbnails/scene0050_01_thumbnail_cropped.png" alt="video-thumbnail879" onclick="switchVideo('Tourist', 'video7Container', 'video7Preview')">
-                <img id="Touristvideo8Preview" class="preview" src="static/img/cropped_thumbnails/09c1414f1b_thumbnail_cropped.png" alt="video-thumbnail2871" onclick="switchVideo('Tourist','video8Container', 'video8Preview')">
-                <img id="Touristvideo9Preview" class="preview" src="static/img/cropped_thumbnails/42897538_thumbnail_cropped.png" alt="video-thumbnail608" onclick="switchVideo('Tourist','video9Container', 'video9Preview')">
-                <img id="Touristvideo10Preview" class="preview" src="static/img/cropped_thumbnails/47331990_thumbnail_cropped.png" alt="video-thumbnail4983" onclick="switchVideo('Tourist','video10Container', 'video10Preview')">
+                <img id="Touristvideo1Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/42445026_thumbnail_cropped.png" alt="video-thumbnail2233" onclick="switchVideo('Tourist', 'video1Container', 'video1Preview')">
+                <img id="Touristvideo2Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/scene0663_00_thumbnail_cropped.png" alt="video-thumbnail3" onclick="switchVideo('Tourist','video2Container', 'video2Preview')">
+                <img id="Touristvideo3Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/45662987_thumbnail_cropped.png" alt="video-thumbnail18" onclick="switchVideo('Tourist', 'video3Container', 'video3Preview')">
+                <img id="Touristvideo4Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/42445026_thumbnail_cropped.png" alt="video-thumbnail2233" onclick="switchVideo('Tourist', 'video4Container', 'video4Preview')">
+                <img id="Touristvideo5Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/41069025_thumbnail_cropped.png" alt="video-thumbnail1236" onclick="switchVideo('Tourist', 'video5Container', 'video5Preview')">
+                <img id="Touristvideo6Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/47334096_thumbnail_cropped.png" alt="video-thumbnail1462" onclick="switchVideo('Tourist','video6Container', 'video6Preview')">
+                <img id="Touristvideo7Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/scene0050_01_thumbnail_cropped.png" alt="video-thumbnail879" onclick="switchVideo('Tourist', 'video7Container', 'video7Preview')">
+                <img id="Touristvideo8Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/09c1414f1b_thumbnail_cropped.png" alt="video-thumbnail2871" onclick="switchVideo('Tourist','video8Container', 'video8Preview')">
+                <img id="Touristvideo9Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/42897538_thumbnail_cropped.png" alt="video-thumbnail608" onclick="switchVideo('Tourist','video9Container', 'video9Preview')">
+                <img id="Touristvideo10Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/47331990_thumbnail_cropped.png" alt="video-thumbnail4983" onclick="switchVideo('Tourist','video10Container', 'video10Preview')">
 
             </div>
-            <!-- Video 1; ID: 212 -->
+            <!-- Video 1; ID: 1129 -->
             <div id="Touristvideo1Container" class="video-container">
-                <div class="video-label">Object Size</div>
+                <div class="video-label">Relative Direction</div>
                 <video class="video-music" controls preload="metadata" playsinline>
-                    <source src="static/videos/42445026.mp4" type="video/mp4">
+                    <source src="static/videos/42446049.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="speed-reminder">
-                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                    <i class="fas fa-info-circle"></i>This video is playing at 2x speed. You can adjust the speed using the controls above.
                 </div>
-                
+        
                 <div class="video-qa">
                     <div class="qa-item">
-                        <p><strong>Question:</strong> What is the length of the longest dimension (length, width, or height) of the chair, measured in centimeters?</p>
-                    
-            
-                    <div id="answer-1" style="display:none; text-align: center;">
-                        <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
-
-
-                            <p>
-                                <strong style="color: green;">Ground Truth:</strong> 69
-                            </p>
-                            
-                            <p>
-                                <strong style="color: red;">Gemini-1.5 Pro:</strong> 200
-                            </p>
-     
+                        <p><strong>Question:</strong> If I am standing by the refrigerator and facing the washer, is the stove to my left, right, or back? 
+                            An object is to my back if I would have to turn at least 135 degrees in order to face it.
+                        </p>
+                        <p><strong>Options:</strong></p>
+                        <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: space-evenly; text-align: left; max-width: 60%; margin: 0 auto;">
+                            <li><input type="radio" name="tables"> A. Back</li>
+                            <li><input type="radio" name="tables"> B. Right</li>
+                            <li><input type="radio" name="tables"> C. Left</li>
+                        </ul>  
+        
+                        <div id="answer-1" style="display:none; text-align: center; margin-top: 20px;">
+                            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+                                <p>
+                                    <strong style="color: green;">Ground Truth:</strong> Right
+                                </p>
+                                <p>
+                                    <strong style="color: red;">Gemini-1.5 Pro:</strong> Left
+                                </p> 
+                            </div>
                         </div>
-                    </div>
-                    
-            
-                    <div style="margin-top: 20px; text-align: center;"> 
-                        <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-1', this)">
+        
+                        <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-1', this)">
                             <img src="static/img/icons/teaser.gif" style="width:1.5rem">
                             <strong>Click to view Ground Truth and MLLM's answer!</strong>
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
 
         
             <!-- Video 2; ID: 4453 -->
@@ -259,7 +259,7 @@
                         Your browser does not support the video tag.
                     </video>
                     <div class="speed-reminder">
-                        <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                        <i class="fas fa-info-circle"></i>This video is playing at 2x speed. You can adjust the speed using the controls above.
                     </div>
                 
                     <div class="video-qa">
@@ -296,7 +296,7 @@
                     Your browser does not support the video tag.
                 </video>
                 <div class="speed-reminder">
-                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                    <i class="fas fa-info-circle"></i>This video is playing at 2x speed. You can adjust the speed using the controls above.
                 </div>
                 
                 <div class="video-qa">
@@ -325,48 +325,38 @@
             </div>
 
 
-            <!-- Video 4; ID: 1129 -->
+            <!-- Video 4; ID: 212 -->
             <div id="Touristvideo4Container" class="video-container" style="display:none;">
-                <div class="video-label">Relative Direction</div>
+                <div class="video-label">Object Size</div>
                 <video class="video-music" controls preload="metadata" playsinline>
-                    <source src="static/videos/42446049.mp4" type="video/mp4">
+                    <source src="static/videos/42445026.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="speed-reminder">
-                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                    <i class="fas fa-info-circle"></i>This video is playing at 2x speed. You can adjust the speed using the controls above.
                 </div>
-                
+        
                 <div class="video-qa">
                     <div class="qa-item">
-                        <p><strong>Question:</strong> If I am standing by the refrigerator and facing the washer, is the stove to my left, right, or back? 
-                            An object is to my back if I would have to turn at least 135 degrees in order to face it.
-                        </p>
-                        <p><strong>Options:</strong></p>
-                        <ul style="list-style-type: none; padding-left: 0; display: flex; justify-content: space-evenly; text-align: left; max-width: 60%; margin: 0 auto;">
-                            <li><input type="radio" name="tables"> A. Back</li>
-                            <li><input type="radio" name="tables"> B. Right</li>
-                            <li><input type="radio" name="tables"> C. Left</li>
-                        </ul>  
-                
-                        <div id="answer-4" style="display:none; text-align: center; margin-top: 20px;">
+                        <p><strong>Question:</strong> What is the length of the longest dimension (length, width, or height) of the chair, measured in centimeters?</p>
+                        <div id="answer-4" style="display:none; text-align: center;">
                             <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
-  
-                            <p>
-                                <strong style="color: green;">Ground Truth:</strong> Right
+                                <p>
+                                    <strong style="color: green;">Ground Truth:</strong> 69
+                                </p>
+                                <p>
+                                    <strong style="color: red;">Gemini-1.5 Pro:</strong> 200
+                                </p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; text-align: center;"> 
+                            <p class="click-hint" style="width:85%; cursor:pointer;" onclick="toggleAnswer('answer-4', this)">
+                                <img src="static/img/icons/teaser.gif" style="width:1.5rem">
+                                <strong>Click to view Ground Truth and MLLM's answer!</strong>
                             </p>
-                            <p>
-                                <strong style="color: red;">Gemini-1.5 Pro:</strong> Left
-                            </p> 
                         </div>
                     </div>
-                
-                        <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 20px;" onclick="toggleAnswer('answer-4', this)">
-                            <img src="static/img/icons/teaser.gif" style="width:1.5rem">
-                            <strong>Click to view Ground Truth and MLLM's answer!</strong>
-                        </p>
-                    </div>
                 </div>
-                
             </div>
 
             <!-- Video 5; ID: 1236 -->
@@ -378,7 +368,7 @@
                     Your browser does not support the video tag.
                 </video>
                 <div class="speed-reminder">
-                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                    <i class="fas fa-info-circle"></i>This video is playing at 2x speed. You can adjust the speed using the controls above.
                 </div>
                 
 
@@ -419,7 +409,7 @@
                     Your browser does not support the video tag.
                 </video>
                 <div class="speed-reminder">
-                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                    <i class="fas fa-info-circle"></i>This video is playing at 2x speed. You can adjust the speed using the controls above.
                 </div>
                 
                 <div class="video-qa">
@@ -463,7 +453,7 @@
                     Your browser does not support the video tag.
                 </video>
                 <div class="speed-reminder">
-                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                    <i class="fas fa-info-circle"></i>This video is playing at 2x speed. You can adjust the speed using the controls above.
                 </div>
                 
                 <div class="video-qa">
@@ -499,7 +489,7 @@
                     Your browser does not support the video tag.
                 </video>
                 <div class="speed-reminder">
-                    <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+                    <i class="fas fa-info-circle"></i>This video is playing at 2x speed. You can adjust the speed using the controls above.
                 </div>
                 
                 <div class="video-qa">
@@ -560,7 +550,7 @@
         Your browser does not support the video tag.
     </video>
     <div class="speed-reminder">
-        <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+        <i class="fas fa-info-circle"></i>This video is playing at 2x speed. You can adjust the speed using the controls above.
     </div>
 
     <div class="video-qa">
@@ -591,7 +581,7 @@
         Your browser does not support the video tag.
     </video>
     <div class="speed-reminder"  style="margin-bottom: -10px;">
-        <i class="fas fa-info-circle"></i>Video is playing at 2x speed here. Feel free to adjust the speed using the controls above.
+        <i class="fas fa-info-circle"></i>This video is playing at 2x speed. You can adjust the speed using the controls above.
     </div>
 
     <div class="video-qa" style="margin-top: 0px;">
@@ -619,8 +609,8 @@
 
             <div id="answer-10" style="visibility: hidden; opacity: 0; max-height: 0; transition: visibility 0s, opacity 0.5s ease-in-out, max-height 0.5s;">
                 <div style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
-                    <p><strong style="color: green;">Ground Truth:</strong>B</p>
-                    <p><strong style="color: red;">Gemini-1.5 Pro:</strong>C</p>
+                    <p><strong style="color: green;">Ground Truth:</strong> B</p>
+                    <p><strong style="color: red;">Gemini-1.5 Pro:</strong> C</p>
                 </div>
             </div>
             <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 0px;" onclick="toggleAnswer2('answer-10', this)">
@@ -950,7 +940,7 @@
 
                     <d-figure id="fig-cog-map" >
                         <figure>
-                            <img data-zoomable="" draggable="false" src="static/img/cog-map.png" alt="benchmark category" style="width: 90%; display: block; margin: 0 auto;">
+                            <img data-zoomable="" draggable="false" src="static/img/cog-map.png" alt="Cognitive Map" style="width: 90%; display: block; margin: 0 auto;">
                             <figcaption style="text-align: center; margin-top: 20px;">
                                 <strong>Figure 9</strong>. <strong>Left</strong>: Visualizations of cognitive maps from MLLM and GT. <strong>Right</strong>: Locality of the MLLM's predicted cognitive maps.
                             </figcaption>

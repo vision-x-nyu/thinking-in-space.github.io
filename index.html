@@ -615,7 +615,7 @@
                     <p><strong style="color: red;">Gemini-1.5 Pro:</strong>C</p>
                 </div>
             </div>
-            <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 0px;" onclick="toggleAnswer('answer-10', this)">
+            <p class="click-hint" style="width:85%; cursor:pointer; margin-top: 0px;" onclick="toggleAnswer2('answer-10', this)">
                 <img src="static/img/icons/teaser.gif" style="width:1.5rem">
                 <strong>Click to view Ground Truth and MLLM's answer!</strong>
             </p>
@@ -640,7 +640,26 @@
         }
     }
     </script>
-
+<script>
+    function toggleAnswer2(answerId, element) {
+        const answerElement = document.getElementById(answerId);
+        const isHidden = answerElement.style.visibility === "hidden";
+    
+        if (isHidden) {
+            // Show the answer
+            answerElement.style.visibility = "visible";
+            answerElement.style.opacity = "1";
+            answerElement.style.maxHeight = "500px"; // Adjust this as needed
+            element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Hide answer</strong>';
+        } else {
+            // Hide the answer
+            answerElement.style.visibility = "hidden";
+            answerElement.style.opacity = "0";
+            answerElement.style.maxHeight = "0";
+            element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and MLLM\'s answer!</strong>';
+        }
+    }
+    </script>
 
         </div>
         

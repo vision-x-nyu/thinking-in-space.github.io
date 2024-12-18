@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <style>
+            pre, code {
+                font-size: 16px;
+            }
+        </style>
+
         <title>Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces</title>
         <link rel="icon" type="image/x-icon" href="./static/img/icons/brain.ico">
 
@@ -660,13 +666,7 @@
         }
     }
     </script>
-    
-
         </div>
-        
-        
-        
-
         <d-figure id="fig-teaser">
             <figure>
                 <img data-zoomable="" draggable="false" src="static/img/teaser.png" alt="Visual-Spatial Intelligence Teaser">
@@ -718,8 +718,8 @@
             <div id="sec:vsi-overview" class="sub-section">
                 <h1 class="text">VSI-Bench</h1>
 
-                    <p class="text">
-                        <p class="text">
+                    <p class="text" align="justify">
+                        <p class="text" align="justify">
                         <strong>Benchmark Overview:</strong> We develop VSI-Bench, a benchmark to evaluate the visual-spatial intelligence of Multimodal LLMs (MLLMs) using over 5,000 question-answer pairs derived from 288 egocentric videos sourced from the validation sets of public indoor 3D scene reconstruction datasets ScanNet, ScanNet++, and ARKitScenes. VSI-Bench includes eight tasks under three task types: configurational, measurement estimation, and spatiotemporal. See Fig. 2 for an overview of the tasks in VSI-Bench and Fig. 3 for dataset statistics. Iteratively refined for quality, VSI-Bench provides a foundation to study the connection between MLLMs and 3D reconstruction.</p>
                     <d-figure id="fig-task-demo" >
                         <figure>
@@ -766,14 +766,14 @@
             <div id="vsi-construct" class="sub-section">
                 
 
-                    <p class="text"><strong>VSI-Bench Construction:</strong>
+                    <p class="text" align="justify"><strong>VSI-Bench Construction:</strong>
                         We develop a robust pipeline to construct VSI-Bench that enables high-quality question-answer (QA) pair generation at scale. Starting with data collection and unification, we standardize diverse 3D indoor scene datasets into a unified meta-information format, incorporating object categories, bounding boxes, and video specifications to support dataset-agnostic QA generation. QA pairs are generated using automated annotations from meta-information and task-specific question templates, with route planning tasks manually annotated. To ensure quality, we implement a human-in-the-loop review process, iteratively refining question templates, annotations, and QA generation rules by addressing ambiguities and errors flagged by evaluators. </p>
 
                     <d-figure id="fig-bench-pipeline" >
                         <figure>
                             <img data-zoomable="" draggable="false" src="static/img/benchmark_construction.png" alt="benchmark category">
                             <figcaption>
-                                <strong>Figure 4: Benchmark curation pipeline.</strong> The pipeline unifies datasets into a standardized format and semantic space for consistent processing. QA pairs are then generated through both human annotation and question templates. To ensure quality, human verification is implemented at all key stages for filtering low-quality videos, annotations, and ambiguous QA pairs.
+                                <p align="justify"><strong>Figure 4: Benchmark curation pipeline.</strong> The pipeline unifies datasets into a standardized format and semantic space for consistent processing. QA pairs are then generated through both human annotation and question templates. To ensure quality, human verification is implemented at all key stages for filtering low-quality videos, annotations, and ambiguous QA pairs.</p>
                             </figcaption>
                         </figure>
                     </d-figure>
@@ -789,7 +789,7 @@
                     <script type="text/javascript" id="MathJax-script" async
                     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
                     </script>
-            <p class="text"><strong>Evaluation Setup</strong>:
+            <p class="text" align="justify"><strong>Evaluation Setup</strong>:
                 We benchmarked 15 video-supporting MLLMs from diverse model families. For proprietary models, we consider Gemini-1.5 and GPT-4o. For open-source models, we evaluate models from InternVL2, ViLA, LongViLA, LongVA, LLaVA-OneVision, and LLaVA-NeXT-Video. All evaluations are conducted in zero-shot settings with default prompts and greedy decoding for reproducibility. Tasks are evaluated using either Multiple-Choice Answer (MCA) accuracy or our proposed Mean Relative Accuracy (MRA) for Numerical Answer (NA) tasks.
             </p>
         
@@ -797,26 +797,26 @@
                 $$\text{MRA} = \frac{1}{10} \sum_{\theta \in C} \mathbb{1}\left(\frac{| \hat{y} - y |}{y} < 1 - \theta\right)$$
             </div>
         
-            <p class="text">
+            <p class="text" align="justify">
                 Baselines include random selection and frequency-based answer selection to identify performance gains due to distribution biases. Additionally, human performance is assessed on a randomly sampled subset of 400 questions (VSI-Bench tiny), with metrics compared to Gemini-1.5 Pro.
             </p>
                    
             
-            <p class="text"><strong>Main Results</strong>:
+            <p class="text" align="justify"><strong>Main Results</strong>:
                 Human evaluators achieve an average accuracy of 79%, outperforming the best model by 33%, with near-perfect performance (94%-100%) on configuration and spatiotemporal tasks. However, the gap narrows on measurement tasks that require precise estimation, where MLLMs demonstrate relative strength in quantitative tasks. Among proprietary models, Gemini-1.5 Pro stands out, significantly exceeding chance baselines and approaching human performance in tasks like absolute distance and room size estimation, despite being trained only on 2D digital data. Top-performing open-source models, such as LLaVA-NeXT-Video-72B and LLaVA-OneVision-72B, achieve competitive results, trailing Gemini-1.5 Pro by just 4%-5%. However, most open-source models (7/12) fall below chance baselines, revealing notable deficiencies in visual-spatial intelligence.
             </p>
             <d-figure id="fig-eval-bench" >
                 <figure>
                     <img data-zoomable="" draggable="false" src="static/img/eval-bench.png" alt="benchmark category">
                     <figcaption>
-                        <strong>Table 1:  Evaluation on VSI-Bench.</strong> <strong>Left</strong>: Dark gray indicates the best result among all models and light gray indicates the best
-                        result among open-source models. † indicates results on VSI-Bench (tiny) set. <strong>Right</strong>: Results including the top-3 open-source models.
+                        <p align="justify"><strong>Table 1:  Evaluation on VSI-Bench.</strong> <strong>Left</strong>: Dark gray indicates the best result among all models and light gray indicates the best
+                        result among open-source models. &dagger; indicates results on VSI-Bench (tiny) set. <strong>Right</strong>: Results including the top-3 open-source models.</p>
                     </figcaption>
                 </figure>
             </d-figure>
 
-            <p class="text"><strong>Blind Evaluation</strong>:
-                We compare MLLMs’ performance against “Chance Level (frequency)” and “Vision Disabled” (blind) results, averaged across six top models (three open-source and three closed-source). The consistent improvements in “Enabled−Disabled” and the general degradation in “Disabled−Chance” highlight the importance of video input for VSI-Bench, as blind models perform worse than chance. However, MLLMs struggle to surpass chance level on tasks such as absolute distance estimation, route planning, and relative direction, reflecting the inherent difficulty of these tasks. Interestingly, “Vision Disabled” models significantly outperform chance on object size tasks, likely due to the integration of common-sense knowledge from language model training.
+            <p class="text" align="justify"><strong>Blind Evaluation</strong>:
+                We compare MLLMs' performance against “Chance Level (frequency)” and “Vision Disabled” (blind) results, averaged across six top models (three open-source and three closed-source). The consistent improvements in “Enabled-Disabled” and the general degradation in “Disabled-Chance” highlight the importance of video input for VSI-Bench, as blind models perform worse than chance. However, MLLMs struggle to surpass chance level on tasks such as absolute distance estimation, route planning, and relative direction, reflecting the inherent difficulty of these tasks. Interestingly, “Vision Disabled” models significantly outperform chance on object size tasks, likely due to the integration of common-sense knowledge from language model training.
             </p>
 
             <d-figure id="fig-blind-eval" >
@@ -833,13 +833,13 @@
             <div id='visual-representation' class="viusal-representation-block">
             <h1 class="text">How MLLMs Think in Space Linguistically</h1>
                 
-                <p class="text">
+                <p class="text" align="justify">
                     To better understand when and why models succeed or fail and to elucidate the facets of visual-spatial intelligence they possess, we examine how MLLMs think in space linguistically.
                 </p>
 
                               
                 </d-figure>
-                <p class="text">
+                <p class="text" align="justify">
                     <strong>Case Studies</strong>:
                     In the success example, the model demonstrates advanced video understanding with accurate timestamped descriptions and a correct step-by-step reasoning process. The use of a global coordinate system suggests that MLLMs may construct implicit world models by integrating spatial context and reasoning. In the error case, the model fails in egocentric-allocentric transformation, incorrectly interpreting a video sequence due to reliance on the egocentric view, leading to a flawed spatial inference.
                 </p>
@@ -853,8 +853,7 @@
                     </figure>
                 </d-figure>
 
-            
-                <p class="text">
+                <p class="text" align="justify">
                     <strong>Error Analysis</strong>:
                     Analysis of errors from the best-performing MLLM on VSI-Bench (tiny) identifies four main error types: visual perception, linguistic intelligence, relational reasoning, and egocentric-allocentric transformation. Figure 6 reveals that 71% of errors stem from spatial reasoning, particularly in understanding distance, size, and direction. This indicates that spatial reasoning remains the key bottleneck for improving MLLM performance on VSI-Bench.
                 </p>
@@ -871,13 +870,9 @@
                     <em>Finding 1: Spatial reasoning is the primary bottleneck for MLLM performance on VSI-Bench.</em>
                 </div>
 
-
-
-                
-                
             </div>
 
-                <p class="text">
+                <p class="text" align="justify">
         
                     <strong>Limits of CoT Methods in Visuospatial Tasks</strong>:
                     We investigate three prompting techniques—Zero-Shot Chain-of-Thought (CoT), Self-Consistency with CoT, and Tree-of-Thoughts (ToT)—to improve MLLM reasoning on VSI-Bench. 
@@ -898,7 +893,7 @@
                         </figcaption>
                     </figure>
                 </d-figure>
-                <p class="text">
+                <p class="text" align="justify">
                     Meanwhile, as shown in Tab. 2, ZeroShot CoT achieves a 1.6% improvement on the general
                     video understanding benchmark VideoMME.
                 </p>
@@ -942,22 +937,20 @@
 
                 <div id='vsi-improvements' class="vsi-improvements">
 
-
-
                 <h1 class="text"> How MLLMs Think in Space Visually</h1>
                 <p class="text">
                     Since humans subconsciously build mental representations of space when reasoning spatially, we explore how MLLMs remember spaces. </p>
 
-                    <p class="text">
+                    <p class="text" align="justify">
                         <strong> Probing via Cognitive Maps</strong>:
-                        We evaluate MLLMs’ ability to create cognitive maps, a framework for spatial representation, by prompting Gemini-1.5 Pro to predict object center positions within a 10 × 10 grid based on video input. Accuracy was measured by comparing predicted object distances with ground truth maps, considering deviations within one grid unit as correct. The model achieved 64% accuracy in positioning adjacent objects, demonstrating strong local spatial awareness but struggling with larger distances, reflecting challenges in forming global spatial representations from discrete video frames. 
+                        We evaluate MLLMs' ability to create cognitive maps, a framework for spatial representation, by prompting Gemini-1.5 Pro to predict object center positions within a 10 x 10 grid based on video input. Accuracy was measured by comparing predicted object distances with ground truth maps, considering deviations within one grid unit as correct. The model achieved 64% accuracy in positioning adjacent objects, demonstrating strong local spatial awareness but struggling with larger distances, reflecting challenges in forming global spatial representations from discrete video frames. 
                     </p>
 
                     <d-figure id="fig-cog-map" >
                         <figure>
                             <img data-zoomable="" draggable="false" src="static/img/cog-map.png" alt="benchmark category" style="width: 90%; display: block; margin: 0 auto;">
                             <figcaption>
-                                <strong>Figure 9</strong>. <strong>Left</strong>: Visualizations of cognitive maps from MLLM and GT. <strong>Right</strong>: Locality of the MLLM’s predicted cognitive maps.
+                                <strong>Figure 9</strong>. <strong>Left</strong>: Visualizations of cognitive maps from MLLM and GT. <strong>Right</strong>: Locality of the MLLM's predicted cognitive maps.
                             </figcaption>
                         </figure>
                     </d-figure>
@@ -965,9 +958,9 @@
                         <em>Finding 3: When remembering spaces, a MLLM forms a series of local world models in its mind from a given video, rather than a unified global model.</em>
                     </div>
 
-                    <p class="text">
+                    <p class="text" align="justify">
                         <strong>Better Distance Reasoning via Cognitive Maps</strong>:
-                        We explored whether cognitive maps could enhance MLLMs’ spatial reasoning by prompting Gemini-1.5 Pro to generate a map from video input and use it to answer relative distance questions. Results showed a 10% accuracy improvement with the model’s own map and a 20%-32% gain using ground truth maps, highlighting the value of accurate mental imagery for enforcing global scene topology. This suggests cognitive mapping as a promising approach to improve MLLMs’ visual-spatial reasoning. 
+                        We explored whether cognitive maps could enhance MLLMs' spatial reasoning by prompting Gemini-1.5 Pro to generate a map from video input and use it to answer relative distance questions. Results showed a 10% accuracy improvement with the model's own map and a 20%-32% gain using ground truth maps, highlighting the value of accurate mental imagery for enforcing global scene topology. This suggests cognitive mapping as a promising approach to improve MLLMs' visual-spatial reasoning. 
                     </p>
                     <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
                         <!-- Table (a) -->
@@ -1008,22 +1001,22 @@
                             <tbody>
                                 <tr>
                                     <td>MLLM</td>
-                                    <td>10 × 10</td>
+                                    <td>10 &times; 10</td>
                                     <td>56.0</td>
                                 </tr>
                                 <tr>
                                     <td>MLLM</td>
-                                    <td>20 × 20</td>
+                                    <td>20 &times; 20</td>
                                     <td>54.0</td>
                                 </tr>
                                 <tr>
                                     <td>GT</td>
-                                    <td>10 × 10</td>
+                                    <td>10 &times; 10</td>
                                     <td>66.0</td>
                                 </tr>
                                 <tr>
                                     <td>GT</td>
-                                    <td>20 × 20</td>
+                                    <td>20 &times; 20</td>
                                     <td>78.0</td>
                                 </tr>
                             </tbody>
@@ -1045,33 +1038,41 @@
 
         <div id="conclusion" style="position: relative; margin-top: 40px; margin-bottom: 0px;">
             <h2 class="text" style="margin-top:0px; margin-bottom:10px">Conclusion</h2>
-            <p class="text">
+            <p class="text" align="justify">
                 We study how models see, remember, and recall spaces by building VSI-Bench and investigating the performance 
                 and behavior of MLLMs on it. Our analysis of how MLLMs think in space linguistically and visually identifies existing strengths (e.g., prominent perceptual, temporal, and linguistic abilities) and bottlenecks for visual-spatial intelligence (e.g., egocentric-allocentric transformation and relational reasoning). While prevailing linguistic prompting methods fail to improve spatial reasoning, building explicit cognitive maps does enhance the spatial distance reasoning of MLLMs.
 
             </p>
         </div>
+
+        <div id="bibtex" style="position: relative; margin-top: 40px; margin-bottom: 0px; color: gray;">
+            <h2 class="text" style="margin-top:0px; margin-bottom:10px">BibTeX</h2>
+            <!-- <p class="bibtex">
+                @article{yang2024think,<br>
+                    title={{Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces}},<br>
+                    author={Yang, Jihan and Yang, Shusheng and Gupta, Anjali and Han, Rilyn and Fei-Fei, Li and Xie, Saining},<br>
+                    year={2024},<br>
+                    journal={arXiv preprint},<br>
+                }
+            </p> -->
+            <pre><code>@article{yang2024think,
+    title={{Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces}},
+    author={Yang, Jihan and Yang, Shusheng and Gupta, Anjali and Han, Rilyn and Fei-Fei, Li and Xie, Saining},
+    year={2024},
+    journal={arXiv preprint},
+}</code></pre>
+        </div>
+
     </div>
 
-        </d-article>
+        <!-- </d-article>
         
         <d-appendix>
 
-            <h3>BibTeX</h3>
-            <p class="bibtex">
-                @article{yang2024think,<br>
-                    &nbsp;&nbsp;title={{Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces}},<br>
-                    &nbsp;&nbsp;author={Jihan Yang and Shusheng Yang and Anjali W. Gupta and Rilyn Han and Li Fei-Fei and Saining Xie},<br>
-                    &nbsp;&nbsp;year={2024},<br>
-                    &nbsp;&nbsp;journal={arXiv preprint},<br>
-                }
-            </p>
             
-            <d-footnote-list></d-footnote-list>
-            <d-citation-list></d-citation-list>
         </d-appendix>  
         <d-bibliography src="bibliography.bib"></d-bibliography>
-        <script src="/static/js/nav-bar.js"></script>
+        <script src="/static/js/nav-bar.js"></script> -->
 
     </body>
 </html>

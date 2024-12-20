@@ -196,16 +196,16 @@
          <div class="l-body">
             <!-- Preview Images in a Flex Container - placed below the Q&A sections -->
             <div class="preview-container">
-                <img id="Touristvideo1Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/42445026_thumbnail_cropped.png" alt="video-thumbnail2233" onclick="switchVideo('Tourist', 'video1Container', 'video1Preview')">
-                <img id="Touristvideo2Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/scene0663_00_thumbnail_cropped.png" alt="video-thumbnail3" onclick="switchVideo('Tourist','video2Container', 'video2Preview')">
-                <img id="Touristvideo3Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/45662987_thumbnail_cropped.png" alt="video-thumbnail18" onclick="switchVideo('Tourist', 'video3Container', 'video3Preview')">
-                <img id="Touristvideo4Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/42445026_thumbnail_cropped.png" alt="video-thumbnail2233" onclick="switchVideo('Tourist', 'video4Container', 'video4Preview')">
-                <img id="Touristvideo5Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/41069025_thumbnail_cropped.png" alt="video-thumbnail1236" onclick="switchVideo('Tourist', 'video5Container', 'video5Preview')">
-                <img id="Touristvideo6Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/47334096_thumbnail_cropped.png" alt="video-thumbnail1462" onclick="switchVideo('Tourist','video6Container', 'video6Preview')">
-                <img id="Touristvideo7Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/scene0050_01_thumbnail_cropped.png" alt="video-thumbnail879" onclick="switchVideo('Tourist', 'video7Container', 'video7Preview')">
-                <img id="Touristvideo8Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/09c1414f1b_thumbnail_cropped.png" alt="video-thumbnail2871" onclick="switchVideo('Tourist','video8Container', 'video8Preview')">
-                <img id="Touristvideo9Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/42897538_thumbnail_cropped.png" alt="video-thumbnail608" onclick="switchVideo('Tourist','video9Container', 'video9Preview')">
-                <img id="Touristvideo10Preview" class="preview" data-number="1" src="static/img/cropped_thumbnails/47331990_thumbnail_cropped.png" alt="video-thumbnail4983" onclick="switchVideo('Tourist','video10Container', 'video10Preview')">
+                <img id="Touristvideo1Preview" class="preview" src="static/img/cropped_thumbnails/42445026_thumbnail_cropped.png" alt="video-thumbnail2233" onclick="switchVideo('Tourist', 'video1Container', 'video1Preview')">
+                <img id="Touristvideo2Preview" class="preview" src="static/img/cropped_thumbnails/scene0663_00_thumbnail_cropped.png" alt="video-thumbnail3" onclick="switchVideo('Tourist','video2Container', 'video2Preview')">
+                <img id="Touristvideo3Preview" class="preview" src="static/img/cropped_thumbnails/45662987_thumbnail_cropped.png" alt="video-thumbnail18" onclick="switchVideo('Tourist', 'video3Container', 'video3Preview')">
+                <img id="Touristvideo4Preview" class="preview" src="static/img/cropped_thumbnails/42445026_thumbnail_cropped.png" alt="video-thumbnail2233" onclick="switchVideo('Tourist', 'video4Container', 'video4Preview')">
+                <img id="Touristvideo5Preview" class="preview" src="static/img/cropped_thumbnails/41069025_thumbnail_cropped.png" alt="video-thumbnail1236" onclick="switchVideo('Tourist', 'video5Container', 'video5Preview')">
+                <img id="Touristvideo6Preview" class="preview" src="static/img/cropped_thumbnails/47334096_thumbnail_cropped.png" alt="video-thumbnail1462" onclick="switchVideo('Tourist','video6Container', 'video6Preview')">
+                <img id="Touristvideo7Preview" class="preview" src="static/img/cropped_thumbnails/scene0050_01_thumbnail_cropped.png" alt="video-thumbnail879" onclick="switchVideo('Tourist', 'video7Container', 'video7Preview')">
+                <img id="Touristvideo8Preview" class="preview" src="static/img/cropped_thumbnails/09c1414f1b_thumbnail_cropped.png" alt="video-thumbnail2871" onclick="switchVideo('Tourist','video8Container', 'video8Preview')">
+                <img id="Touristvideo9Preview" class="preview" src="static/img/cropped_thumbnails/42897538_thumbnail_cropped.png" alt="video-thumbnail608" onclick="switchVideo('Tourist','video9Container', 'video9Preview')">
+                <img id="Touristvideo10Preview" class="preview" src="static/img/cropped_thumbnails/47331990_thumbnail_cropped.png" alt="video-thumbnail4983" onclick="switchVideo('Tourist','video10Container', 'video10Preview')">
 
             </div>
             <!-- Video 1; ID: 1129 -->
@@ -782,7 +782,7 @@
                     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
                     </script>
             <p class="text" align="justify"><strong>Evaluation Setup</strong>:
-                We benchmarked 15 video-supporting MLLMs from diverse model families. For proprietary models, we consider Gemini-1.5 and GPT-4o. For open-source models, we evaluate models from InternVL2, ViLA, LongViLA, LongVA, LLaVA-OneVision, and LLaVA-NeXT-Video. All evaluations are conducted in zero-shot settings with default prompts and greedy decoding for reproducibility. Tasks are evaluated using either Multiple-Choice Answer (MCA) accuracy or our proposed Mean Relative Accuracy (MRA) for Numerical Answer (NA) tasks.
+                We benchmark 15 video-supporting MLLMs from diverse model families. For proprietary models, we consider Gemini-1.5 and GPT-4o. For open-source models, we evaluate models from InternVL2, ViLA, LongViLA, LongVA, LLaVA-OneVision, and LLaVA-NeXT-Video. All evaluations are conducted in zero-shot settings with default prompts and greedy decoding for reproducibility. Tasks are evaluated using either Multiple-Choice Answer (MCA) accuracy or our proposed Mean Relative Accuracy (MRA) for Numerical Answer (NA) tasks.
             </p>
         
             <div class="formula">
@@ -935,7 +935,7 @@
 
                     <p class="text" align="justify">
                         <strong> Probing via Cognitive Maps</strong>:
-                        We evaluate MLLMs' ability to create cognitive maps, a framework for spatial representation, by prompting Gemini-1.5 Pro to predict object center positions within a 10 x 10 grid based on video input. Accuracy was measured by comparing predicted object distances with ground truth maps, considering deviations within one grid unit as correct. The model achieved 64% accuracy in positioning adjacent objects, demonstrating strong local spatial awareness but struggling with larger distances, reflecting challenges in forming global spatial representations from discrete video frames. 
+                        We evaluate MLLMs' ability to create cognitive maps, a framework for spatial representation, by prompting Gemini-1.5 Pro to predict object center positions within a 10 x 10 grid based on video input. Accuracy is measured by comparing predicted object distances with ground truth maps, considering deviations within one grid unit as correct. The model achieves 64% accuracy in positioning close objects, which demonstrates its strong local spatial awareness. However, the model does struggle with larger distances, which reflects the challenges it faces in forming global spatial representations from discrete video frames. 
                     </p>
 
                     <d-figure id="fig-cog-map" >
@@ -952,7 +952,7 @@
 
                     <p class="text" align="justify">
                         <strong>Better Distance Reasoning via Cognitive Maps</strong>:
-                        We explored whether cognitive maps could enhance MLLMs' spatial reasoning by prompting Gemini-1.5 Pro to generate a map from video input and use it to answer relative distance questions. Results showed a 10% accuracy improvement with the model's own map and a 20%-32% gain using ground truth maps, highlighting the value of accurate mental imagery for enforcing global scene topology. This suggests cognitive mapping as a promising approach to improve MLLMs' visual-spatial reasoning. 
+                        We explore whether cognitive maps could enhance MLLMs' spatial reasoning by prompting Gemini-1.5 Pro to generate a map from video input and use it to answer relative distance questions. Results show a 10% accuracy improvement with the model's own map and a 20%-32% gain using ground truth maps, highlighting the value of accurate mental imagery for enforcing global scene topology. This suggests cognitive mapping as a promising approach to improve MLLMs' visual-spatial reasoning. 
                     </p>
                     <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
                         <!-- Table (a) -->

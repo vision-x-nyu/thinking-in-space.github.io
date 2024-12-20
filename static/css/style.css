@@ -4,13 +4,13 @@ body {
 
 .header-wrapper {
     /* background: linear-gradient(-235deg, #1E0844 10%, #23316E 45%, #FE8383 75%, #F2E6C9 100%); */
-   background: linear-gradient(-210deg, #4682b4 20%, #87ceeb 55%, #97da93 75%, #feec8d 100%);
+   background: linear-gradient(-210deg, #014f9c 0%, #8db1e1 65%, #97da93 85%, #feec8d 100%);
 
 
 }
 
 .header-container {
-  color: #FBC664;
+  color: #d7d167;
   text-align: center; 
   padding: 20px; 
   opacity: 1.0;
@@ -105,7 +105,7 @@ body {
 }
 
 .header-content {
-    color: #FFF7D4;
+    color: #faecd5;
     text-align: left;
 }
 
@@ -113,13 +113,13 @@ body {
     font-size: 1.5em;
     margin-bottom: 0.5em;
     line-height: 1.2;
-    color: #FEAE6F;
+    color: #FBBC04;
 }
 
 .header-content h2 {
     margin-bottom: 0.5em;
     line-height: 1.2;
-    color: #FEAE6F;
+    color: #FBBC04;
 }
 
 .header-container p {
@@ -446,7 +446,6 @@ d-article section{
   height: 100%;
 }
 
- 
 .preview-container {
   display: flex;
   align-items: center;
@@ -464,8 +463,6 @@ d-article section{
   padding-top: 20px; /* Optional: Adds internal spacing */
 }
 
-
-
 .preview {
   cursor: pointer;
   transition: opacity 0.2s, box-shadow 0.2s;
@@ -481,6 +478,7 @@ div .preview-video-active,
   opacity: 1.0; /* Fully opaque on hover */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow effect on hover */
 }
+
 
 
 /* blockquote {
@@ -1414,7 +1412,7 @@ div.takeaway-tags img {
   font-style: italic; 
   font-weight: bold; 
   text-align: center; 
-  margin: 2% auto; /* Dynamic margin based on screen size */
+  margin: 2% auto; 
   padding: 2vw; /* Padding scales with viewport width */
 
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);

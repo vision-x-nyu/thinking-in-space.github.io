@@ -105,7 +105,7 @@ body {
 }
 
 .header-content {
-    color: #faecd5;
+    color: #FEEFC3;
     text-align: left;
 }
 
@@ -1552,3 +1552,35 @@ body {
   text-align: justify;
 }
 
+@media screen and (max-width: 768px) {
+    .video-container {
+        margin-bottom: 20px; 
+        overflow-y: scroll;
+        max-height: 90vh; 
+        scrollbar-width: thin; 
+        scrollbar-color: #888 #f1f1f1; 
+    }
+
+    .video-container::-webkit-scrollbar {
+        width: 6px; 
+    }
+
+    .video-container::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 10px;
+    }
+
+    .video-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    .video-container:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
+      pointer-events: none; 
+  }
+}

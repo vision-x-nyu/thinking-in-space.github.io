@@ -623,20 +623,25 @@
 
 
 <script>
-    function toggleAnswer(answerId, element) {
-        const answerElement = document.getElementById(answerId);
-        const currentlyHidden = answerElement.style.display === "none";
-    
-        if (currentlyHidden) {
-            // Show the answer
-            answerElement.style.display = "block";
-            element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Hide answer</strong>';
-        } else {
-            // Hide the answer
-            answerElement.style.display = "none";
-            element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and MLLMs answer!</strong>';
+function toggleAnswer(answerId, element) {
+    const answerElement = document.getElementById(answerId);
+    const isVisible = answerElement.style.display === "block";
+
+    if (isVisible) {
+        answerElement.style.display = "none";
+        element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and MLLM\'s answer!</strong>';
+    } else {
+        answerElement.style.display = "block";
+        element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Hide answer</strong>';
+  
+        if (window.innerWidth <= 768) {
+            // answerElement.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     }
+}
+
+
+
     </script>
 <script>
     function toggleAnswer2(answerId, element) {
